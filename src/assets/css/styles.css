@@ -1,0 +1,19 @@
+.landing-bg{
+    background-color: #007FE0;
+}
+.landing-text{
+    top: 0;
+    left: 0;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 380px;
+    padding-bottom: 410px;
+}
+.living-pro-text{
+    font-size: xx-large;
+}
+.lp-landing-icon{
+    margin-right: 4px;
+}

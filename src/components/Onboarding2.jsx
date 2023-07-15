@@ -23,19 +23,17 @@ const Onboarding2 = () => {
         </div>
 
         <div className='boarding-icons'>
-            <div className='boarding-icons'>
-                <Link to='/'>
-                    <img src={boardingempty} className='boarding-icon rounded-am'/>
-                </Link>
-            
-            <Link to='/onboarding2'>
-                    <img src={boardingfill} className='boarding-icon rounded-sm'/>
+            <Link to='/'>
+                <img src={boardingempty} className='boarding-icon rounded-am'/>
             </Link>
-                
-                <Link to='/onboarding3'>
-                    <img src={boardingempty} className='boarding-icon rounded-sm'/>
-                </Link>
-            </div>
+        
+        <Link to='/onboarding2'>
+                <img src={boardingfill} className='boarding-icon rounded-sm'/>
+        </Link>
+            
+            <Link to='/onboarding3'>
+                <img src={boardingempty} className='boarding-icon rounded-sm'/>
+            </Link>
         </div>
 
         <div className='boarding-options'>

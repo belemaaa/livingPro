@@ -2,14 +2,12 @@
     background-color: #007FE0;
 }
 .landing-text{
-    top: 0;
-    left: 0;
     color: white;
     justify-content: center;
+    align-items: center;
+    flex: 1;
     text-align: center;
     flex-direction: row;
-    padding-top: 388px;
-    padding-bottom: 410px;
 }
 .living-pro-text{
     font-size: xx-large;
@@ -18,17 +16,17 @@
     margin-right: 4px;
     margin-top: 5px;
 }
-.ellipse16{
+.OB1ellipse16{
     width: 60px;
     height: 60px;
     margin-top: 79px;
     margin-left: 285px;  
 }
-.ellipse15{
+.OB1ellipse15, .OB2ellipse18{
     margin-left: 55px;
     margin-top: 20px;
 }
-.ellipse17{
+.OB1ellipse17{
     width: 60px;
     height: 60px;
     margin-top: 20px;
@@ -36,4 +34,16 @@
 }
 .onboarding1-text{
     text-align: center;
+}
+.OB2ellipse16{
+    width: 60px;
+    height: 60px;
+    margin-top: 79px;
+    margin-left: 215px;  
+}
+.OB2ellipse17{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 120px;
 }

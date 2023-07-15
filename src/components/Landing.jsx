@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import '../assets/css/styles.css'
 import {BsFillHouseHeartFill} from 'react-icons/bs'
+import Home from './Home'
 
 const Landing = () => {
   return (

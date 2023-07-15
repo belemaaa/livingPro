@@ -3,6 +3,7 @@ import Landing from './components/Landing';
 import Splash from "./components/Splash";
 import Onboarding2 from "./components/Onboarding2";
 import Onboarding3 from "./components/Onboarding3";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -10,8 +11,10 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' exact element={<Splash/>} />
-          <Route path='/onboarding2' exact element={<Onboarding2/>} />
-          <Route path='/onboarding3' exact element={<Onboarding3/>} />
+          <Route path='/onboarding2' element={<Onboarding2/>} />
+          <Route path='/onboarding3' element={<Onboarding3/>} />
+          <Route path='/onboarding3' element={<Onboarding3/>} />
+          <Route path='/home' element={<Home/>} />
         </Routes>
       </Router>
     </div>

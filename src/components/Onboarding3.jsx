@@ -20,9 +20,9 @@ const Onboarding3 = () => {
             </p>
         </div>
 
-        <div className='mt-12'>
+        {/* <div className='mt-12'>
             <Link to='/onboarding2' className='mr-10'>Previous</Link>
-        </div>
+        </div> */}
     </div>
   )
 }

@@ -7,11 +7,9 @@ import boardingempty from '../assets/images/boardingempty.png';
 import boardingfill from '../assets/images/boardingfill.png';
 import Onboarding2 from './Onboarding2'
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
 const Onboarding1 = () => {
-    const page2 = () =>{
-        return <Onboarding2/>
-    }
   return (
     <div>
         <div>
@@ -28,9 +26,17 @@ const Onboarding1 = () => {
         </div>
 
         <div className='boarding-icons'>
-            <img src={boardingfill} className='boarding-icon rounded-am'/>
-            <img src={boardingempty} className='boarding-icon rounded-sm'/>
-            <img src={boardingempty} className='boarding-icon rounded-sm'/>
+            <Link to='/'>
+                <img src={boardingfill} className='boarding-icon rounded-am'/>
+            </Link>
+           
+           <Link to='/onboarding2'>
+                <img src={boardingempty} className='boarding-icon rounded-sm'/>
+           </Link>
+            
+            <Link to='/onboarding3'>
+                <img src={boardingempty} className='boarding-icon rounded-sm'/>
+            </Link>
         </div>
 
         <div className='boarding-options'>
@@ -38,7 +44,7 @@ const Onboarding1 = () => {
                 Skip
             </Link>
 
-            <Link to='/' className='boarding-next px-[70px] py-2'>
+            <Link to='/onboarding2' className='boarding-next px-[70px] py-2'>
                 Next
             </Link>
         </div>

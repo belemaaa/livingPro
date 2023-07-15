@@ -14,8 +14,8 @@ const Onboarding1 = () => {
         </div>
 
         <div className='onboarding1-text'>
-            <p className=''>Find Your Roomate</p>
-            <p>Find like-minded individuals to interact with and find the
+            <p className='font-semibold pt-8'>Find Your Roomate</p>
+            <p className='text-sm pt-4'>Find like-minded individuals to interact with and find the
                 roomate you've been looking for or needing.
             </p>
         </div>

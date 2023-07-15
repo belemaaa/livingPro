@@ -14,14 +14,17 @@ const Onboarding2 = () => {
         </div>
 
         <div className='onboarding1-text'>
-            <p className='font-semibold pt-8'>Get appartments/rooms close to you</p>
-            <p className='text-sm pt-4'>Get apartments easily and within your budget that are close to you
-            and whatever you want.
+            <p className='font-semibold pt-8'>Post Your Readiness</p>
+            <p className='text-sm pt-4'>Find verified tenants by listing your
+            apartments or rooms for rent or sale.
             </p>
         </div>
 
-        <Link to='/onboarding3'>Previous</Link>
-        <Link to='/onboarding1'>Next</Link>
+        <div className='mt-12'>
+            <Link to='/' className='mr-10'>Previous</Link>
+            <Link to='/onboarding3'>Next</Link>
+        </div>
+        
 
     </div>
   )

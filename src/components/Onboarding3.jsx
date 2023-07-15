@@ -42,7 +42,7 @@ const Onboarding3 = () => {
             </Link>
 
             <Link to='/home' className='boarding-next px-[70px] py-2'>
-                Next
+                Get Started
             </Link>
         </div>
     </div>

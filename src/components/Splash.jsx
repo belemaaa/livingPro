@@ -8,7 +8,7 @@ const Splash = () => {
     const [showSplash, setShowSplash] = useState(true);
 
     useEffect(() => {
-      // Simulate a 4-second delay before hiding the splash screen
+      // Simulate a 5-second delay before hiding the splash screen
       const timeout = setTimeout(() => {
         setShowSplash(false);
       }, 5000);

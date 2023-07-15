@@ -40,7 +40,7 @@ const Onboarding1 = () => {
         </div>
 
         <div className='boarding-options'>
-            <Link to='/home' className='boarding-skip'>
+            <Link to='/signup' className='boarding-skip'>
                 Skip
             </Link>
 

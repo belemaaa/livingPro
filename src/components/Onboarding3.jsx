@@ -37,11 +37,11 @@ const Onboarding3 = () => {
         </div>
 
         <div className='boarding-options'>
-            <Link to='/home' className='boarding-skip'>
+            <Link to='/signup' className='boarding-skip'>
                 Skip
             </Link>
 
-            <Link to='/home' className='boarding-next px-[70px] py-2'>
+            <Link to='/signup' className='boarding-next px-[40px] py-2'>
                 Get Started
             </Link>
         </div>

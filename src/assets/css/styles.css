@@ -38,12 +38,24 @@
 .OB2ellipse16{
     width: 60px;
     height: 60px;
-    margin-top: 79px;
-    margin-left: 215px;  
+    margin-top: 74px;
+    margin-left: 220px;  
 }
 .OB2ellipse17{
     width: 60px;
     height: 60px;
     margin-top: 20px;
-    margin-left: 120px;
+    margin-left: 109px;
+}
+.OB3ellipse16{
+    width: 60px;
+    height: 60px;
+    margin-top: 79px;
+    margin-left: 30px;  
+}
+.OB3ellipse17{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 285px;
 }

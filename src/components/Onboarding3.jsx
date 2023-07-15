@@ -8,9 +8,9 @@ const Onboarding3 = () => {
   return (
     <div>
         <div>
-            <img src={ellipse16} className='OB2ellipse16'/>
+            <img src={ellipse16} className='OB3ellipse16'/>
             <img src={ellipse8} className='OB3ellipse8'/>
-            <img src={ellipse17} className='OB2ellipse17'/>
+            <img src={ellipse17} className='OB3ellipse17'/>
         </div>
 
         <div className='onboarding1-text'>

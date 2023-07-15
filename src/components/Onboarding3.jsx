@@ -13,17 +13,14 @@ const Onboarding3 = () => {
             <img src={ellipse17} className='OB3ellipse17'/>
         </div>
 
-        <div className='onboarding1-text'>
-            <p className='font-semibold pt-8'>Get appartments/rooms close to you</p>
-            <p className='text-sm pt-4'>Get apartments easily and within your budget that are close to you
-            and whatever you want.
+        <div className='onboarding-text'>
+            <p className='font-semibold pt-8'>Post Your Readiness</p>
+            <p className='text-xs pt-4 px-8'>Find verified tenants by listing your
+            apartments or rooms for rent or sale.
             </p>
         </div>
-
-        {/* <div className='mt-12'>
-            <Link to='/onboarding2' className='mr-10'>Previous</Link>
-        </div> */}
     </div>
+    
   )
 }
 

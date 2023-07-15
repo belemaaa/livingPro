@@ -19,7 +19,7 @@ const Splash = () => {
 
     return (
         <div>
-            {showSplash ? <Landing /> : <BoardingCarousel />}
+            {showSplash ? <Landing /> : <Onboarding1/>}
         </div>
     )
 }

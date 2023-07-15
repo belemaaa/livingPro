@@ -20,24 +20,31 @@ const Onboarding1 = () => {
             <img src={ellipse17} className='OB1ellipse17' />
         </div>
 
-        <div className='onboarding1-text'>
+        <div className='onboarding-text'>
             <p className='font-semibold pt-8'>Find Your Roomate</p>
-            <p className='text-sm pt-4'>Find like-minded individuals to interact with and find the
+            <p className='text-xs pt-4 px-8'>Find like-minded individuals to interact with and find the
                 roomate you've been looking for or needing.
             </p>
         </div>
 
-        {/* <div className='flex flex-row mt-10'>
-            <img src={boardingfill} 
-            onClick={page2}
-            className='mx-4'
-            />
+        <div className='boarding-icons'>
+            <img src={boardingfill} className='boarding-icon rounded-am'/>
+            <img src={boardingempty} className='boarding-icon rounded-sm'/>
+            <img src={boardingempty} className='boarding-icon rounded-sm'/>
+        </div>
 
-            <img src={boardingfill}  className='mx-4'/>
-            <img src={boardingfill} className='ml-4'/>
-        </div> */}
-        <Link to='/onboarding2'>Next</Link>
+        <div className='boarding-options'>
+            <Link to='/home' className='boarding-skip'>
+                Skip
+            </Link>
+
+            <Link to='/' className='boarding-next px-[70px] py-2'>
+                Next
+            </Link>
+        </div>
+
     </div>
+
   )
 }
 

@@ -32,12 +32,12 @@ const BoardingCarousel = () => {
     <div>
         {boardingPages[currentBoardingPage]}
 
-        <div>
-            <Link to='/home'>
+        <div className='boarding-options'>
+            <Link to='/home' className='boarding-skip'>
                 Skip
             </Link>
 
-            <button onClick={nextBoardingPage}>
+            <button onClick={nextBoardingPage} className='boarding-next'>
                 Next
             </button>
         </div>

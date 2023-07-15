@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Landing from './Landing'
 import Onboarding1 from './Onboarding1';
+import BoardingSection from './BoardingSection';
 
 const Splash = () => {
     const [showSplash, setShowSplash] = useState(true);

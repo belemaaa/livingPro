@@ -19,6 +19,10 @@ const Onboarding1 = () => {
                 roomate you've been looking for or needing.
             </p>
         </div>
+
+        <div>
+            
+        </div>
     </div>
   )
 }

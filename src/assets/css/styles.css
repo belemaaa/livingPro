@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding-top: 380px;
+    padding-top: 388px;
     padding-bottom: 410px;
 }
 .living-pro-text{
@@ -16,4 +16,20 @@
 }
 .lp-landing-icon{
     margin-right: 4px;
+}
+.ellipse16{
+    width: 60px;
+    height: 60px;
+    margin-top: 79px;
+    margin-left: 285px;  
+}
+.ellipse15{
+    margin-left: 55px;
+    margin-top: 20px;
+}
+.ellipse17{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 30px;
 }

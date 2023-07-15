@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Landing from './Landing'
-import Home from './Home'
+import Onboarding1 from './Onboarding1';
 
 const Splash = () => {
     const [showSplash, setShowSplash] = useState(true);
@@ -9,7 +9,7 @@ const Splash = () => {
       // Simulate a 4-second delay before hiding the splash screen
       const timeout = setTimeout(() => {
         setShowSplash(false);
-      }, 4000);
+      }, 5000);
   
       return () => clearTimeout(timeout);
     }, []);
@@ -17,7 +17,7 @@ const Splash = () => {
 
     return (
         <div>
-            {showSplash ? <Landing /> : <Home />}
+            {showSplash ? <Landing /> : <Onboarding1 />}
         </div>
     )
 }

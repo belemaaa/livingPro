@@ -18,7 +18,7 @@ function App() {
           <Route path='/onboarding3' element={<Onboarding3/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/home' element={<Home/>} />
-          <Route path='/Email-Verification' element={<EmailVerification/>}/>
+          <Route path='/email-verification' element={<EmailVerification/>}/>
         </Routes>
       </Router>
     </div>

@@ -48,7 +48,7 @@ const Onboarding1 = () => {
                 Next
             </Link>
         </div>
-        {/* comment */}
+        
 
     </div>
 

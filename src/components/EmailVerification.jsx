@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const EmailVerification = () => {
   const navigate = useNavigate();
-  const handleNavigation = () => {
+  const handleVerify = () => {
 
      // handle any api calls
 
@@ -24,18 +24,6 @@ const EmailVerification = () => {
     }
   };
 
-  const handleVerify = (event) => {
-    event.preventDefault();
-
-    const pinArray = inputRefs.current.map((inputRef) => inputRef.value);
-    const pinCode = pinArray.join('');
-
-    // api call for verification
-
-    inputRefs.current.forEach((inputRef) => {
-      inputRef.value = '';
-    });
-  };
   return (
     <div>
         <div className='signup-go-back-btn'>
@@ -52,7 +40,7 @@ const EmailVerification = () => {
         </div>
 
         <div className='verification-pins'>
-            <form method='POST' onSubmit={handleNavigation}>
+            <form method='POST' onSubmit={handleVerify}>
                 {Array.from({ length: 6 }, (_, index) => (
                     <input
                         key={index}
@@ -70,3 +58,18 @@ const EmailVerification = () => {
 }
 
 export default EmailVerification
+
+
+    //function to validate pin entries (saving if needed)
+//   const handleVerify = (event) => {
+//     event.preventDefault();
+
+//     const pinArray = inputRefs.current.map((inputRef) => inputRef.value);
+//     const pinCode = pinArray.join('');
+
+//     // api call for verification
+
+//     inputRefs.current.forEach((inputRef) => {
+//       inputRef.value = '';
+//     });
+//   };

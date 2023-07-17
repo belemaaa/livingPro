@@ -20,27 +20,47 @@ const Signup = () => {
 
       <div className='signup-form-div'>
         <form method='POST' className='signup-form'>
-          <input type='text' name='name' placeholder='Enter your Full name' required
-          className='signup-form-input-box border'/>
-          <input type='email' name='email' placeholder='Enter your Email Address' required
-          className='signup-form-input-box border'/>
-          <input type='password' name='password' placeholder='Enter your Password' required
-          className='signup-form-input-box border'/>
+          <input type='text' 
+          name='name' 
+          placeholder='Enter your Full name' 
+          required
+          className='signup-form-input-box border'
+          />
+
+          <input type='email' 
+          name='email' 
+          placeholder='Enter your Email Address' 
+          required
+          className='signup-form-input-box border'
+          />
+
+          <input type='password' 
+          name='password' 
+          placeholder='Enter your Password' 
+          required
+          className='signup-form-input-box border'
+          />
 
           <div className='flex flex-row'>
-            <label for='Remember me' className='RememberMe'>Remember me</label>
+            <label for='Remember me' className='RememberMe'>
+              Remember me
+            </label>
             <div className='RM-checkbox'>
               <input type='checkbox' name='RememberMe'/>
             </div>
           </div>
 
           <br/>
-          <button type='submit' className='create-account-btn'>Create Account</button>
+          <button type='submit' className='create-account-btn'>
+            Create Account
+          </button>
         </form>
       </div>
 
       <div className='google-auth-div'>
-        <p className='google-auth-p'>You can create an account with</p>
+        <p className='google-auth-p'>
+          You can create an account with
+        </p>
         <div>
           <Link to='#'>
             <img src={GoogleFrame} className='google-frame'/>

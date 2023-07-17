@@ -202,3 +202,16 @@
     font-weight: 400;
     color: #007FE0;
 }
+.verification-pins{
+    width: 314px;
+    height: 44px;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+.verification-pin{
+    border-radius: 10px;
+    width: 45px;
+    height: 60px;
+    border-color: black;
+    margin-right: 7px;
+}

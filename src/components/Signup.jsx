@@ -8,10 +8,9 @@ import GoogleFrame from '../assets/images/GoogleFrame.png'
 const Signup = () => {
   const navigate = useNavigate();
 
-  const handleCreateAccount = (event) => {
-     // Prevent the default form submission until api calls are handled
-    event.preventDefault();
+  const handleCreateAccount = () => {
 
+     // handle any api calls
 
     navigate('/Email-Verification');
   };

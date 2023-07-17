@@ -5,6 +5,19 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 const EmailVerification = () => {
+  const navigate = useNavigate();
+
+  const handleVerify = () => {
+
+     // handle any api calls
+
+    navigate('#');
+  };
+  const handlePinChange = (event) => {
+    const inputValue = event.target.value;
+    event.target.value = inputValue.slice(0, 1);
+  };
+
   return (
     <div>
         <div className='signup-go-back-btn'>
@@ -15,7 +28,43 @@ const EmailVerification = () => {
 
         <div className='signup-head'>
             <p className='signup-welcome'>Welcome!!</p>
-            <p className='signup-head-p'>Kindly fill in these details to create an account and find what you need</p>
+            <p className='signup-head-p'>
+                Kindly fill in the six digit pin we sent to your mail
+            </p>
+        </div>
+
+        <div className='verification-pins'>
+            <form method='POST' onSubmit={handleVerify}>
+                <input type='text' 
+                className='verification-pin border'
+                maxLength={1}
+                onInput={handlePinChange}/>
+
+                <input type='text' 
+                className='verification-pin border'
+                maxLength={1}
+                onInput={handlePinChange}/>
+
+                <input type='text' 
+                className='verification-pin border'
+                maxLength={1}
+                onInput={handlePinChange}/>
+
+                <input type='text' 
+                className='verification-pin border'
+                maxLength={1}
+                onInput={handlePinChange}/>
+
+                <input type='text' 
+                className='verification-pin border'
+                maxLength={1}
+                onInput={handlePinChange}/>
+
+                <input type='text' 
+                className='verification-pin border'
+                maxLength={1}
+                onInput={handlePinChange}/>
+            </form>
         </div>
     </div>
   )

@@ -2,9 +2,19 @@ import React from 'react'
 import '../assets/css/styles.css'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import GoogleFrame from '../assets/images/GoogleFrame.png'
 
 const Signup = () => {
+  const navigate = useNavigate();
+
+  const handleCreateAccount = () => {
+
+    // any necessary api call
+
+    navigate('/Email Verification');
+  };
+
   return (
     <div>
       <div className='signup-go-back-btn'>
@@ -25,6 +35,7 @@ const Signup = () => {
           placeholder='Enter your Full name' 
           required
           className='signup-form-input-box border'
+          autoComplete='off'
           />
 
           <input type='email' 
@@ -32,6 +43,7 @@ const Signup = () => {
           placeholder='Enter your Email Address' 
           required
           className='signup-form-input-box border'
+          autoComplete='off'
           />
 
           <input type='password' 
@@ -39,6 +51,7 @@ const Signup = () => {
           placeholder='Enter your Password' 
           required
           className='signup-form-input-box border'
+          autoComplete='off'
           />
 
           <div className='flex flex-row'>
@@ -51,7 +64,9 @@ const Signup = () => {
           </div>
 
           <br/>
-          <button type='submit' className='create-account-btn'>
+          <button type='submit' className='create-account-btn'
+          onclick={handleCreateAccount}
+          >
             Create Account
           </button>
         </form>
@@ -73,8 +88,11 @@ const Signup = () => {
         <Link to='/login' className='signup-login-link'> Log in</Link>
         </span>
       </p>
+
+      
     </div>
   )
+
 }
 
 export default Signup

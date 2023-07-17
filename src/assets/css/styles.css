@@ -124,6 +124,7 @@
     border-radius: 10px;
     border-color: #e7e6e6;
     margin-bottom: 20px;
+    padding-left: 10px;
 }
 .signup-form-input-box::placeholder{
     padding-left: 10px;

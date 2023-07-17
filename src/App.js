@@ -5,6 +5,7 @@ import Onboarding2 from "./components/Onboarding2";
 import Onboarding3 from "./components/Onboarding3";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
+import EmailVerification from "./components/EmailVerification";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/onboarding3' element={<Onboarding3/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/home' element={<Home/>} />
+          <Route path='/Email Verification' element={<EmailVerification/>}/>
         </Routes>
       </Router>
     </div>

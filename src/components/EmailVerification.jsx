@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import '../assets/css/styles.css'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
@@ -6,18 +6,36 @@ import { useNavigate } from 'react-router-dom';
 
 const EmailVerification = () => {
   const navigate = useNavigate();
-
-  const handleVerify = () => {
+  const handleNavigation = () => {
 
      // handle any api calls
 
     navigate('#');
   };
-  const handlePinChange = (event) => {
-    const inputValue = event.target.value;
-    event.target.value = inputValue.slice(0, 1);
+
+  const inputRefs = useRef([]);
+  const handlePinChange = (event, index) => {
+    const pin = event.target.value;
+    const nextIndex = index + 1;
+
+    // focus on the next input field
+    if (pin && nextIndex < inputRefs.current.length) {
+      inputRefs.current[nextIndex].focus();
+    }
   };
 
+  const handleVerify = (event) => {
+    event.preventDefault();
+
+    const pinArray = inputRefs.current.map((inputRef) => inputRef.value);
+    const pinCode = pinArray.join('');
+
+    // api call for verification
+
+    inputRefs.current.forEach((inputRef) => {
+      inputRef.value = '';
+    });
+  };
   return (
     <div>
         <div className='signup-go-back-btn'>
@@ -34,36 +52,17 @@ const EmailVerification = () => {
         </div>
 
         <div className='verification-pins'>
-            <form method='POST' onSubmit={handleVerify}>
-                <input type='text' 
-                className='verification-pin border'
-                maxLength={1}
-                onInput={handlePinChange}/>
-
-                <input type='text' 
-                className='verification-pin border'
-                maxLength={1}
-                onInput={handlePinChange}/>
-
-                <input type='text' 
-                className='verification-pin border'
-                maxLength={1}
-                onInput={handlePinChange}/>
-
-                <input type='text' 
-                className='verification-pin border'
-                maxLength={1}
-                onInput={handlePinChange}/>
-
-                <input type='text' 
-                className='verification-pin border'
-                maxLength={1}
-                onInput={handlePinChange}/>
-
-                <input type='text' 
-                className='verification-pin border'
-                maxLength={1}
-                onInput={handlePinChange}/>
+            <form method='POST' onSubmit={handleNavigation}>
+                {Array.from({ length: 6 }, (_, index) => (
+                    <input
+                        key={index}
+                        type='text'
+                        className='verification-pin border'
+                        maxLength={1}
+                        ref={(el) => (inputRefs.current[index] = el)}
+                        onInput={(event) => handlePinChange(event, index)}
+                    />
+                ))}
             </form>
         </div>
     </div>

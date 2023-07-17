@@ -50,7 +50,7 @@ const Signup = () => {
 
       <p className='login-option'>Not new here? Please 
         <span className='login'>
-        <Link to='/login'>Log in</Link>
+        <Link to='/login' className='signup-login-link'> Log in</Link>
         </span>
       </p>
     </div>

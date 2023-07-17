@@ -122,7 +122,7 @@
     width: 343px;
     height: 44px;
     border-radius: 10px;
-    border-color: #8f8e8e;
+    border-color: #e7e6e6;
     margin-bottom: 20px;
 }
 .signup-form-input-box::placeholder{
@@ -189,5 +189,14 @@
     width: 316px;
     height: 18px;
     margin-top: 55px;
-    margin-left: 29px;
+    margin-left: 49px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+    text-align: center;
+}
+.signup-login-link{
+    font-weight: 400;
+    color: #007FE0;
 }

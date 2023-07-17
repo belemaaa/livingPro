@@ -10,7 +10,7 @@ const EmailVerification = () => {
 
      // handle any api calls
 
-    navigate('#');
+    navigate('/about');
   };
 
   const inputRefs = useRef([]);
@@ -49,15 +49,15 @@ const EmailVerification = () => {
                         maxLength={1}
                         ref={(el) => (inputRefs.current[index] = el)}
                         onInput={(event) => handlePinChange(event, index)}
+                        required
                     />
                 ))}
+
+                <button type='submit' className='email-verify-btn'  >
+                    Verify
+                </button>
             </form>
         </div>
-
-        <button type='submit' className='email-verify-btn'
-          >
-            Verify
-        </button>
     </div>
   )
 }

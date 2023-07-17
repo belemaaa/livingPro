@@ -6,6 +6,7 @@ import Onboarding3 from "./components/Onboarding3";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
 import EmailVerification from "./components/EmailVerification";
+import AboutInfo from "./components/AboutInfo";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/signup' element={<Signup/>} />
           <Route path='/home' element={<Home/>} />
           <Route path='/email-verification' element={<EmailVerification/>}/>
+          <Route path='/about' element={<AboutInfo/>}/>
         </Routes>
       </Router>
     </div>

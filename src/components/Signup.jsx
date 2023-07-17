@@ -8,11 +8,12 @@ import GoogleFrame from '../assets/images/GoogleFrame.png'
 const Signup = () => {
   const navigate = useNavigate();
 
-  const handleCreateAccount = () => {
+  const handleCreateAccount = (event) => {
+     // Prevent the default form submission until api calls are handled
+    event.preventDefault();
 
-    // any necessary api call
 
-    navigate('/Email Verification');
+    navigate('/Email-Verification');
   };
 
   return (
@@ -29,7 +30,7 @@ const Signup = () => {
       </div>
 
       <div className='signup-form-div'>
-        <form method='POST' className='signup-form'>
+        <form method='POST' className='signup-form' onSubmit={handleCreateAccount}>
           <input type='text' 
           name='name' 
           placeholder='Enter your Full name' 
@@ -65,7 +66,6 @@ const Signup = () => {
 
           <br/>
           <button type='submit' className='create-account-btn'
-          onclick={handleCreateAccount}
           >
             Create Account
           </button>

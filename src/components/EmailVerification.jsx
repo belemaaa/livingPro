@@ -53,6 +53,11 @@ const EmailVerification = () => {
                 ))}
             </form>
         </div>
+
+        <button type='submit' className='email-verify-btn'
+          >
+            Verify
+        </button>
     </div>
   )
 }

@@ -27,10 +27,15 @@ const Signup = () => {
           <input type='password' name='password' placeholder='Enter your Password' required
           className='signup-form-input-box border'/>
 
-          <label for='Remember me' className='RememberMe'>Remember me</label>
-          <input type='checkbox' name='RememberMe' className='RM-checkbox'/>
+          <div className='flex flex-row'>
+            <label for='Remember me' className='RememberMe'>Remember me</label>
+            <div className='RM-checkbox'>
+              <input type='checkbox' name='RememberMe'/>
+            </div>
+          </div>
 
-          <button type='submit'>Create Account</button>
+          <br/>
+          <button type='submit' className='create-account-btn'>Create Account</button>
         </form>
       </div>
 

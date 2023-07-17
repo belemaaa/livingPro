@@ -41,7 +41,7 @@ const Signup = () => {
 
       <div className='google-auth-div'>
         <p className='google-auth-p'>You can create an account with</p>
-        <div className='google-auth'>
+        <div>
           <Link to='#'>
             <img src={GoogleFrame} className='google-frame'/>
           </Link>

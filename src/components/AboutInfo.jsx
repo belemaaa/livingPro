@@ -70,8 +70,15 @@ const AboutInfo = () => {
             className='about-form-input-box'
             />
 
-            
+            <label>Here for:</label>
+            <button className='here-for-option-btn'>Find apartment</button>
+            <button className='here-for-option-btn'>Find a roomate</button>
+            <button className='here-for-option-btn'>Post apartment</button>
 
+            <button type='submit' className='about-proceed-btn'
+            >
+                Proceed
+            </button>
           </form>
         </div>
     </div>

@@ -11,6 +11,31 @@ const AboutInfo = () => {
                 <IoIosArrowBack size={30}/>
             </Link>
         </div>
+
+        <div>
+          <form method='POST'>
+            <label>What's your full name? <span>*</span></label>
+            <input type='text' name='name' 
+            className='about-form-input-box'
+            required/>
+
+            <label>What do you do? (Occupation) <span>*</span></label>
+            <input type='text' name='name' 
+            className='about-form-input-box'
+            required/>
+
+            <label>Age? <span>*</span></label>
+            <input type='text' name='name' 
+            className='about-form-input-box'
+            required/>
+
+            <label>Date of Birth? <span>*</span></label>
+            <input type='date' 
+            name='name' 
+            className='about-form-input-box'
+            required/>
+          </form>
+        </div>
     </div>
   )
 }

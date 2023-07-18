@@ -17,7 +17,7 @@ const Login = () => {
     return (
       <div>
         <div className='signup-go-back-btn'>
-          <Link to='/onboarding3'>
+          <Link to='/signup'>
               <IoIosArrowBack size={30}/>
           </Link>
         </div>
@@ -45,23 +45,23 @@ const Login = () => {
             autoComplete='off'
             />
   
-            <div>
+            <div className='forgot-password-btn'>
                 <Link to='#'>
-                    Forgot passoword?
+                    Forgot Passoword?
                 </Link>
             </div>
   
             <br/>
             <button type='submit' className='create-account-btn'
             >
-              Create Account
+                Log in
             </button>
           </form>
         </div>
   
         <div className='google-auth-div'>
           <p className='google-auth-p'>
-            You can create an account with
+            You can log in with
           </p>
           <div>
             <Link to='#'>
@@ -70,9 +70,9 @@ const Login = () => {
           </div>
         </div>
   
-        <p className='login-option'>Not new here? Please 
-          <span className='login'>
-          <Link to='/login' className='signup-login-link'> Log in</Link>
+        <p className='create-account-option'>New here? Please 
+          <span className=''>
+          <Link to='/signup' className='signup-create-account-link'> Create an Account</Link>
           </span>
         </p>
   

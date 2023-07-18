@@ -122,7 +122,7 @@
     width: 343px;
     height: 44px;
     border-radius: 10px;
-    border-color: #7c7b7b;
+    border-color: #d5d4d4;
     margin-bottom: 20px;
     padding-left: 10px;
     font-size: 12px;
@@ -137,7 +137,7 @@
     height: 18px;
     color: #000000;
 }
-.RememberMe{
+.RememberMe, .forgot-password-btn{
     color: #007FE0;
     width: fit-content;
     height: 18px;
@@ -187,7 +187,8 @@
     border: 1px;
     gap: 10px;
 }
-.login-option{
+.login-option, 
+.create-account-option{
     width: 316px;
     height: 18px;
     margin-top: 55px;
@@ -198,7 +199,8 @@
     letter-spacing: -0.3px;
     text-align: center;
 }
-.signup-login-link{
+.signup-login-link, 
+.signup-create-account-link{
     font-weight: 400;
     color: #007FE0;
 }

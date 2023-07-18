@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import EmailVerification from "./components/EmailVerification";
 import AboutInfo from "./components/AboutInfo";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/signup' element={<Signup/>} />
           <Route path='/home' element={<Home/>} />
           <Route path='/email-verification' element={<EmailVerification/>}/>
+          <Route path="/login" element={<Login/>}/>
           <Route path='/about' element={<AboutInfo/>}/>
         </Routes>
       </Router>

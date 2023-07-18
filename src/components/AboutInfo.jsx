@@ -29,30 +29,43 @@ const AboutInfo = () => {
 
         <div>
           <form method='POST'>
-            <label>What's your full name? <span>*</span></label>
+            <label className='about-form-label'>What's your full name? 
+            <span className='required-asterik'>*</span></label>
+
             <input type='text' name='name' 
-            className='about-form-input-box'
+            className='about-form-input-box border'
             required/>
 
-            <label>What do you do? (Occupation) <span>*</span></label>
+            <br/>
+            <label className='about-form-label'>What do you do? (Occupation) 
+            <span className='required-asterik'>*</span></label>
+
             <input type='text' name='occupation' 
-            className='about-form-input-box'
+            className='about-form-input-box border'
             required/>
 
-            <label>Age? <span>*</span></label>
+            <br/>
+            <label className='about-form-label'>Age? 
+            <span className='required-asterik'>*</span></label>
+
             <input type='text' name='age' 
-            className='about-form-input-box'
+            className='about-form-input-box border'
             required/>
 
-            <label>Date of Birth <span>*</span></label>
+            <label className='about-form-label'>Date of Birth 
+            <span className='required-asterik'>*</span></label>
+
             <input type='date' 
             name='dateOfBirth' 
-            className='about-form-input-box'
+            className='about-form-input-box border'
             required/>
 
-            <label>Location <span>*</span></label>
+            <br/>
+            <label className='about-form-label'>Location 
+            <span className='required-asterik'>*</span></label>
+
             <select name='location' 
-            className='about-form-input-box' 
+            className='about-form-input-box border' 
             value={selectedLocation} 
             onChange={handleLocationChange}
             required>
@@ -64,13 +77,15 @@ const AboutInfo = () => {
                 ))}
             </select>
 
-            <label>Mobile number</label>
+            <br/>
+            <label className='about-form-label'>Mobile number</label>
             <input type='phone' 
             name='phone' 
-            className='about-form-input-box'
+            className='about-form-input-box border'
             />
 
-            <label>Here for:</label>
+            <br/>
+            <label className='about-form-label'>Here for:</label>
             <button className='here-for-option-btn'>Find apartment</button>
             <button className='here-for-option-btn'>Find a roomate</button>
             <button className='here-for-option-btn'>Post apartment</button>

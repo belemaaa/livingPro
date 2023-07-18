@@ -45,19 +45,19 @@ const AboutInfo = () => {
             required/>
 
             <br/>
-            <label className='about-form-label'>Age? 
+            <label className='about-form-label-A'>Age? 
             <span className='required-asterik'>*</span></label>
 
             <input type='text' name='age' 
-            className='about-form-input-box border'
+            className='about-form-input-box-A border'
             required/>
 
-            <label className='about-form-label'>Date of Birth 
+            <label className='about-form-label-D'>Date of Birth 
             <span className='required-asterik'>*</span></label>
 
             <input type='date' 
             name='dateOfBirth' 
-            className='about-form-input-box border'
+            className='about-form-input-box-D border'
             required/>
 
             <br/>

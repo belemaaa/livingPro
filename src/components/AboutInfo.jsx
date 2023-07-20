@@ -94,6 +94,7 @@ const AboutInfo = () => {
             >
                 Proceed
             </button>
+            {/* next */}
           </form>
         </div>
     </div>

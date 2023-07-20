@@ -30,6 +30,10 @@ const CompatibilityTest4 = () => {
             Tell us something you think about a lot,
             that either bothers or amuses you.
         </p>
+
+        <form method='POST'>
+            <textarea className='compat-4-textarea border'/>
+        </form>
     </div>
   )
 }

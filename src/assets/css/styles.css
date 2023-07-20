@@ -460,7 +460,16 @@
     margin-top: 26px;
     margin-left: 30px;
     font-weight: 400;
-    size: 13px;
+    font-size: 13px;
     line-height: 18px;
     letter-spacing: -0.3px;
+}
+.compat-4-textarea{
+    width: 350px;
+    height: 160px;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 10px;
+    border-color: #dfdede;
+    padding: 10px;
 }

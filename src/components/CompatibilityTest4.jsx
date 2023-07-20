@@ -4,11 +4,16 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 const CompatibilityTest4 = () => {
+    const navigate = useNavigate()
+    const handleProceed = () => {
+        navigate('/home')
+    }
+
   return (
     <div>
         <div className='prev-next-options'>
             <div className='signup-go-back-btn'>
-                <Link to='/compatibility_test_2'>
+                <Link to='/compatibility_test_3'>
                     <IoIosArrowBack size={30}/>
                 </Link>
             </div>
@@ -31,8 +36,12 @@ const CompatibilityTest4 = () => {
             that either bothers or amuses you.
         </p>
 
-        <form method='POST'>
+        <form method='POST' onSubmit={handleProceed}>
             <textarea className='compat-4-textarea border'/>
+
+            <button type='submit' className='compat-proceed-btn-M'>
+                Done
+            </button>
         </form>
     </div>
   )

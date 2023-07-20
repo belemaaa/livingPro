@@ -454,3 +454,13 @@
     gap: 10px;
     color: white;
 }
+.compat-4-upper-p{
+    width: 315px;
+    Height: 36px;
+    margin-top: 26px;
+    margin-left: 30px;
+    font-weight: 400;
+    size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+}

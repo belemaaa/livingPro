@@ -63,7 +63,7 @@ const CompatibilityTest2 = () => {
 
     const navigate = useNavigate()
     const handleProceed = () => {
-        navigate('/compatibility_test_2')
+        navigate('/compatibility_test_3')
     }
 
   return (

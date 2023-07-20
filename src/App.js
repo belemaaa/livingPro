@@ -10,6 +10,7 @@ import AboutInfo from "./components/AboutInfo";
 import Login from "./components/Login";
 import CompatibilityTest1 from "./components/CompatibilityTest1";
 import CompatibilityTest2 from "./components/CompatibilityTest2";
+import CompatibilityTest3 from "./components/CompatibilityTest3";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='/about' element={<AboutInfo/>}/>
           <Route path="/compatibility_test_1" element={<CompatibilityTest1/>}/>
           <Route path="/compatibility_test_2" element={<CompatibilityTest2/>}/>
+          <Route path="/compatibility_test_3" element={<CompatibilityTest3/>}/>
         </Routes>
       </Router>
     </div>

@@ -5,16 +5,20 @@ import { useNavigate } from 'react-router-dom';
 
 const AboutInfo = () => {
   const [selectedLocation, setSelectedLocation] = useState('');
+  const [hereForBtn, setHereForBtn] = useState(false)
 
   // Array of Nigerian state names
   const nigerianStates = [
     'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra',   
   ];
 
-
   const handleLocationChange = (event) => {
     setSelectedLocation(event.target.value);
   };
+
+  // const handleBtnClick = () => {
+  //   setHereForBtn(true)
+  // }
 
   return (
     <div>
@@ -35,7 +39,8 @@ const AboutInfo = () => {
 
               <input type='text' name='name' 
               className='about-form-input-box border'
-              required/>
+              required
+              autoComplete='off'/>
             </div>
             
             <br/>
@@ -46,7 +51,8 @@ const AboutInfo = () => {
 
               <input type='text' name='occupation' 
               className='about-form-input-box border'
-              required/>
+              required
+              autoComplete='off'/>
             </div>     
 
             <br/>
@@ -62,7 +68,8 @@ const AboutInfo = () => {
                 <br/>
                 <input type='text' name='age' 
                 className='about-form-input-box-A border'
-                required/>
+                required
+                autoComplete='off'/>
               </div>
               
               <div>
@@ -82,43 +89,81 @@ const AboutInfo = () => {
 
             <br/>
 
-            <div>
-              <label className='about-form-label'>Location 
-              <span className='required-asterik'>*</span></label>
+            <div className='about-2'>
+              <div>
+                <label className='about-form-label'>Location 
+                <span className='required-asterik'>*</span></label>
 
-              <select name='location' 
-              className='about-form-input-box border' 
-              value={selectedLocation} 
-              onChange={handleLocationChange}
-              required>
-                <option value=""></option>
-                  {nigerianStates.map((state) => (
-                    <option key={state} value={state}>
-                      {state}
-                    </option>
-                  ))}
-              </select>
-            </div>
-           
+                <select name='location' 
+                className='about-form-input-box border' 
+                value={selectedLocation} 
+                onChange={handleLocationChange}
+                required>
+                  <option value=""></option>
+                    {nigerianStates.map((state) => (
+                      <option key={state} value={state}>
+                        {state}
+                      </option>
+                    ))}
+                </select>
+              </div>
+            
 
-            <br/>
+              <br/>
 
-            <div>
-              <label className='about-form-label'>Mobile number</label>
-              <input type='phone' 
-              name='phone' 
-              className='about-form-input-box border'
-              />
-            </div>
-           
+              <div>
+                <label className='about-form-label'>Mobile number</label>
+                <input type='phone' 
+                name='phone' 
+                className='about-form-input-box border'
+                autoComplete='off'/>
+              </div>
+            
 
-            <br/>
+              <br/>
 
-            <div>
-              <label className='about-form-label'>Here for:</label>
-              <button className='here-for-option-btn'>Find apartment</button>
-              <button className='here-for-option-btn'>Find a roomate</button>
-              <button className='here-for-option-btn'>Post apartment</button>
+              <div>
+                <label className='about-form-label'>Here for:</label>
+                <br/>
+                <div>
+                  <button className='here-for-option-btn' 
+                  onClick={() => setHereForBtn(!hereForBtn)}>
+                    {hereForBtn ? <p style={{ backgroundColor: 'blue' }}>
+                      Find apartment
+                    </p> 
+                    :
+                    <p style={{ backgroundColor: 'gray' }}>
+                      Find apartment
+                    </p>}
+                  </button>
+                </div>
+                
+                <div>
+                  <button className='here-for-option-btn' 
+                  onClick={() => setHereForBtn(!hereForBtn)}>
+                    {hereForBtn ? <p style={{ backgroundColor: 'blue' }}>
+                      Find a roomate
+                    </p> 
+                    :
+                    <p style={{ backgroundColor: 'gray' }}>
+                      Find a roomate
+                    </p>}
+                  </button>
+                </div>
+                <div>
+                  <button className='here-for-option-btn' 
+                  onClick={() => setHereForBtn(!hereForBtn)}>
+                    {hereForBtn ? <p style={{ backgroundColor: 'blue' }}>
+                      Post apartment
+                    </p> 
+                    :
+                    <p style={{ backgroundColor: 'gray' }}>
+                      Post apartment
+                    </p>}
+                  </button>
+                </div>
+              </div>
+            
             </div>
             
 

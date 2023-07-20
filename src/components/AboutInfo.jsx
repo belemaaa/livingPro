@@ -19,6 +19,19 @@ const AboutInfo = () => {
     setSelectedLocation(event.target.value);
   };
 
+  const handleApartBtn = (e) => {
+    e.preventDefault()
+    setApartBtn(!apartBtn)
+  }
+  const handleRoomateBtn = (e) => {
+    e.preventDefault()
+    setRoomateBtn(!roomateBtn)
+  }
+  const handlePostBtn = (e) => {
+    e.preventDefault()
+    setPostBtn(!postbtn)
+  }
+
   const handleProceed = () => {
     navigate('/compatibility_test_1')
   }
@@ -129,7 +142,7 @@ const AboutInfo = () => {
 
                 <div className='here-for-option-btns'>
                   <div className='here-for-option-btn'>
-                    <button onClick={() => setApartBtn(!apartBtn)}>
+                    <button onClick={handleApartBtn}>
                       {apartBtn ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
                       className='here-for-btn-text border'>
                         Find apartment
@@ -142,7 +155,7 @@ const AboutInfo = () => {
                   </div>
                   
                   <div className='here-for-option-btn'>
-                    <button onClick={() => setRoomateBtn(!roomateBtn)}>
+                    <button onClick={handleRoomateBtn}>
                       {roomateBtn ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
                       className='here-for-btn-text'>
                         Find a roomate
@@ -156,7 +169,7 @@ const AboutInfo = () => {
                   </div>
                   
                   <div className='here-for-option-btn'>
-                    <button onClick={() => setPostBtn(!postbtn)}>
+                    <button onClick={handlePostBtn}>
                       {postbtn ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
                       className='here-for-btn-text border'>
                         Post apartment
@@ -174,8 +187,7 @@ const AboutInfo = () => {
             </div>
             
 
-            <button type='submit' className='about-proceed-btn'
-            >
+            <button type='submit' className='about-proceed-btn'>
                 Proceed
             </button>
           </form>

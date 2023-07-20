@@ -26,7 +26,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path='/about' element={<AboutInfo/>}/>
           <Route path="/compatibility_test_1" element={<CompatibilityTest1/>}/>
-          <Route path="/compatibility_test_1" element={<CompatibilityTest2/>}/>
+          <Route path="/compatibility_test_2" element={<CompatibilityTest2/>}/>
         </Routes>
       </Router>
     </div>

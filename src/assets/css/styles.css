@@ -387,7 +387,8 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-.personality{
+.personality,
+.habits{
     width: 81px;
     height: 18px;
     margin-left: 28px;

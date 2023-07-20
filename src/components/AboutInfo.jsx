@@ -29,7 +29,7 @@ const AboutInfo = () => {
 
         <div>
           <form method='POST'>
-            <div className='about-form-div'>
+            <div>
               <label className='about-form-label'>What's your full name? 
               <span className='required-asterik'>*</span></label>
 
@@ -40,7 +40,7 @@ const AboutInfo = () => {
             
             <br/>
 
-            <div className='about-form-div'>
+            <div>
               <label className='about-form-label'>What do you do? (Occupation) 
               <span className='required-asterik'>*</span></label>
 
@@ -53,9 +53,12 @@ const AboutInfo = () => {
 
             <div className='AD'>
               <div>
-                <label className=''>Age? 
-                  <span className='required-asterik'>*</span>
-                </label>
+                <div className='age'>
+                  <label className=''>Age? 
+                    <span className='required-asterik'>*</span>
+                  </label>
+                </div>
+                
                 <br/>
                 <input type='text' name='age' 
                 className='about-form-input-box-A border'
@@ -63,8 +66,12 @@ const AboutInfo = () => {
               </div>
               
               <div>
-                <label className=''>Date of Birth 
-                <span className='required-asterik'>*</span></label>
+                <div className='dob'>
+                  <label>Date of Birth 
+                    <span className='required-asterik'>*</span>
+                  </label>
+                </div>
+               
                 <br/>
                 <input type='date' 
                 name='dateOfBirth' 
@@ -75,7 +82,7 @@ const AboutInfo = () => {
 
             <br/>
 
-            <div className='about-form-div'>
+            <div>
               <label className='about-form-label'>Location 
               <span className='required-asterik'>*</span></label>
 
@@ -96,7 +103,7 @@ const AboutInfo = () => {
 
             <br/>
 
-            <div className='about-form-div'>
+            <div>
               <label className='about-form-label'>Mobile number</label>
               <input type='phone' 
               name='phone' 
@@ -107,7 +114,7 @@ const AboutInfo = () => {
 
             <br/>
 
-            <div className='about-form-div'>
+            <div>
               <label className='about-form-label'>Here for:</label>
               <button className='here-for-option-btn'>Find apartment</button>
               <button className='here-for-option-btn'>Find a roomate</button>

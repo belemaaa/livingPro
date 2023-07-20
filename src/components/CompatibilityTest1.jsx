@@ -41,6 +41,7 @@ const CompatibilityTest1 = () => {
     const [trustworthy, setTrustworthy] = useState(false)
     const [creative, setCreative] = useState(false)
     const [introvert, setIntrovert] = useState(false)
+    const [extrovert, setExtrovert] = useState(false)
     const [optimistic, setOptimistic] = useState(false)
     const [egocentric, setEgocentric] = useState(false)
     const [selfaware, setSelfaware] = useState(false)
@@ -50,6 +51,84 @@ const CompatibilityTest1 = () => {
     const [emotional, setEmotional] = useState(false)
     const [stubborn, setStubborn] = useState(false)
     const [playful, setPlayful] = useState(false)
+
+    const handlePatientBtn = (e) => {
+        e.preventDefault()
+        setPatient(!patient)
+    }
+    const handleFunnyBtn = (e) => {
+        e.preventDefault()
+        setFunny(!funny)
+    }
+    const handleStrictBtn = (e) => {
+        e.preventDefault()
+        setStrict(!strict)
+    }
+    const handleOrganizedBtn = (e) => {
+        e.preventDefault()
+        setOrganized(!organized)
+    }
+    const handleNeatBtn = (e) => {
+        e.preventDefault()
+        setNeat(!neat)
+    }
+    const handleStraightforwardBtn = (e) => {
+        e.preventDefault()
+        setStraightforward(!straightForward)
+    }
+    const handleTrustworthyBtn = (e) => {
+        e.preventDefault()
+        setTrustworthy(!trustworthy)
+    }
+    const handleCreativeBtn = (e) => {
+        e.preventDefault()
+        setCreative(!creative)
+    }
+    const handleIntrovertBtn = (e) => {
+        e.preventDefault()
+        setIntrovert(!introvert)
+    }
+    const handleExtrovertBtn = (e) => {
+        e.preventDefault()
+        setExtrovert(!extrovert)
+    }
+    const handleOptimisticBtn = (e) => {
+        e.preventDefault()
+        setOptimistic(!optimistic)
+    }
+    const handleEgocentricBtn = (e) => {
+        e.preventDefault()
+        setEgocentric(!egocentric)
+    }
+    const handleSelfaware = (e) => {
+        e.preventDefault()
+        setSelfaware(!selfaware)
+    }
+    const handleHonestBtn = (e) => {
+        e.preventDefault()
+        setHonest(!honest)
+    }
+    const handleGenerous = (e) => {
+        e.preventDefault()
+        setGenerous(!generous)
+    }
+    const handleLogicalBtn = (e) => {
+        e.preventDefault()
+        setLogical(!logical)
+    }
+    const handleEmotionalBtn = (e) => {
+        e.preventDefault()
+        setEmotional(!emotional)
+    }
+    const handleStubbornBtn = (e) => {
+        e.preventDefault()
+        setStubborn(!stubborn)
+    }
+    const handlePlayfulBtn = (e) => {
+        e.preventDefault()
+        setPlayful(!playful)
+    }
+
 
   return (
     <div>

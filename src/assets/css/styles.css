@@ -87,8 +87,9 @@
 
 }
 .signup-go-back-btn{
-    margin-top: 77px;
+    margin-top: 61px;
     margin-left: 30px;
+    width: 16px;
 }
 .signup-head{
     margin-left: 30px;
@@ -359,4 +360,30 @@
     padding: 10px;
     gap: 10px;
     color: white;
+}
+.prev-next-options{
+    display: flex;
+    flex-direction: row;
+}
+.compat-skip{
+    width: 24px;
+    height: 18px;
+    margin-top: 61px;
+    margin-left: 299px;
+    color: #BE0000;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+}
+.compat-p{
+    width: 306px;
+    height: 36px;
+    margin-left: 30px;
+    margin-top: 9px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.3px;
 }

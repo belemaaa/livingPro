@@ -347,3 +347,16 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
+.about-proceed-btn{
+    width: 162px;
+    height: 36px;
+    margin-top: 32px;
+    margin-left: 120px;
+    background-color: #007FE0;
+    font-weight: 500;
+    font-size: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    color: white;
+}

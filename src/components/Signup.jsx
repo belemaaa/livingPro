@@ -12,7 +12,7 @@ const Signup = () => {
 
      // handle any api calls
 
-    navigate('/email-verification');
+    navigate('/email_verification');
   };
 
   return (

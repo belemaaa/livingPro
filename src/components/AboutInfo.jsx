@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 const AboutInfo = () => {
+  const navigate = useNavigate()
   const [selectedLocation, setSelectedLocation] = useState('');
   const [apartBtn, setApartBtn] = useState(false)
   const [roomateBtn, setRoomateBtn] = useState(false)
@@ -18,6 +19,10 @@ const AboutInfo = () => {
     setSelectedLocation(event.target.value);
   };
 
+  const handleProceed = () => {
+    navigate('/compatibility_test_1')
+  }
+
   return (
     <div>
         <div className='signup-go-back-btn'>
@@ -25,12 +30,10 @@ const AboutInfo = () => {
                 <IoIosArrowBack size={30}/>
             </Link>
         </div>
-        <div className=''>
-          <p className='about-welcome'>Let's get to know you better</p>
-        </div>
+        <p className='about-welcome'>Let's get to know you better</p>
 
         <div>
-          <form method='POST'>
+          <form method='POST' onSubmit={handleProceed}>
             <div>
               <label className='about-form-label'>What's your full name? 
               <span className='required-asterik'>*</span></label>
@@ -59,7 +62,7 @@ const AboutInfo = () => {
               <div>
                 <div className='age'>
                   <label className=''>Age? 
-                    <span className='required-asterik'>*</span>
+                  <span className='required-asterik'>*</span>
                   </label>
                 </div>
                 
@@ -73,7 +76,7 @@ const AboutInfo = () => {
               <div>
                 <div className='dob'>
                   <label>Date of Birth 
-                    <span className='required-asterik'>*</span>
+                  <span className='required-asterik'>*</span>
                   </label>
                 </div>
                
@@ -175,7 +178,6 @@ const AboutInfo = () => {
             >
                 Proceed
             </button>
-            {/* next */}
           </form>
         </div>
     </div>

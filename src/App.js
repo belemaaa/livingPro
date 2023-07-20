@@ -8,6 +8,7 @@ import Signup from "./components/Signup";
 import EmailVerification from "./components/EmailVerification";
 import AboutInfo from "./components/AboutInfo";
 import Login from "./components/Login";
+import CompatibilityTest1 from "./components/CompatibilityTest1";
 
 function App() {
   return (
@@ -20,9 +21,10 @@ function App() {
           <Route path='/onboarding3' element={<Onboarding3/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/home' element={<Home/>} />
-          <Route path='/email-verification' element={<EmailVerification/>}/>
+          <Route path='/email_verification' element={<EmailVerification/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path='/about' element={<AboutInfo/>}/>
+          <Route path="/compatibility_test_1" element={<CompatibilityTest1/>}/>
         </Routes>
       </Router>
     </div>

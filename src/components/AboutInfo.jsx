@@ -40,7 +40,7 @@ const AboutInfo = () => {
   return (
     <div>
         <div className='signup-go-back-btn'>
-            <Link to='/email-verification'>
+            <Link to='/email_verification'>
                 <IoIosArrowBack size={30}/>
             </Link>
         </div>

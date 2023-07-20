@@ -403,3 +403,14 @@
     margin-top: 9px;
     margin-left: 29.94px;
 }
+.personality-list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.here-for-option-btns-P{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}

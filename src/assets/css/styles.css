@@ -387,3 +387,19 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
+.personality{
+    width: 81px;
+    height: 18px;
+    margin-left: 28px;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18.15px;
+    letter-spacing: -0.3px;
+    align-items: center;
+}
+.border{
+    width: 350px;
+    margin-top: 9px;
+    margin-left: 29.94px;
+}

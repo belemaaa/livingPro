@@ -5,7 +5,9 @@ import { useNavigate } from 'react-router-dom';
 
 const AboutInfo = () => {
   const [selectedLocation, setSelectedLocation] = useState('');
-  const [hereForBtn, setHereForBtn] = useState(false)
+  const [apartBtn, setApartBtn] = useState(false)
+  const [roomateBtn, setRoomateBtn] = useState(false)
+  const [postbtn, setPostBtn] = useState(false)
 
   // Array of Nigerian state names
   const nigerianStates = [
@@ -15,10 +17,6 @@ const AboutInfo = () => {
   const handleLocationChange = (event) => {
     setSelectedLocation(event.target.value);
   };
-
-  // const handleBtnClick = () => {
-  //   setHereForBtn(true)
-  // }
 
   return (
     <div>
@@ -125,43 +123,49 @@ const AboutInfo = () => {
               <div>
                 <label className='about-form-label'>Here for:</label>
                 <br/>
-                <div>
-                  <button className='here-for-option-btn' 
-                  onClick={() => setHereForBtn(!hereForBtn)}>
-                    {hereForBtn ? <p style={{ backgroundColor: 'blue' }}>
-                      Find apartment
-                    </p> 
-                    :
-                    <p style={{ backgroundColor: 'gray' }}>
-                      Find apartment
-                    </p>}
-                  </button>
+
+                <div className='here-for-option-btns'>
+                  <div className='here-for-option-btn'>
+                    <button onClick={() => setApartBtn(!apartBtn)}>
+                      {apartBtn ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                      className='here-for-btn-text border'>
+                        Find apartment
+                      </p> 
+                      :
+                      <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                        Find apartment
+                      </p>}
+                    </button>
+                  </div>
+                  
+                  <div className='here-for-option-btn'>
+                    <button onClick={() => setRoomateBtn(!roomateBtn)}>
+                      {roomateBtn ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                      className='here-for-btn-text'>
+                        Find a roomate
+                      </p> 
+                      :
+                      <p  style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                        Find a roomate
+                      </p>
+                    }
+                    </button>
+                  </div>
+                  
+                  <div className='here-for-option-btn'>
+                    <button onClick={() => setPostBtn(!postbtn)}>
+                      {postbtn ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                      className='here-for-btn-text border'>
+                        Post apartment
+                      </p> 
+                      :
+                      <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                        Post apartment
+                      </p>}
+                    </button>
+                  </div>
                 </div>
                 
-                <div>
-                  <button className='here-for-option-btn' 
-                  onClick={() => setHereForBtn(!hereForBtn)}>
-                    {hereForBtn ? <p style={{ backgroundColor: 'blue' }}>
-                      Find a roomate
-                    </p> 
-                    :
-                    <p style={{ backgroundColor: 'gray' }}>
-                      Find a roomate
-                    </p>}
-                  </button>
-                </div>
-                <div>
-                  <button className='here-for-option-btn' 
-                  onClick={() => setHereForBtn(!hereForBtn)}>
-                    {hereForBtn ? <p style={{ backgroundColor: 'blue' }}>
-                      Post apartment
-                    </p> 
-                    :
-                    <p style={{ backgroundColor: 'gray' }}>
-                      Post apartment
-                    </p>}
-                  </button>
-                </div>
               </div>
             
             </div>

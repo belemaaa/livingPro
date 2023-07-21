@@ -18,7 +18,6 @@ const Signup = () => {
     const headers={
       'Content-Type': 'application/json',
     }
-
     const response = await fetch('https://lp-backend-production.up.railway.app/signup', {
       method: 'POST',
       headers: headers,

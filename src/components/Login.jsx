@@ -1,18 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import GoogleFrame from '../assets/images/GoogleFrame.png'
+import axios from 'axios';
 
 const Login = () => {
     const navigate = useNavigate();
+    const [username, setUsername] = useState('')
+    const [password, setPassword]  = useState('')
 
-    const handleLogin = () => {
+    const handleLogin = async (e) => {
+      e.preventDefault()
   
-       // handle any api calls
-  
-      navigate('/home');
-    };
+      const headers={
+        'Content-Type': 'multipart/form-data; boundary',
+      }
+      const response = await axios.post('https://lp-backend-production.up.railway.app/login',
+      {
+        username: username,
+        password: password
+      },
+      {headers: headers}
+      )
+      if (response.status === 200){
+        console.log('login was successful')
+        navigate('/home')
+      }
+      else{
+        console.log('an error occurred')
+      }
+    }
   
     return (
       <div>
@@ -30,7 +48,8 @@ const Login = () => {
         <div className='signup-form-div'>
           <form method='POST' className='signup-form' onSubmit={handleLogin}>
             <input type='email' 
-            name='email' 
+            value={username} 
+            onChange={(e) => setUsername(e.target.value)}
             placeholder='Enter your Email Address' 
             required
             className='signup-form-input-box border'
@@ -38,7 +57,8 @@ const Login = () => {
             />
   
             <input type='password' 
-            name='password' 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder='Enter your Password' 
             required
             className='signup-form-input-box border'

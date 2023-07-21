@@ -23,7 +23,7 @@ const Onboarding3 = () => {
         </div>
 
         <div className='boarding-icons'>
-            <Link to='/'>
+            <Link to='/livingPro'>
                 <img src={boardingempty} className='boarding-icon rounded-am'/>
             </Link>
         
@@ -44,6 +44,7 @@ const Onboarding3 = () => {
             <Link to='/signup' className='boarding-next px-[40px] py-2'>
                 Get Started
             </Link>
+            {/*  */}
         </div>
     </div>
     

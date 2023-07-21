@@ -26,7 +26,7 @@ const Onboarding1 = () => {
         </div>
 
         <div className='boarding-icons'>
-            <Link to='/livingPro'>
+            <Link to='/'>
                 <img src={boardingfill} className='boarding-icon rounded-am'/>
             </Link>
            

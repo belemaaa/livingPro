@@ -14,7 +14,7 @@ const Login = () => {
       e.preventDefault()
   
       const headers={
-        'Content-Type': 'multipart/form-data; boundary',
+        'Content-Type': 'multipart/form-data',
       }
       const response = await axios.post('https://lp-backend-production.up.railway.app/login',
       {

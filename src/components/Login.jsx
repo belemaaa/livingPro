@@ -13,22 +13,23 @@ const Login = () => {
     const handleLogin = async (e) => {
       e.preventDefault()
   
-      const headers={
-        'Content-Type': 'multipart/form-data',
-      }
-      const response = await axios.post('https://lp-backend-production.up.railway.app/login',
-      {
-        username: username,
-        password: password
-      },
-      {headers: headers}
-      )
-      if (response.status === 200){
-        console.log('login was successful')
-        navigate('/home')
-      }
-      else{
-        console.log('an error occurred')
+      try{
+        const headers={
+          'Content-Type': 'multipart/form-data',
+        }
+        const response = await axios.post('https://lp-backend-production.up.railway.app/login',
+        {
+          username: username,
+          password: password
+        },
+        {headers: headers}
+        )
+        if (response.status === 200){
+          console.log('login was successful')
+          navigate('/home')
+        }
+      } catch(error){
+        console.error('Error received: ', error)
       }
     }
   

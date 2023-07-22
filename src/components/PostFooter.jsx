@@ -9,7 +9,7 @@ import {CgProfile} from 'react-icons/cg'
 import { useNavigate } from 'react-router-dom'
 
 
-const DiscoverFooter = () => {
+const PostFooter = () => {
     const navigateToHome = useNavigate()
     const navigateToDiscover = useNavigate()
     const navigateToPost = useNavigate()
@@ -74,4 +74,4 @@ const DiscoverFooter = () => {
   )
 }
 
-export default DiscoverFooter
+export default PostFooter

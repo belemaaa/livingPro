@@ -9,7 +9,7 @@ import {CgProfile} from 'react-icons/cg'
 import { useNavigate } from 'react-router-dom'
 
 
-const InboxFooter = () => {
+const ProfileFooter = () => {
     const navigateToHome = useNavigate()
     const navigateToDiscover = useNavigate()
     const navigateToPost = useNavigate()
@@ -57,14 +57,14 @@ const InboxFooter = () => {
             </div>
 
             <div onClick={handleInbox}>
-                <AiFillMessage size={28} className='home-footer-icon-open'/>
+                <AiOutlineMessage size={28} className='home-footer-icon-closed'/>
                 <p className='home-footer-icon-name'>
                     Inbox
                 </p>
             </div>
 
             <div onClick={handleProfile}> 
-                <CgProfile size={28} className='home-footer-icon-closed'/>
+                <CgProfile size={28} className='home-footer-icon-open'/>
                 <p className='home-footer-icon-name'>
                     Profile
                 </p>
@@ -74,4 +74,4 @@ const InboxFooter = () => {
   )
 }
 
-export default InboxFooter
+export default ProfileFooter

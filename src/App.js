@@ -15,6 +15,7 @@ import CompatibilityTest4 from "./components/CompatibilityTest4";
 import CreatePost from "./components/CreatePost";
 import Discover from "./components/Discover";
 import Inbox from "./components/Inbox";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/discover" element={<Discover/>}/>
           <Route path="/post" element={<CreatePost/>}/>
           <Route path="/inbox" element={<Inbox/>}/>
+          <Route path="/profile" element={<Profile/>}/>
         </Routes>
       </Router>
     </div>

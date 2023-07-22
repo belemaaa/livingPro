@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import HomeFooter from './HomeFooter';
 
 const CreatePost = () => {
   useEffect(() => {
@@ -6,7 +7,11 @@ const CreatePost = () => {
   }, []);
 
   return (
-    <div>CreatePost</div>
+    <div>
+      <div>Create Post</div>
+
+      <HomeFooter/>
+    </div>
   )
 }
 

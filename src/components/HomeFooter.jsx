@@ -13,6 +13,8 @@ const HomeFooter = () => {
     const navigateToHome = useNavigate()
     const navigateToDiscover = useNavigate()
     const navigateToPost = useNavigate()
+    const navigateToInbox = useNavigate()
+    const navigateToProfile = useNavigate()
 
     const [home, setHome] = useState(false)
     const [discover, setDiscover] = useState(false)
@@ -35,6 +37,8 @@ const HomeFooter = () => {
         setPost(false)
         setInbox(false)
         setProfile(false)
+
+        navigateToDiscover('/discover')
     }
     const handlePost = () => {
         setHome(false)
@@ -51,6 +55,8 @@ const HomeFooter = () => {
         setPost(false)
         setInbox(true)
         setProfile(false)
+
+        navigateToInbox('/inbox')
     }
     const handleProfile = () => {
         setHome(false)
@@ -58,18 +64,41 @@ const HomeFooter = () => {
         setPost(true)
         setInbox(false)
         setProfile(true)
+
+        navigateToProfile('/profile')
     }
 
   return (
     <div>
         <div className='home-footer-icons'>
             <div onClick={handleHome}>
-                {home ? <HiHome /> : <HiHome />} 
-                {home && (
-                    <div>
-                        
-                    </div>
-                )}
+                {home ? <HiHome size={40} className='home-footer-icon'/>
+                 : 
+                <HiHome  size={40} className='home-footer-icon'/>} 
+            </div>
+
+            <div onClick={handleDiscover}>
+                {discover ? <BiSolidSearch size={40} className='home-footer-icon'/>
+                 : 
+                <FiSearch size={40} className='home-footer-icon'/>}
+            </div>
+
+            <div onClick={handlePost}>
+                {post ? <BsPencilSquare size={40} className='home-footer-icon'/>
+                 : 
+                <BsPencilSquare size={40} className='home-footer-icon'/>}
+            </div>
+
+            <div onClick={handleInbox}>
+                {post ? <AiFillMessage size={40} className='home-footer-icon'/>
+                 : 
+                <AiOutlineMessage size={40} className='home-footer-icon'/>}
+            </div>
+
+            <div onClick={handleProfile}>
+                {post ? <CgProfile size={40} className='home-footer-icon'/>
+                 : 
+                <CgProfile size={40} className='home-footer-icon'/>}
             </div>
         </div>
     </div>

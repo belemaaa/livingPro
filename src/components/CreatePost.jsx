@@ -12,32 +12,36 @@ const CreatePost = () => {
 
   return (
     <div className='post-page'>
-        <p>I want to post</p>
+        <p className='post-p'>I want to post</p>
 
-      <div>
-        <div>
+      <div className='post-images-div'>
+        <div className='post-image'>
           <Link to='#'>
             <img src={needApartment}/>
+            <p className='post-image-p'>A New Apartment</p>
           </Link>
         </div>
 
-        <div>
+        <div className='post-image'>
           <Link to='#'>
             <img src={needRoomate}/>
+            <p className='post-image-p'>Need a Roomate</p>
           </Link>
         </div>
       </div>
 
-      <div>
-        <div>
+      <div className='post-images-div'>
+        <div className='post-image'>
           <Link to='#'>
             <img src={needApartment}/>
+            <p className='post-image-p'>Got what I needed</p>
           </Link>
         </div>
 
-        <div>
+        <div className='post-image'>
           <Link to='#'>
             <img src={needRoomate}/>
+            <p className='post-image-p'>Need an Apartment</p>
           </Link>
         </div>
       </div>

@@ -72,16 +72,16 @@ const HomeFooter = () => {
     <div className='home-footer-div w-screen'>
         <div className='home-footer-icons border-t w-screen'>
             <div>
-                <HiHome size={28} className='home-footer-icon-open'/>
+                <HiHome size={26} className='home-footer-icon-open'/>
                 <p className='home-footer-icon-name'>
                     Home
                 </p>
             </div>
 
             <div onClick={handleDiscover}>
-                {discover ? <BiSolidSearch size={28} className='home-footer-icon-open'/>
+                {discover ? <BiSolidSearch size={26} className='home-footer-icon-open'/>
                  : 
-                <FiSearch size={28} className='home-footer-icon-closed'/>
+                <FiSearch size={26} className='home-footer-icon-closed'/>
                 }
                 <p className='home-footer-icon-name'>
                     Discover
@@ -89,9 +89,9 @@ const HomeFooter = () => {
             </div>
 
             <div onClick={handlePost}>
-                {post ? <BsPencilSquare size={28} className='home-footer-icon-open'/>
+                {post ? <BsPencilSquare size={26} className='home-footer-icon-open'/>
                  : 
-                <BsPencilSquare size={28} className='home-footer-icon-closed'/>
+                <BsPencilSquare size={26} className='home-footer-icon-closed'/>
                 }
                 <p className='home-footer-icon-name'>
                     Post
@@ -99,9 +99,9 @@ const HomeFooter = () => {
             </div>
 
             <div onClick={handleInbox}>
-                {post ? <AiFillMessage size={28} className='home-footer-icon-open'/>
+                {post ? <AiFillMessage size={26} className='home-footer-icon-open'/>
                  : 
-                <AiOutlineMessage size={28} className='home-footer-icon-closed'/>
+                <AiOutlineMessage size={26} className='home-footer-icon-closed'/>
                 }
                 <p className='home-footer-icon-name'>
                     Inbox
@@ -109,9 +109,9 @@ const HomeFooter = () => {
             </div>
 
             <div onClick={handleProfile}>
-                {post ? <CgProfile size={28} className='home-footer-icon-open'/>
+                {post ? <CgProfile size={26} className='home-footer-icon-open'/>
                  : 
-                <CgProfile size={28} className='home-footer-icon-closed'/>
+                <CgProfile size={26} className='home-footer-icon-closed'/>
                 }
                 <p className='home-footer-icon-name'>
                     Profile

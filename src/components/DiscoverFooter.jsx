@@ -36,35 +36,35 @@ const DiscoverFooter = () => {
     <div className='home-footer-div w-screen'>
         <div className='home-footer-icons border-t w-screen'>
             <div onClick={handleHome}> 
-                <HiHome  size={28} className='home-footer-icon-closed'/>
+                <HiHome  size={26} className='home-footer-icon-closed'/>
                 <p className='home-footer-icon-name'>
                     Home
                 </p>
             </div>
 
             <div onClick={handleDiscover}>
-                <BiSolidSearch size={28} className='home-footer-icon-open'/>
+                <BiSolidSearch size={26} className='home-footer-icon-open'/>
                 <p className='home-footer-icon-name'>
                     Discover
                 </p>
             </div>
 
             <div onClick={handlePost}> 
-                <BsPencilSquare size={28} className='home-footer-icon-closed'/>
+                <BsPencilSquare size={26} className='home-footer-icon-closed'/>
                 <p className='home-footer-icon-name'>
                     Post
                 </p>
             </div>
 
             <div onClick={handleInbox}>
-                <AiOutlineMessage size={28} className='home-footer-icon-closed'/>
+                <AiOutlineMessage size={26} className='home-footer-icon-closed'/>
                 <p className='home-footer-icon-name'>
                     Inbox
                 </p>
             </div>
 
             <div onClick={handleProfile}> 
-                <CgProfile size={28} className='home-footer-icon-closed'/>
+                <CgProfile size={26} className='home-footer-icon-closed'/>
                 <p className='home-footer-icon-name'>
                     Profile
                 </p>

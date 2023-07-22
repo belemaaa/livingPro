@@ -14,6 +14,7 @@ import CompatibilityTest3 from "./components/CompatibilityTest3";
 import CompatibilityTest4 from "./components/CompatibilityTest4";
 import CreatePost from "./components/CreatePost";
 import Discover from "./components/Discover";
+import Inbox from "./components/Inbox";
 
 function App() {
   return (
@@ -22,7 +23,6 @@ function App() {
         <Routes>
           <Route path='/' exact element={<Splash/>} />
           <Route path='/onboarding2' element={<Onboarding2/>} />
-          {/* <Route path='/onboarding2' element={<Onboarding3/>} /> */}
           <Route path='/onboarding3' element={<Onboarding3/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/home' element={<Home/>} />
@@ -35,7 +35,7 @@ function App() {
           <Route path="/compatibility_test_4" element={<CompatibilityTest4/>}/>
           <Route path="/discover" element={<Discover/>}/>
           <Route path="/post" element={<CreatePost/>}/>
-          {/* <Route path="/inbox" element={</>}/> */}
+          <Route path="/inbox" element={<Inbox/>}/>
         </Routes>
       </Router>
     </div>

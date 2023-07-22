@@ -59,7 +59,7 @@ const AboutInfo = () => {
               <input type='text' name='name' 
               className='about-form-input-box border'
               required
-              autoComplete='off'/>
+              />
             </div>
             
             <br/>

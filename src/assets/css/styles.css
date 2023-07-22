@@ -497,3 +497,13 @@
     gap: 10px;
     color: white;
 }
+.home-icon-bg{
+    background-color: #007FE0;
+    height: 50px;
+    margin-top: 50px;
+}
+.lp-home-icon{
+    height: 53px;
+    color: white;
+    margin-left: 185px;
+}

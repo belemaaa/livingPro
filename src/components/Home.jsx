@@ -1,4 +1,6 @@
 import React, {useEffect} from 'react'
+import HomeFooter from './HomeFooter';
+import {BsFillHouseHeartFill} from 'react-icons/bs'
 
 const Home = () => {
   useEffect(() => {
@@ -6,7 +8,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div>Home</div>
+    <div>
+      <div>
+        <div className='home-icon-bg w-screen'>
+          <BsFillHouseHeartFill size={35} className='lp-home-icon'/>
+        </div>
+      </div>
+
+      <HomeFooter/>
+    </div>
   )
 }
 

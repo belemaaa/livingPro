@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import HomeFooter from './HomeFooter';
+import PostFooter from './PostFooter';
 
 const CreatePost = () => {
   useEffect(() => {
@@ -10,7 +10,7 @@ const CreatePost = () => {
     <div className='post-page'>
       <div>Create Post</div>
 
-      <HomeFooter/>
+      <PostFooter/>
     </div>
   )
 }

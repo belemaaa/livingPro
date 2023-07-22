@@ -69,12 +69,12 @@ const HomeFooter = () => {
     }
 
   return (
-    <div className='home-footer-div w-screen border-t'>
-        <div className='home-footer-icons'>
+    <div className='home-footer-div w-screen'>
+        <div className='home-footer-icons border-t w-screen'>
             <div onClick={handleHome}>
-                {home ? <HiHome size={40} className='home-footer-icon'/>
+                {home ? <HiHome size={28} className='home-footer-icon-open'/>
                  : 
-                <HiHome  size={40} className='home-footer-icon'/>
+                <HiHome  size={28} className='home-footer-icon-closed'/>
                 } 
                 <p className='home-footer-icon-name'>
                     Home
@@ -82,9 +82,9 @@ const HomeFooter = () => {
             </div>
 
             <div onClick={handleDiscover}>
-                {discover ? <BiSolidSearch size={40} className='home-footer-icon'/>
+                {discover ? <BiSolidSearch size={28} className='home-footer-icon-open'/>
                  : 
-                <FiSearch size={40} className='home-footer-icon'/>
+                <FiSearch size={28} className='home-footer-icon-closed'/>
                 }
                 <p className='home-footer-icon-name'>
                     Discover
@@ -92,9 +92,9 @@ const HomeFooter = () => {
             </div>
 
             <div onClick={handlePost}>
-                {post ? <BsPencilSquare size={40} className='home-footer-icon'/>
+                {post ? <BsPencilSquare size={28} className='home-footer-icon-open'/>
                  : 
-                <BsPencilSquare size={40} className='home-footer-icon'/>
+                <BsPencilSquare size={28} className='home-footer-icon-closed'/>
                 }
                 <p className='home-footer-icon-name'>
                     Post
@@ -102,9 +102,9 @@ const HomeFooter = () => {
             </div>
 
             <div onClick={handleInbox}>
-                {post ? <AiFillMessage size={40} className='home-footer-icon'/>
+                {post ? <AiFillMessage size={28} className='home-footer-icon-open'/>
                  : 
-                <AiOutlineMessage size={40} className='home-footer-icon'/>
+                <AiOutlineMessage size={28} className='home-footer-icon-closed'/>
                 }
                 <p className='home-footer-icon-name'>
                     Inbox
@@ -112,9 +112,9 @@ const HomeFooter = () => {
             </div>
 
             <div onClick={handleProfile}>
-                {post ? <CgProfile size={40} className='home-footer-icon'/>
+                {post ? <CgProfile size={28} className='home-footer-icon-open'/>
                  : 
-                <CgProfile size={40} className='home-footer-icon'/>
+                <CgProfile size={28} className='home-footer-icon-closed'/>
                 }
                 <p className='home-footer-icon-name'>
                     Profile

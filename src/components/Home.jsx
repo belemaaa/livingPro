@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div>
-      <div>
+      <div className='home-page'>
         <div className='home-icon-bg w-screen'>
           <BsFillHouseHeartFill size={35} className='lp-home-icon'/>
         </div>

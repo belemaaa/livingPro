@@ -531,7 +531,11 @@
     margin-left: 23px;
     margin-right: 21px;
 }
-.home-page{
+.home-page,
+.discover-page,
+.post-page,
+.inbox-page,
+.profile-page{
     height: 100%;
 }
 .home-footer-icon-name{
@@ -545,8 +549,6 @@
 .onboarding3-page,
 .login-page,
 .email-page,
-.discover-page,
-.post-page,
 .compat-test-4-page,
 .compat-test-3-page,
 .compat-test-2-page,

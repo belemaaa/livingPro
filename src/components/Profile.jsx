@@ -7,7 +7,7 @@ const Profile = () => {
     }, []);
 
   return (
-    <div>
+    <div className='profile-page'>
         <div>
             Profile
         </div>

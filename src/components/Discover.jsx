@@ -8,7 +8,7 @@ const Discover = () => {
 
   return (
     <div className='discover-page'>
-       <div>
+       <div className=''>
 
         Discover   
 

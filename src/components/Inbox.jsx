@@ -7,7 +7,7 @@ const Inbox = () => {
     }, []);
 
   return (
-    <div>
+    <div className='inbox-page'>
         <div>
             Inbox
         </div>

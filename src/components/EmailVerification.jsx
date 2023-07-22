@@ -27,7 +27,7 @@ const EmailVerification = () => {
   };
 
   return (
-    <div>
+    <div className='email-page'>
         <div className='signup-go-back-btn'>
             <Link to='/signup'>
                 <IoIosArrowBack size={25}/>

@@ -71,11 +71,8 @@ const HomeFooter = () => {
   return (
     <div className='home-footer-div w-screen'>
         <div className='home-footer-icons border-t w-screen'>
-            <div onClick={handleHome}>
-                {home ? <HiHome size={28} className='home-footer-icon-open'/>
-                 : 
-                <HiHome  size={28} className='home-footer-icon-closed'/>
-                } 
+            <div>
+                <HiHome size={28} className='home-footer-icon-open'/>
                 <p className='home-footer-icon-name'>
                     Home
                 </p>

@@ -34,7 +34,7 @@ const Login = () => {
     }
   
     return (
-      <div>
+      <div className='login-page'>
         <div className='signup-go-back-btn'>
           <Link to='/signup'>
               <IoIosArrowBack size={25}/>

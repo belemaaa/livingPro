@@ -539,3 +539,19 @@
     font-size: 12px;
     font-weight: 500;
 }
+.signup-page,
+.onboarding1-page,
+.onboarding2-page,
+.onboarding3-page,
+.login-page,
+.email-page,
+.discover-page,
+.post-page,
+.compat-test-4-page,
+.compat-test-3-page,
+.compat-test-2-page,
+.compat-test-1-page,
+.about-page{
+    height: 100%;
+    width: 100%;
+}

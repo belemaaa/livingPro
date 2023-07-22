@@ -113,7 +113,7 @@ const CompatibilityTest1 = () => {
 
 
   return (
-    <div>
+    <div className='compat-test-3-page'>
         <div className='prev-next-options'>
             <div className='signup-go-back-btn'>
                 <Link to='/compatibility_test_2'>

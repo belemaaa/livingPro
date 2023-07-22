@@ -14,7 +14,7 @@ const CompatibilityTest4 = () => {
     }
 
   return (
-    <div>
+    <div className='compat-test-4-page'>
         <div className='prev-next-options'>
             <div className='signup-go-back-btn'>
                 <Link to='/compatibility_test_3'>

@@ -17,33 +17,33 @@ const Signup = () => {
   const [password, setPassword]  = useState('')
 
   const handleCreateAccount = async (e) => {
-    // e.preventDefault()
+    e.preventDefault()
 
-    // const headers={
-    //   'Content-Type': 'application/json',
-    // }
-    // const response = await fetch('https://lp-backend-production.up.railway.app/signup', {
-    //   method: 'POST',
-    //   headers: headers,
-    //   body: JSON.stringify({
-    //     fullname: fullname,
-    //     email: email,
-    //     password: password,
-    //   }),
-    // });
-    // if (response.status === 200){
-    //   console.log('signup was successful')
-    //   navigate('/email_verification')
-    // }
-    // else{
-    //   console.log('an error occurred');
-    //   // console.log('Response data:', error.response.data);
-    // }  
+    const headers={
+      'Content-Type': 'application/json',
+    }
+    const response = await fetch('https://lp-backend-production.up.railway.app/signup', {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({
+        fullname: fullname,
+        email: email,
+        password: password,
+      }),
+    });
+    if (response.status === 200){
+      console.log('signup was successful')
+      navigate('/email_verification')
+    }
+    else{
+      console.log('an error occurred');
+      // console.log('Response data:', error.response.data);
+    }  
     navigate('/email_verification') 
   };
 
   return (
-    <div>
+    <div className='sign-page'>
       <div className='signup-go-back-btn'>
         <Link to='/onboarding3'>
             <IoIosArrowBack size={25}/>

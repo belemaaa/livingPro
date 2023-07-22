@@ -15,7 +15,7 @@ const Onboarding1 = () => {
     }, []);
 
   return (
-    <div>
+    <div className='onboarding1-page'>
         <div>
             <img src={ellipse16} className='OB1ellipse16'/>
             <img src={ellipse15} className='OB1ellipse15'/>

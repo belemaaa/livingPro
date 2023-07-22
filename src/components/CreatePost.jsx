@@ -7,7 +7,7 @@ const CreatePost = () => {
   }, []);
 
   return (
-    <div>
+    <div className='post-page'>
       <div>Create Post</div>
 
       <HomeFooter/>

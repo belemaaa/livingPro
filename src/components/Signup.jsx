@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../assets/css/styles.css'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
@@ -7,6 +7,10 @@ import GoogleFrame from '../assets/images/GoogleFrame.png'
 import axios from 'axios'
 
 const Signup = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate();
   const [fullname, setFullname] = useState('')
   const [email, setEmail] = useState('')
@@ -34,14 +38,15 @@ const Signup = () => {
     else{
       console.log('an error occurred');
       // console.log('Response data:', error.response.data);
-    }   
+    }  
+    navigate('/email_verification') 
   };
 
   return (
     <div>
       <div className='signup-go-back-btn'>
         <Link to='/onboarding3'>
-            <IoIosArrowBack size={30}/>
+            <IoIosArrowBack size={25}/>
         </Link>
       </div>
 

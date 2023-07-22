@@ -37,7 +37,7 @@ const Login = () => {
       <div>
         <div className='signup-go-back-btn'>
           <Link to='/signup'>
-              <IoIosArrowBack size={30}/>
+              <IoIosArrowBack size={25}/>
           </Link>
         </div>
   

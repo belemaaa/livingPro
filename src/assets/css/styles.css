@@ -18,17 +18,18 @@
 .OB1ellipse16{
     width: 60px;
     height: 60px;
-    margin-top: 79px;
+    margin-top: 50px;
     margin-left: 285px;  
 }
 .OB1ellipse15, .OB2ellipse18, .OB3ellipse8{
-    margin-left: 55px;
+    margin-left: 52px;
     margin-top: 20px;
+    width: 310px;
 }
 .OB1ellipse17{
     width: 60px;
     height: 60px;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: 30px;
 }
 .onboarding-text{
@@ -37,7 +38,7 @@
 .OB2ellipse16{
     width: 60px;
     height: 60px;
-    margin-top: 79px;
+    margin-top: 50px;
     margin-left: 220px;  
 }
 .OB2ellipse17{
@@ -49,7 +50,7 @@
 .OB3ellipse16{
     width: 60px;
     height: 60px;
-    margin-top: 79px;
+    margin-top: 50px;
     margin-left: 30px;  
 }
 .OB3ellipse17{
@@ -61,6 +62,7 @@
 .boarding-options{
     margin-top: 30px;
     margin-left: 27px;
+    margin-bottom: 40px;
 }
 .boarding-icons{
     margin-top: 100px;
@@ -116,7 +118,7 @@
 .signup-form-div{
     margin-left: 30px;
     margin-right: 30px;
-    margin-top: 100px;
+    margin-top: 70px;
 
 }
 .signup-form-input-box{
@@ -157,7 +159,7 @@
 .create-account-btn{
     width: 162px;
     height: 36px;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 100px;
     background-color: #007FE0;
     font-weight: 500;
@@ -194,6 +196,7 @@
     height: 18px;
     margin-top: 55px;
     margin-left: 49px;
+    margin-bottom: 40px;
     font-weight: 500;
     font-size: 13px;
     line-height: 18px;
@@ -208,13 +211,13 @@
 .verification-pins{
     width: 314px;
     height: 44px;
-    margin-top: 90px;
+    margin-top: 50px;
     margin-left: 50px;
 }
 .verification-pin{
     border-radius: 10px;
     width: 45px;
-    height: 60px;
+    height: 50px;
     border-color: #7c7b7b;
     margin-right: 7px;
     text-align: center;
@@ -223,7 +226,8 @@
 .email-verify-btn{
     width: 162px;
     height: 36px;
-    margin-top: 100px;
+    margin-top: 280px;
+    margin-bottom: 40px;
     margin-left: 80px;
     background-color: #007FE0;
     font-weight: 500;
@@ -351,7 +355,8 @@
 .about-proceed-btn{
     width: 162px;
     height: 36px;
-    margin-top: 32px;
+    margin-top: 50px;
+    margin-bottom: 40px;
     margin-left: 120px;
     background-color: #007FE0;
     font-weight: 500;
@@ -413,12 +418,13 @@
     display: flex;
     flex-direction: row;
     margin-left: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .compat-proceed-btn{
     width: 162px;
     height: 36px;
-    margin-top: 42px;
+    margin-top: 52px;
+    margin-bottom: 40px;
     margin-left: 120px;
     background-color: #007FE0;
     font-weight: 500;
@@ -432,6 +438,7 @@
     width: 162px;
     height: 36px;
     margin-top: 222px;
+    margin-bottom: 40px;
     margin-left: 120px;
     background-color: #007FE0;
     font-weight: 500;
@@ -444,7 +451,8 @@
 .compat-proceed-btn-I{
     width: 162px;
     height: 36px;
-    margin-top: 102px;
+    margin-top: 120px;
+    margin-bottom: 40px;
     margin-left: 120px;
     background-color: #007FE0;
     font-weight: 500;
@@ -466,7 +474,8 @@
 }
 .compat-4-textarea{
     width: 350px;
-    height: 160px;
+    height: 200px;
+    font-size: 14px;
     margin-top: 30px;
     margin-left: 30px;
     border-radius: 10px;
@@ -477,6 +486,7 @@
     width: 162px;
     height: 36px;
     margin-top: 253px;
+    margin-bottom: 40px;
     margin-left: 120px;
     background-color: #007FE0;
     font-weight: 500;

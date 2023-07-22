@@ -1,15 +1,17 @@
-import React, {useRef} from 'react'
+import React, {useRef, useEffect} from 'react'
 import '../assets/css/styles.css'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 const EmailVerification = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
   const navigate = useNavigate();
+
   const handleVerify = () => {
-
-     // handle any api calls
-
     navigate('/about');
   };
 
@@ -28,7 +30,7 @@ const EmailVerification = () => {
     <div>
         <div className='signup-go-back-btn'>
             <Link to='/signup'>
-                <IoIosArrowBack size={30}/>
+                <IoIosArrowBack size={25}/>
             </Link>
         </div>
 

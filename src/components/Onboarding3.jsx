@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import ellipse16 from '../assets/images/Ellipse 16.jpg'
 import ellipse8 from '../assets/images/Ellipse 18-2.png'
 import ellipse17 from '../assets/images/Ellipse 17.png'
@@ -7,6 +7,10 @@ import boardingfill from '../assets/images/boardingfill.png';
 import { Link } from 'react-router-dom'
 
 const Onboarding3 = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div>
         <div>

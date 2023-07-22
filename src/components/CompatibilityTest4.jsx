@@ -1,9 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 const CompatibilityTest4 = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const navigate = useNavigate()
     const handleProceed = () => {
         navigate('/home')
@@ -14,7 +18,7 @@ const CompatibilityTest4 = () => {
         <div className='prev-next-options'>
             <div className='signup-go-back-btn'>
                 <Link to='/compatibility_test_3'>
-                    <IoIosArrowBack size={30}/>
+                    <IoIosArrowBack size={25}/>
                 </Link>
             </div>
             <Link to='/home' className='compat-skip'>

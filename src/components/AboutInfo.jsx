@@ -1,9 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 const AboutInfo = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate()
   const [selectedLocation, setSelectedLocation] = useState('');
   const [apartBtn, setApartBtn] = useState(false)
@@ -41,7 +45,7 @@ const AboutInfo = () => {
     <div>
         <div className='signup-go-back-btn'>
             <Link to='/email_verification'>
-                <IoIosArrowBack size={30}/>
+                <IoIosArrowBack size={25}/>
             </Link>
         </div>
         <p className='about-welcome'>Let's get to know you better</p>

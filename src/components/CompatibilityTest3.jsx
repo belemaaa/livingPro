@@ -1,10 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 // remember to change state names
 const CompatibilityTest1 = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [patient, setPatient] = useState(false)
     const [funny, setFunny] = useState(false)
     const [strict, setStrict] = useState(false)
@@ -113,7 +117,7 @@ const CompatibilityTest1 = () => {
         <div className='prev-next-options'>
             <div className='signup-go-back-btn'>
                 <Link to='/compatibility_test_2'>
-                    <IoIosArrowBack size={30}/>
+                    <IoIosArrowBack size={25}/>
                 </Link>
             </div>
             <Link to='/home' className='compat-skip'>

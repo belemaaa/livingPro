@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {BsFillCircleFill} from 'react-icons/bs'
 import ellipse16 from '../assets/images/Ellipse 16.jpg'
 import ellipse15 from '../assets/images/Ellipse 15.jpg'
@@ -10,6 +10,10 @@ import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom';
 
 const Onboarding1 = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div>
         <div>

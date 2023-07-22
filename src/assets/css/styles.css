@@ -507,3 +507,14 @@
     color: white;
     margin-left: 185px;
 }
+.home-footer-div{
+    height: 58px;
+    margin-top: 730px;
+    border-color: #b5b4b4;
+    position: fixed;
+}
+.home-footer-icons{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}

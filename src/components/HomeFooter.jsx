@@ -69,36 +69,56 @@ const HomeFooter = () => {
     }
 
   return (
-    <div>
+    <div className='home-footer-div w-screen border-t'>
         <div className='home-footer-icons'>
             <div onClick={handleHome}>
                 {home ? <HiHome size={40} className='home-footer-icon'/>
                  : 
-                <HiHome  size={40} className='home-footer-icon'/>} 
+                <HiHome  size={40} className='home-footer-icon'/>
+                } 
+                <p className='home-footer-icon-name'>
+                    Home
+                </p>
             </div>
 
             <div onClick={handleDiscover}>
                 {discover ? <BiSolidSearch size={40} className='home-footer-icon'/>
                  : 
-                <FiSearch size={40} className='home-footer-icon'/>}
+                <FiSearch size={40} className='home-footer-icon'/>
+                }
+                <p className='home-footer-icon-name'>
+                    Discover
+                </p>
             </div>
 
             <div onClick={handlePost}>
                 {post ? <BsPencilSquare size={40} className='home-footer-icon'/>
                  : 
-                <BsPencilSquare size={40} className='home-footer-icon'/>}
+                <BsPencilSquare size={40} className='home-footer-icon'/>
+                }
+                <p className='home-footer-icon-name'>
+                    Post
+                </p>
             </div>
 
             <div onClick={handleInbox}>
                 {post ? <AiFillMessage size={40} className='home-footer-icon'/>
                  : 
-                <AiOutlineMessage size={40} className='home-footer-icon'/>}
+                <AiOutlineMessage size={40} className='home-footer-icon'/>
+                }
+                <p className='home-footer-icon-name'>
+                    Inbox
+                </p>
             </div>
 
             <div onClick={handleProfile}>
                 {post ? <CgProfile size={40} className='home-footer-icon'/>
                  : 
-                <CgProfile size={40} className='home-footer-icon'/>}
+                <CgProfile size={40} className='home-footer-icon'/>
+                }
+                <p className='home-footer-icon-name'>
+                    Profile
+                </p>
             </div>
         </div>
     </div>

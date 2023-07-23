@@ -74,7 +74,7 @@ const StartPost = () => {
 
                 <div>
                     <div className='post-image-div'>
-                        <label className='post-image-lbl'>Add Pictures (please select all files)</label>
+                        <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
                         {images.length === 0 ? (
                             <input
                                 type='file'
@@ -86,7 +86,7 @@ const StartPost = () => {
                         ) : null}
                     </div>
 
-                    <div  className='uploaded-images-grid'>
+                    <div  className='uploaded-images-grid border'>
                         {images.map((image, index) => (
                             <div key={index}>
                                 <img src={image} alt={`Image ${index}`} className='uploaded-images'/>

@@ -682,6 +682,12 @@
     font-size: 14px;
     line-height: 14.52px;
 }
+.post-image-lbl span{
+    height: 15px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14.52px;
+}
 .image-field{
     width: 350px;
     height: 200px;
@@ -693,16 +699,22 @@
 }
 .uploaded-images-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 0fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 0fr));
     gap: 10px;
     margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-color: #d6d4d4;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 .uploaded-images{
     display: flex;
     flex-direction: row;
     border-radius: 10px;
-    width: 180px;
+    width: 150px;
     height: 200px;
-    margin-bottom: 15px;
-    margin-left: 30px;
+    margin-left: 20px;
+    margin-bottom: 2px;
 }

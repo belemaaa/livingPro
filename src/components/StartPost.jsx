@@ -10,6 +10,26 @@ import '../assets/css/styles.css'
 import axios from 'axios'
 
 const StartPost = () => {
+    const [images, setImages] = useState([]);
+
+    const handleImageChange = (event) => {
+        const files = event.target.files;
+        const imageList = [];
+        for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+            imageList.push(e.target.result);
+            if (imageList.length === files.length) {
+            setImages(imageList);
+            }
+        };
+
+        reader.readAsDataURL(file);
+        }
+    };
+
   return (
     <div>
         <div>
@@ -43,6 +63,7 @@ const StartPost = () => {
                 maxLength={50}
                 placeholder='Add additional information'
                 className='post-information-input border'
+                required
                 />
                 <p className='fifty-words'>50 words</p>
 
@@ -52,8 +73,14 @@ const StartPost = () => {
                     type='file'
                     accept='image/*'
                     className='image-field border'
+                    onChange={handleImageChange}
                     multiple
                     />
+                    {images.map((image, index) => (
+                        <div key={index}>
+                        <img src={image} alt={`Image ${index}`} style={{ width: '200px', height: '200px', margin: '10px' }} />
+                        </div>
+                    ))}
                 </div>
             </form>
         </div>

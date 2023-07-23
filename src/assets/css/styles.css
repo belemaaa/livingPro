@@ -518,7 +518,7 @@
     display: flex;
     flex-direction: row;
     padding: 10px;
-    padding-left: 25px;
+    padding-left: 14px;
     position: fixed;
     bottom: 0;
     flex: 1;
@@ -526,8 +526,8 @@
 }
 .home-footer-icon-closed{
     color: #7c7b7b;
-    margin-left: 23px;
-    margin-right: 21px;
+    margin-left: 28px;
+    margin-right: 23px;
 }
 .home-footer-icon-open{
     color: #007FE0;

@@ -10,6 +10,10 @@ import '../assets/css/styles.css'
 import axios from 'axios'
 
 const StartPost = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     const [images, setImages] = useState([]);
 
     const handleImageChange = (event) => {
@@ -35,7 +39,7 @@ const StartPost = () => {
         <div>
             <div className='prev-next-options'>
                 <div className='signup-go-back-btn'>
-                    <Link to='/about'>
+                    <Link to='/post'>
                         <IoIosArrowBack size={25}/>
                     </Link>
                 </div>
@@ -67,21 +71,31 @@ const StartPost = () => {
                 />
                 <p className='fifty-words'>50 words</p>
 
-                <div className='post-image-div'>
-                    <label className='post-image-lbl'>Add Pictures</label>
-                    <input 
-                    type='file'
-                    accept='image/*'
-                    className='image-field border'
-                    onChange={handleImageChange}
-                    multiple
-                    />
+                <div>
+                    <div className='post-image-div'>
+                        <label className='post-image-lbl'>Add Pictures</label>
+                        {images.length === 0 ? (
+                            <input
+                                type='file'
+                                accept='image/*'
+                                className='image-field border'
+                                onChange={handleImageChange}
+                                multiple
+                            />
+                        ) : null}
+                    </div>
+
                     {images.map((image, index) => (
                         <div key={index}>
-                        <img src={image} alt={`Image ${index}`} style={{ width: '200px', height: '200px', margin: '10px' }} />
+                            <img 
+                                src={image} 
+                                alt={`Image ${index}`} 
+                                style={{ width: '200px', height: '200px', margin: '10px' }} 
+                            />
                         </div>
-                    ))}
+                    ))}  
                 </div>
+                           
             </form>
         </div>
 

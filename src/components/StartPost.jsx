@@ -34,6 +34,28 @@ const StartPost = () => {
                     </span> 
                 </p>
             </div>
+
+            <div className='header-border border'></div>
+
+            <form method='POST'>
+                <textarea
+                type='text'
+                maxLength={50}
+                placeholder='Add additional information'
+                className='post-information-input border'
+                />
+                <p className='fifty-words'>50 words</p>
+
+                <div className='post-image-div'>
+                    <label className='post-image-lbl'>Add Pictures</label>
+                    <input 
+                    type='file'
+                    accept='image/*'
+                    className='image-field border'
+                    multiple
+                    />
+                </div>
+            </form>
         </div>
 
         <PostFooter/>

@@ -10,9 +10,21 @@ import '../assets/css/styles.css'
 import axios from 'axios'
 
 const StartPost = () => {
+    const [selectedLocation, setSelectedLocation] = useState('');
+
     useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
+
+      // Array of Nigerian state names
+    const nigerianStates = [
+        'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra',  
+        'Bauchi', 'Bayelsa', 
+    ];
+
+    const handleLocationChange = (event) => {
+        setSelectedLocation(event.target.value);
+    };
 
     const [images, setImages] = useState([]);
 
@@ -98,8 +110,24 @@ const StartPost = () => {
                                 </div>
                             ))}
                         </div>
-      )}  
-                </div>                      
+                    )}  
+                </div>  
+
+                <div className='post-location-div'>
+                    <label className='post-location-lbl'>Add Location</label>
+                    <select name='location' 
+                        className='about-form-input-box border' 
+                        value={selectedLocation} 
+                        onChange={handleLocationChange}
+                        required>
+                        <option value=""></option>
+                            {nigerianStates.map((state) => (
+                            <option key={state} value={state}>
+                                {state}
+                            </option>
+                        ))}
+                    </select>
+                </div>                    
             </form>
         </div>
 

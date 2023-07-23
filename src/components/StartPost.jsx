@@ -86,13 +86,19 @@ const StartPost = () => {
                         ) : null}
                     </div>
 
-                    <div  className='uploaded-images-grid border'>
-                        {images.map((image, index) => (
-                            <div key={index}>
-                                <img src={image} alt={`Image ${index}`} className='uploaded-images'/>
-                            </div>
-                        ))}
-                    </div>  
+                    {images.length > 0 && (
+                        <div className='uploaded-images-grid border'>
+                            {images.map((image, index) => (
+                                <div key={index}>
+                                <img
+                                    src={image}
+                                    alt={`Image ${index}`}
+                                    className='uploaded-images'
+                                />
+                                </div>
+                            ))}
+                        </div>
+      )}  
                 </div>                      
             </form>
         </div>

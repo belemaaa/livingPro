@@ -116,7 +116,8 @@ const StartPost = () => {
                 <div className='post-location-div'>
                     <label className='post-location-lbl'>Add Location</label>
                     <select name='location' 
-                        className='about-form-input-box border' 
+                        placeholder='Location'
+                        className='post-location-box border' 
                         value={selectedLocation} 
                         onChange={handleLocationChange}
                         required>

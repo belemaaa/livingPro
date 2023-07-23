@@ -539,7 +539,7 @@
 .post-page,
 .inbox-page,
 .profile-page{
-    height: 100%;
+    max-height: fit-content;
 }
 .home-footer-icon-name{
     text-align: center;
@@ -721,4 +721,24 @@
 }
 .post-location-div{
     margin-top: 50px;
+}
+.post-location-box{
+    width: 350px;
+    height: 44px;
+    margin-top: 5px;
+    margin-left: 30px;
+    border-radius: 10px;
+    background-color: white;
+    padding-left: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14.52px;
+}
+.post-location-box::placeholder{
+    color: black;
+    height: 15px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.52px;
 }

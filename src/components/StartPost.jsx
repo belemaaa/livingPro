@@ -25,11 +25,12 @@ const StartPost = () => {
 
         reader.onload = (e) => {
             imageList.push(e.target.result);
-            if (imageList.length === files.length) {
-            setImages(imageList);
+            if (imageList.length + images.length <= 4) {
+              setImages([...images, ...imageList]);
+            } else {
+              alert('Maximum of 4 images allowed!');
             }
         };
-
         reader.readAsDataURL(file);
         }
     };
@@ -73,7 +74,7 @@ const StartPost = () => {
 
                 <div>
                     <div className='post-image-div'>
-                        <label className='post-image-lbl'>Add Pictures</label>
+                        <label className='post-image-lbl'>Add Pictures (please select all files)</label>
                         {images.length === 0 ? (
                             <input
                                 type='file'
@@ -87,15 +88,10 @@ const StartPost = () => {
 
                     {images.map((image, index) => (
                         <div key={index}>
-                            <img 
-                                src={image} 
-                                alt={`Image ${index}`} 
-                                style={{ width: '200px', height: '200px', margin: '10px' }} 
-                            />
+                            <img src={image} alt={`Image ${index}`} className='uploaded-images'/>
                         </div>
                     ))}  
-                </div>
-                           
+                </div>                      
             </form>
         </div>
 

@@ -51,6 +51,10 @@ const AboutInfo = () => {
       </div>
 
       <div className='about-page2'>
+        <div className='hidden md:flex'>
+          <img src={aboutImage} className='about-image'/>
+        </div>
+
         <div className='about-form'>
           <p className='about-welcome'>Let's get to know you better</p>
 
@@ -204,9 +208,7 @@ const AboutInfo = () => {
           </div>
         </div>
 
-        <div className='hidden md:flex'>
-          <img src={aboutImage} className='about-image'/>
-        </div>
+        
       </div>
       
         

@@ -15,7 +15,10 @@ const Signup = () => {
   const [fullname, setFullname] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword]  = useState('')
+  const [code, setCode] = useState('')
   const [showCodeVerification, setShowCodeVerification] = useState(false);
+  const [signupData, setSignupData] = useState(null);
+  const [loginError, setLoginError] = useState('')
 
   // fetching signup api
   const handleCreateAccount = async (e) => {
@@ -35,6 +38,8 @@ const Signup = () => {
     });
     if (response.status === 200){
       console.log('signup was successful')
+      // Store the signup data in state
+      setSignupData({ fullname, email, password });
       setShowCodeVerification(true);
     }
     else{
@@ -44,22 +49,21 @@ const Signup = () => {
   };
 
   
-  // snippet to fetch code verification api
-  const [code, setCode] = useState('')
-  const [loginError, setLoginError] = useState('')
-
+  // fetching code verification api
   const handleVerify = async (e) => {
       e.preventDefault()
 
       const headers={
           'Content-Type': 'application/json'
       }
-      const response = await fetch('https://lp-backend-production.up.railway.app/', {
-          method: 'POST',
-          headers: headers,
-          body: JSON.stringify({
-              code: code
-          }),
+      const requestBody = {
+        code: code,
+        signupData: signupData,
+      };
+      const response = await fetch('https://lp-backend-production.up.railway.app/verify', {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(requestBody),
       });
       if (response.status === 200){
           console.log('verification successful')

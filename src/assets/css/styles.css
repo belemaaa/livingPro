@@ -185,16 +185,17 @@
     width: 16px;
 }
 @media (min-width: 941px) {
-    .signup-div{
+    .signup-div,
+    .login-div{
         padding-top: 20px;
         margin-left: 380px;
         width: 600px;
-        background-color: #BE0000;
+        /* background-color: #fbf9f9; */
         border-radius: 10px;
         margin-bottom: 60px;
-        --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        /* --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
         --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
 
     }
 }
@@ -379,7 +380,7 @@
         width: 250px;
         height: 18px;
         margin-top: 32.5px;
-        /* margin-left: 575px; */
+        margin-left: 172px;
         font-weight: 500;
         font-size: 13px;
         line-height: 18px;
@@ -402,7 +403,7 @@
         width: 40px;
         height: 36px;
         margin-top: 16px;
-        /* margin-left: 686px; */
+        margin-left: 280px;
         border-radius: 5px;
         border: 1px;
         gap: 10px;
@@ -427,7 +428,7 @@
         width: 316px;
         height: 18px;
         margin-top: 55px;
-        /* margin-left: 545px; */
+        margin-left: 138px;
         margin-bottom: 40px;
         font-weight: 500;
         font-size: 13px;

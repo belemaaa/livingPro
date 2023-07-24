@@ -23,10 +23,11 @@
 }
 @media (min-width: 941px) {
     .OB1ellipse16{
-        width: 110px;
+        width: 90px;
         height: 90px;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 800px;
+        margin-bottom: -15px;
     }
 }
 .OB1ellipse15, .OB2ellipse18, .OB3ellipse8{
@@ -36,8 +37,8 @@
 }
 @media (min-width: 941px) {
     .OB1ellipse15, .OB2ellipse18, .OB3ellipse8{
-        width: 400px;
-        margin-left: 450px;
+        width: 350px;
+        margin-left: 490px;
     }
 }
 .OB1ellipse17{
@@ -46,8 +47,34 @@
     margin-top: 5px;
     margin-left: 30px;
 }
+@media (min-width: 941px) {
+    .OB1ellipse17{
+        width: 90px;
+        height: 90px;
+        margin-left: 450px;
+        margin-top: -7px;
+    }
+}
 .onboarding-text{
     text-align: center;
+}
+@media (min-width: 941px) {
+    .onboarding-text{
+        font-size: 24px;
+    }
+}
+.onboarding-text-p{
+    font-size: x-small;
+    padding-top: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+@media (min-width: 941px) {
+    .onboarding-text-p{
+        padding-top: 2px;
+        font-weight: 400;
+        font-size: 12px;
+    }
 }
 .OB2ellipse16{
     width: 60px;
@@ -55,11 +82,28 @@
     margin-top: 50px;
     margin-left: 220px;  
 }
+@media (min-width: 941px) {
+    .OB2ellipse16{
+        width: 90px;
+        height: 90px;
+        margin-top: 10px;
+        margin-left: 690px;
+        margin-bottom: -5px;
+    }
+}
 .OB2ellipse17{
     width: 60px;
     height: 60px;
     margin-top: 20px;
     margin-left: 109px;
+}
+@media (min-width: 941px) {
+    .OB2ellipse17{
+        width: 90px;
+        height: 90px;
+        margin-left: 520px;
+        margin-top: -5px;
+    }
 }
 .OB3ellipse16{
     width: 60px;
@@ -67,16 +111,40 @@
     margin-top: 50px;
     margin-left: 30px;  
 }
+@media (min-width: 941px) {
+    .OB3ellipse16{
+        width: 90px;
+        height: 90px;
+        margin-top: 10px;
+        margin-left: 450px;
+        margin-bottom: -15px;
+    }
+}
 .OB3ellipse17{
     width: 60px;
     height: 60px;
     margin-top: 20px;
     margin-left: 285px;
 }
+@media (min-width: 941px) {
+    .OB3ellipse17{
+        width: 90px;
+        height: 90px;
+        margin-left: 800px;
+        margin-top: -10px;
+    }
+}
 .boarding-options{
     margin-top: 30px;
     margin-left: 27px;
     margin-bottom: 40px;
+}
+@media (min-width: 941px) {
+    .boarding-options{
+        margin-top: 30px;
+        margin-left: 500px;
+        margin-bottom: 40px;
+    }
 }
 .boarding-icons{
     margin-top: 100px;
@@ -84,6 +152,15 @@
     margin-right: 30px;
     display: flex;
     flex-direction: row;
+}
+@media (min-width: 941px) {
+    .boarding-icons{
+        margin-left: 500px;
+        margin-top: 100px;
+        margin-right: 500px;
+        display: flex;
+        flex-direction: row;
+    }
 }
 .boarding-icon{
     height: 4px;

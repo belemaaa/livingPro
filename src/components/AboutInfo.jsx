@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import aboutImage from '../assets/images/about.jpg'
 
 const AboutInfo = () => {
   useEffect(() => {
@@ -43,6 +44,7 @@ const AboutInfo = () => {
 
   return (
     <div className='about-page'>
+      <div className='about-form'>
         <div className='signup-go-back-btn'>
             <Link to='/email_verification'>
                 <IoIosArrowBack size={25}/>
@@ -97,7 +99,7 @@ const AboutInfo = () => {
                   <span className='required-asterik'>*</span>
                   </label>
                 </div>
-               
+              
                 <br/>
                 <input type='date' 
                 name='dateOfBirth' 
@@ -197,6 +199,12 @@ const AboutInfo = () => {
             </button>
           </form>
         </div>
+      </div>
+
+      <div className='hidden md:flex'>
+        <img src={aboutImage} className='about-image'/>
+      </div>
+        
     </div>
   )
 }

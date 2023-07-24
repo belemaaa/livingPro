@@ -20,27 +20,27 @@ const Signup = () => {
   const handleCreateAccount = async (e) => {
     e.preventDefault()
 
-    const headers={
-      'Content-Type': 'application/json',
-    }
-    const response = await fetch('https://lp-backend-production.up.railway.app/signup', {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify({
-        fullname: fullname,
-        email: email,
-        password: password,
-      }),
-    });
-    if (response.status === 200){
-      console.log('signup was successful')
-      setShowCodeVerification(true);
-    }
-    else{
-      console.log('an error occurred');
-      // console.log('Response data:', error.response.data);
-    }  
-    // setShowCodeVerification(true);
+    // const headers={
+    //   'Content-Type': 'application/json',
+    // }
+    // const response = await fetch('https://lp-backend-production.up.railway.app/signup', {
+    //   method: 'POST',
+    //   headers: headers,
+    //   body: JSON.stringify({
+    //     fullname: fullname,
+    //     email: email,
+    //     password: password,
+    //   }),
+    // });
+    // if (response.status === 200){
+    //   console.log('signup was successful')
+    //   setShowCodeVerification(true);
+    // }
+    // else{
+    //   console.log('an error occurred');
+    //   // console.log('Response data:', error.response.data);
+    // }  
+    setShowCodeVerification(true);
   };
 
   const [code, setCode] = useState('')
@@ -76,16 +76,22 @@ const Signup = () => {
 
           <div className='verification-pins'>
               {/* {loginError && <p className='loginError'>{loginError}</p>} */}
-              <form method='POST' value={code}>
+              <form method='POST'>
                 {Array.from({ length: 6 }, (_, index) => (
                     <input
                         key={index}
+                        value={code[index] || ''}
+                        onChange={(e) => {
+                          const newCode = [...code];
+                          newCode[index] = e.target.value;
+                          setCode(newCode);
+                        }}
                         type='text'
                         className='verification-pin border'
                         maxLength={1}
                         ref={(el) => (inputRefs.current[index] = el)}
                         onInput={(event) => handlePinChange(event, index)}
-                        onChange={(e) => setCode(e.target.value)}
+                        //onChange={(e) => setCode(e.target.value)}
                         required
                     />
                 ))}

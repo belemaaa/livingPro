@@ -493,20 +493,21 @@
     }
 }
 @media (min-width: 941px) {
-    .about-page{
+    .about-page2{
         display: flex;
         flex-direction: row;
     }
 }
 @media (min-width: 941px) {
     .about-form{
-        margin-left: 50px;
+        margin-left: 130px;
+        margin-right: 45px;
     }
 }
 @media (min-width: 941px) {
     .about-image{
         height: 500px;
-        margin-top: 130px;
+        margin-top: 40px;
         border-radius: 10px;
     }
 }
@@ -521,6 +522,20 @@
     margin-top: 39px;
     margin-left: 30px;
     margin-bottom: 16px;
+}
+@media (min-width: 941px) {
+    .about-welcome{
+        width: 300px;
+        height: 22px;
+        font-size: 19px;
+        line-height: 21.78px;
+        font-weight: 600;
+        align-items: center;
+        letter-spacing: -0.3px;
+        margin-top: 39px;
+        margin-left: 30px;
+        margin-bottom: 16px;
+    }
 }
 .about-form-label{
     height: 18px;

@@ -436,7 +436,6 @@
 .signup-create-account-link{
     font-weight: 400;
     color: #007FE0;
-    /* margin-left: -28px; */
 }
 .loginError{
     color: red;
@@ -454,20 +453,6 @@
         margin-bottom: 3px;
     }
 }
-.login{
-    width: 314px;
-    height: 44px;
-    margin-top: 50px;
-    margin-left: 29px;
-}
-/* @media (min-width: 1024px) {
-    .login{
-        width: 314px;
-        height: 44px;
-        margin-top: 50px;
-        margin-left: 530px;
-    }
-} */
 .verification-pins{
     width: 314px;
     height: 44px;

@@ -21,10 +21,24 @@
     margin-top: 50px;
     margin-left: 285px;  
 }
+@media (min-width: 941px) {
+    .OB1ellipse16{
+        width: 110px;
+        height: 90px;
+        margin-top: 20px;
+        margin-left: 800px;
+    }
+}
 .OB1ellipse15, .OB2ellipse18, .OB3ellipse8{
     margin-left: 52px;
     margin-top: 20px;
     width: 310px;
+}
+@media (min-width: 941px) {
+    .OB1ellipse15, .OB2ellipse18, .OB3ellipse8{
+        width: 400px;
+        margin-left: 450px;
+    }
 }
 .OB1ellipse17{
     width: 60px;

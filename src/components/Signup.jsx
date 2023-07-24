@@ -17,33 +17,60 @@ const Signup = () => {
   const [password, setPassword]  = useState('')
   const [showCodeVerification, setShowCodeVerification] = useState(false);
 
+  // fetching signup api
   const handleCreateAccount = async (e) => {
     e.preventDefault()
 
-    // const headers={
-    //   'Content-Type': 'application/json',
-    // }
-    // const response = await fetch('https://lp-backend-production.up.railway.app/signup', {
-    //   method: 'POST',
-    //   headers: headers,
-    //   body: JSON.stringify({
-    //     fullname: fullname,
-    //     email: email,
-    //     password: password,
-    //   }),
-    // });
-    // if (response.status === 200){
-    //   console.log('signup was successful')
-    //   setShowCodeVerification(true);
-    // }
-    // else{
-    //   console.log('an error occurred');
-    //   // console.log('Response data:', error.response.data);
-    // }  
+    const headers={
+      'Content-Type': 'application/json',
+    }
+    const response = await fetch('https://lp-backend-production.up.railway.app/signup', {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({
+        fullname: fullname,
+        email: email,
+        password: password,
+      }),
+    });
+    if (response.status === 200){
+      console.log('signup was successful')
+      setShowCodeVerification(true);
+    }
+    else{
+      console.log('an error occurred');
+    }  
     setShowCodeVerification(true);
   };
 
+  
+  // snippet to fetch code verification api
   const [code, setCode] = useState('')
+  const [loginError, setLoginError] = useState('')
+
+  const handleVerify = async (e) => {
+      e.preventDefault()
+
+      const headers={
+          'Content-Type': 'application/json'
+      }
+      const response = await fetch('https://lp-backend-production.up.railway.app/', {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({
+              code: code
+          }),
+      });
+      if (response.status === 200){
+          console.log('verification successful')
+          navigate('/about')
+      }
+      else{
+          console.log('an error occurred')
+          setLoginError('Invalid input. Please confirm the code sent to your mail.')
+          setCode('')
+      }
+    };
 
   const inputRefs = useRef([]);
   const handlePinChange = (event, index) => {
@@ -75,8 +102,8 @@ const Signup = () => {
           </div>
 
           <div className='verification-pins'>
-              {/* {loginError && <p className='loginError'>{loginError}</p>} */}
-              <form method='POST'>
+              {loginError && <p className='loginError'>{loginError}</p>}
+              <form method='POST' onSubmit={handleVerify}>
                 {Array.from({ length: 6 }, (_, index) => (
                     <input
                         key={index}
@@ -91,7 +118,6 @@ const Signup = () => {
                         maxLength={1}
                         ref={(el) => (inputRefs.current[index] = el)}
                         onInput={(event) => handlePinChange(event, index)}
-                        //onChange={(e) => setCode(e.target.value)}
                         required
                     />
                 ))}

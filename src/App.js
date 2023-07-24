@@ -28,7 +28,7 @@ function App() {
           <Route path='/onboarding3' element={<Onboarding3/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/home' element={<Home/>} />
-          <Route path='/email_verification' element={<EmailVerification/>}/>
+          {/* <Route path='/email_verification' element={<EmailVerification/>}/> */}
           <Route path="/login" element={<Login/>}/>
           <Route path='/about' element={<AboutInfo/>}/>
           <Route path="/compatibility_test_1" element={<CompatibilityTest1/>}/>

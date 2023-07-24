@@ -67,6 +67,7 @@ const DiscoverFooter = () => {
                 <CgProfile size={26} className='home-footer-icon-closed'/>
                 <p className='home-footer-icon-name'>
                     Profile
+                    {/* profile */}
                 </p>
             </div>
         </div>

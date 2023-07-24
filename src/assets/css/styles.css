@@ -254,7 +254,7 @@
 }
 @media (min-width: 941px) {
     .signup-form-div{
-        margin-left: 450px;
+        margin-left: 480px;
         margin-top: 70px;
     }
 }
@@ -309,6 +309,19 @@
     letter-spacing: -0.3px;
     align-items: center;
 }
+@media (min-width: 941px) {
+    .RememberMe, 
+    .forgot-password-btn{
+        color: #007FE0;
+        width: fit-content;
+        height: 18px;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 18px;
+        letter-spacing: -0.3px;
+        align-items: center;
+    }
+}
 .RM-checkbox{
     width: 16px;
     height: 16px;
@@ -328,6 +341,21 @@
     gap: 10px;
     color: white;
 }
+@media (min-width: 941px) {
+    .create-account-btn{
+        width: 162px;
+        height: 36px;
+        margin-top: 60px;
+        margin-left: 120px;
+        background-color: #007FE0;
+        font-weight: 500;
+        font-size: 11px;
+        border-radius: 10px;
+        padding: 10px;
+        gap: 10px;
+        color: white;
+    }
+}
 .google-auth-p{
     width: 190px;
     height: 18px;
@@ -340,6 +368,20 @@
     align-content: center;
     text-align: center;
 }
+@media (min-width: 941px) {
+    .google-auth-p{
+        width: 250px;
+        height: 18px;
+        margin-top: 32.5px;
+        margin-left: 550px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: -0.3px;
+        align-content: center;
+        text-align: center;
+    }
+}
 .google-frame{
     width: 40px;
     height: 36px;
@@ -348,6 +390,17 @@
     border-radius: 5px;
     border: 1px;
     gap: 10px;
+}
+@media (min-width: 941px) {
+    .google-frame{
+        width: 40px;
+        height: 36px;
+        margin-top: 16px;
+        margin-left: 660px;
+        border-radius: 5px;
+        border: 1px;
+        gap: 10px;
+    }
 }
 .login-option, 
 .create-account-option{
@@ -361,6 +414,21 @@
     line-height: 18px;
     letter-spacing: -0.3px;
     text-align: center;
+}
+@media (min-width: 941px) {
+    .login-option,
+    .create-account-option{
+        width: 316px;
+        height: 18px;
+        margin-top: 55px;
+        margin-left: 520px;
+        margin-bottom: 40px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: -0.3px;
+        text-align: center;
+    }
 }
 .signup-login-link, 
 .signup-create-account-link{

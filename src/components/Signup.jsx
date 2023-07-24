@@ -45,7 +45,6 @@ const Signup = () => {
     else{
       console.log('an error occurred');
     }  
-    setShowCodeVerification(true);
   };
 
   

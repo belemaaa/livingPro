@@ -192,7 +192,6 @@
         width: 600px;
         border-radius: 10px;
         margin-bottom: 60px;
-
     }
 }
 @media (min-width: 1024px) {
@@ -202,7 +201,15 @@
         width: 600px;
         border-radius: 10px;
         height: 600px;
-
+    }
+}
+@media (min-width: 768px) {
+    .ev-div{
+        padding-top: 20px;
+        margin-left: 380px;
+        width: 600px;
+        border-radius: 10px;
+        height: 600px;
     }
 }
 .signup-head{

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import '../assets/css/styles.css'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
@@ -15,6 +15,7 @@ const Signup = () => {
   const [fullname, setFullname] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword]  = useState('')
+  const [showCodeVerification, setShowCodeVerification] = useState(false);
 
   const handleCreateAccount = async (e) => {
     e.preventDefault()
@@ -33,13 +34,28 @@ const Signup = () => {
     });
     if (response.status === 200){
       console.log('signup was successful')
-      navigate('/email_verification')
+      setShowCodeVerification(true);
     }
     else{
       console.log('an error occurred');
       // console.log('Response data:', error.response.data);
     }  
+    // setShowCodeVerification(true);
   };
+
+  const [code, setCode] = useState('')
+
+  const inputRefs = useRef([]);
+  const handlePinChange = (event, index) => {
+      const pin = event.target.value;
+      const nextIndex = index + 1;
+
+      // focus on the next input field
+      if (pin && nextIndex < inputRefs.current.length) {
+      inputRefs.current[nextIndex].focus();
+      }
+  };
+
 
   return (
     <div className='signup-page overflow-hidden'>
@@ -49,77 +65,112 @@ const Signup = () => {
         </Link>
       </div>
 
-      <div className='signup-div'>
-        <div className='signup-head'>
-          <p className='signup-welcome'>Welcome!!</p>
-          <p className='signup-head-p'>Kindly fill in these details to create an account and find what you need</p>
-        </div>
+      {showCodeVerification ? (
+        <div className='ev-div'>
+          <div className='signup-head'>
+              <p className='signup-welcome'>Welcome!!</p>
+              <p className='signup-head-p'>
+                  Kindly fill in the six digit pin we sent to your mail
+              </p>
+          </div>
 
-        <div className='signup-form-div'>
-          <form method='POST' className='signup-form' onSubmit={handleCreateAccount}>
-            <input 
-              type='text' 
-              value={fullname}
-              onChange={(e) => setFullname(e.target.value)}
-              placeholder='Enter your Full name' 
-              required
-              className='signup-form-input-box border'
-              autoComplete='off'
-            />
-            
-            <br/>
-            <input type='email' 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder='Enter your Email Address' 
-              required
-              className='signup-form-input-box border'
-              autoComplete='off'
-            />
+          <div className='verification-pins'>
+              {/* {loginError && <p className='loginError'>{loginError}</p>} */}
+              <form method='POST' value={code}>
+                {Array.from({ length: 6 }, (_, index) => (
+                    <input
+                        key={index}
+                        type='text'
+                        className='verification-pin border'
+                        maxLength={1}
+                        ref={(el) => (inputRefs.current[index] = el)}
+                        onInput={(event) => handlePinChange(event, index)}
+                        onChange={(e) => setCode(e.target.value)}
+                        required
+                    />
+                ))}
 
-            <br/>
-            <input type='password' 
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder='Enter your Password' 
-              required
-              className='signup-form-input-box border'
-              autoComplete='off'
-            />
-
-            <div className='flex flex-row'>
-              <label for='Remember me' className='RememberMe'>
-                Remember me
-              </label>
-              <div className='RM-checkbox'>
-                <input type='checkbox' name='RememberMe'/>
-              </div>
-            </div>
-
-            <br/>
-            <button type='submit' className='create-account-btn'>
-              Create Account
-            </button>
-          </form>
-        </div>
-
-        <div className='google-auth-div'>
-          <p className='google-auth-p'>
-            You can create an account with
-          </p>
-          <div>
-            <Link to='#'>
-              <img src={GoogleFrame} className='google-frame'/>
-            </Link>
+                <button type='submit' className='email-verify-btn'>
+                    Verify
+                </button>
+              </form>
           </div>
         </div>
+      ): (
+        <div className='signup-div'>
+          <div className='signup-head'>
+            <p className='signup-welcome'>Welcome!!</p>
+            <p className='signup-head-p'>Kindly fill in these details to create an account and find what you need</p>
+          </div>
 
-        <p className='login-option'>Not new here? Please 
-          <span className='login'>
-          <Link to='/login' className='signup-login-link'> Log in</Link>
-          </span>
-        </p>
-      </div>
+          <div className='signup-form-div'>
+            <form method='POST' className='signup-form' onSubmit={handleCreateAccount}>
+              <input 
+                type='text' 
+                value={fullname}
+                onChange={(e) => setFullname(e.target.value)}
+                placeholder='Enter your Full name' 
+                required
+                className='signup-form-input-box border'
+                autoComplete='off'
+              />
+              
+              <br/>
+              <input type='email' 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder='Enter your Email Address' 
+                required
+                className='signup-form-input-box border'
+                autoComplete='off'
+              />
+
+              <br/>
+              <input type='password' 
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder='Enter your Password' 
+                required
+                className='signup-form-input-box border'
+                autoComplete='off'
+              />
+
+              <div className='flex flex-row'>
+                <label for='Remember me' className='RememberMe'>
+                  Remember me
+                </label>
+                <div className='RM-checkbox'>
+                  <input type='checkbox' name='RememberMe'/>
+                </div>
+              </div>
+
+              <br/>
+              <button type='submit' className='create-account-btn'>
+                Create Account
+              </button>
+            </form>
+          </div>
+
+          <div className='google-auth-div'>
+            <p className='google-auth-p'>
+              You can create an account with
+            </p>
+            <div>
+              <Link to='#'>
+                <img src={GoogleFrame} className='google-frame'/>
+              </Link>
+            </div>
+          </div>
+
+          <p className='login-option'>Not new here? Please 
+            <span className='login'>
+            <Link to='/login' className='signup-login-link'> Log in</Link>
+            </span>
+          </p>
+        </div>
+      
+      )}
+
       
 
       

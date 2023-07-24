@@ -202,7 +202,8 @@
 }
 @media (min-width: 941px) {
     .signup-head{
-        margin-left: 500px;
+        margin-left: 530px;
+        margin-top: 39px;
     }
 }
 .signup-welcome{
@@ -224,6 +225,8 @@
         align-items: center;
         letter-spacing: -0.3px;
         margin-top: 40px;
+        text-align: center;
+        margin-left: 80px;
     }
 }
 .signup-head-p{
@@ -244,6 +247,7 @@
         font-size: 12px;
         line-height: 18px;
         letter-spacing: -0.3px;
+        text-align: center;
     }
 }
 .signup-form-div{
@@ -254,7 +258,7 @@
 }
 @media (min-width: 941px) {
     .signup-form-div{
-        margin-left: 480px;
+        margin-left: 500px;
         margin-top: 70px;
     }
 }
@@ -373,7 +377,7 @@
         width: 250px;
         height: 18px;
         margin-top: 32.5px;
-        margin-left: 550px;
+        margin-left: 575px;
         font-weight: 500;
         font-size: 13px;
         line-height: 18px;
@@ -396,7 +400,7 @@
         width: 40px;
         height: 36px;
         margin-top: 16px;
-        margin-left: 660px;
+        margin-left: 686px;
         border-radius: 5px;
         border: 1px;
         gap: 10px;
@@ -421,7 +425,7 @@
         width: 316px;
         height: 18px;
         margin-top: 55px;
-        margin-left: 520px;
+        margin-left: 545px;
         margin-bottom: 40px;
         font-weight: 500;
         font-size: 13px;
@@ -440,6 +444,14 @@
     height: 44px;
     margin-top: 50px;
     margin-left: 50px;
+}
+@media (min-width: 941px) {
+    .verification-pins{
+        width: 314px;
+        height: 44px;
+        margin-top: 50px;
+        margin-left: 530px;
+    }
 }
 .verification-pin{
     border-radius: 10px;
@@ -463,6 +475,22 @@
     padding: 10px;
     gap: 10px;
     color: white;
+}
+@media (min-width: 941px) {
+    .email-verify-btn{
+        width: 162px;
+        height: 36px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+        margin-left: 79px;
+        background-color: #007FE0;
+        font-weight: 500;
+        font-size: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        gap: 10px;
+        color: white;
+    }
 }
 .about-welcome{
     width: 300px;

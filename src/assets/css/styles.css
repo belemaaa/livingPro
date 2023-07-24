@@ -186,7 +186,8 @@
 }
 @media (min-width: 1024px) {
     .signup-div,
-    .login-div{
+    .login-div,
+    .ev-div{
         padding-top: 20px;
         margin-left: 380px;
         width: 600px;
@@ -239,7 +240,6 @@
 }
 @media (min-width: 1024px) {
     .signup-head-p{
-        /* width: 311px; */
         height: 36px;
         margin-top: 9px;
         font-weight: 450;
@@ -464,7 +464,7 @@
         width: 314px;
         height: 44px;
         margin-top: 50px;
-        margin-left: 530px;
+        margin-left: 140px;
     }
 }
 .verification-pin{

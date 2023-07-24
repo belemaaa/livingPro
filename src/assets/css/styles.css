@@ -184,9 +184,26 @@
     margin-left: 30px;
     width: 16px;
 }
+/* @media (min-width: 941px) {
+    .signup-div{
+        margin-top: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 60px;
+        --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+    }
+} */
 .signup-head{
     margin-left: 30px;
     margin-top: 39px;
+}
+@media (min-width: 941px) {
+    .signup-head{
+        margin-left: 500px;
+    }
 }
 .signup-welcome{
     width: 113px;
@@ -197,6 +214,18 @@
     align-items: center;
     letter-spacing: -0.3px;
 }
+@media (min-width: 941px) {
+    .signup-welcome{
+        width: 113px;
+        height: 28px;
+        font-size: 30px;
+        line-height: 27.84px;
+        font-weight: 500;
+        align-items: center;
+        letter-spacing: -0.3px;
+        margin-top: 40px;
+    }
+}
 .signup-head-p{
     width: 311px;
     height: 36px;
@@ -206,11 +235,28 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
+@media (min-width: 941px) {
+    .signup-head-p{
+        /* width: 311px; */
+        height: 36px;
+        margin-top: 9px;
+        font-weight: 450;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -0.3px;
+    }
+}
 .signup-form-div{
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 70px;
 
+}
+@media (min-width: 941px) {
+    .signup-form-div{
+        margin-left: 450px;
+        margin-top: 70px;
+    }
 }
 .signup-form-input-box{
     width: 343px;
@@ -221,6 +267,17 @@
     padding-left: 10px;
     font-size: 12px;
 }
+@media (min-width: 941px) {
+    .signup-form-input-box{
+        width: 400px;
+        height: 48px;
+        border-radius: 10px;
+        border-color: #929292;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+}
 .signup-form-input-box::placeholder{
     padding-left: 10px;
     font-weight: 400;
@@ -230,6 +287,17 @@
     /* align-items: center; */
     height: 18px;
     color: #000000;
+}
+@media (min-width: 941px) {
+    .signup-form-input-box::placeholder{
+        padding-left: 10px;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 18px;
+        letter-spacing: -0.3px;
+        height: 18px;
+        color: #000000;
+    }
 }
 .RememberMe, .forgot-password-btn{
     color: #007FE0;

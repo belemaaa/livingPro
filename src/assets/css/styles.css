@@ -184,25 +184,27 @@
     margin-left: 30px;
     width: 16px;
 }
-/* @media (min-width: 941px) {
+@media (min-width: 941px) {
     .signup-div{
-        margin-top: 60px;
-        margin-left: 10px;
-        margin-right: 10px;
+        padding-top: 20px;
+        margin-left: 380px;
+        width: 600px;
+        background-color: #BE0000;
+        border-radius: 10px;
         margin-bottom: 60px;
-        --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+        --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
     }
-} */
+}
 .signup-head{
     margin-left: 30px;
     margin-top: 39px;
 }
 @media (min-width: 941px) {
     .signup-head{
-        margin-left: 530px;
+        margin-left: 140px;
         margin-top: 39px;
     }
 }
@@ -258,7 +260,7 @@
 }
 @media (min-width: 941px) {
     .signup-form-div{
-        margin-left: 500px;
+        margin-left: 100px;
         margin-top: 70px;
     }
 }
@@ -377,7 +379,7 @@
         width: 250px;
         height: 18px;
         margin-top: 32.5px;
-        margin-left: 575px;
+        /* margin-left: 575px; */
         font-weight: 500;
         font-size: 13px;
         line-height: 18px;
@@ -400,7 +402,7 @@
         width: 40px;
         height: 36px;
         margin-top: 16px;
-        margin-left: 686px;
+        /* margin-left: 686px; */
         border-radius: 5px;
         border: 1px;
         gap: 10px;
@@ -425,7 +427,7 @@
         width: 316px;
         height: 18px;
         margin-top: 55px;
-        margin-left: 545px;
+        /* margin-left: 545px; */
         margin-bottom: 40px;
         font-weight: 500;
         font-size: 13px;

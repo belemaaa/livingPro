@@ -190,12 +190,8 @@
         padding-top: 20px;
         margin-left: 380px;
         width: 600px;
-        /* background-color: #fbf9f9; */
         border-radius: 10px;
         margin-bottom: 60px;
-        /* --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-        --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
 
     }
 }
@@ -441,6 +437,13 @@
 .signup-create-account-link{
     font-weight: 400;
     color: #007FE0;
+}
+.loginError{
+    color: red;
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: -10px;
+    margin-bottom: 2px;
 }
 .verification-pins{
     width: 314px;

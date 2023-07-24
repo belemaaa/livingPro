@@ -12,6 +12,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState('')
     const [password, setPassword]  = useState('')
+    const [loginError, setLoginError] = useState('')
 
     const handleLogin = async (e) => {
       e.preventDefault()
@@ -32,12 +33,15 @@ const Login = () => {
           navigate('/home')
         }
       } catch(error){
+        setLoginError('Invalid username or password. Please try again.')
+        setUsername('')
+        setPassword('')
         console.error('Error received: ', error)
       }
     }
   
     return (
-      <div className='login-page'>
+      <div className='login-page overflow-hidden'>
         <div className='signup-go-back-btn'>
           <Link to='/signup'>
               <IoIosArrowBack size={25}/>
@@ -51,6 +55,7 @@ const Login = () => {
           </div>
     
           <div className='signup-form-div'>
+            {loginError && <p className='loginError'>{loginError}</p>}
             <form method='POST' className='signup-form' onSubmit={handleLogin}>
               <input type='email' 
               value={username} 

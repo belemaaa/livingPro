@@ -39,11 +39,10 @@ const Signup = () => {
       console.log('an error occurred');
       // console.log('Response data:', error.response.data);
     }  
-    navigate('/email_verification') 
   };
 
   return (
-    <div className='signup-page'>
+    <div className='signup-page overflow-hidden'>
       <div className='signup-go-back-btn'>
         <Link to='/onboarding3'>
             <IoIosArrowBack size={25}/>

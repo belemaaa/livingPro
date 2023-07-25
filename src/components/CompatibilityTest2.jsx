@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import compatTestImage from '../assets/images/compat_test_image.jpg'
+import compatTestImage from '../assets/images/compat_2.jpg'
 
 const CompatibilityTest2 = () => {
     useEffect(() => {

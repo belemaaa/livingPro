@@ -21,7 +21,7 @@ const StartPost = () => {
     }, []);
 
     // fetching post api
-    const handleCreateAccount = async (e) => {
+    const handlePost = async (e) => {
     e.preventDefault()
 
     const headers={
@@ -78,37 +78,38 @@ const StartPost = () => {
     return (
         <div>
             <div>
-                <div className='prev-next-options'>
-                    <div className='signup-go-back-btn'>
-                        <Link to='/post'>
-                            <IoIosArrowBack size={25}/>
-                        </Link>
+                <form method='POST' onSubmit={handlePost}>
+                    <div className='prev-next-options'>
+                        <div className='signup-go-back-btn'>
+                            <Link to='/post'>
+                                <IoIosArrowBack size={25}/>
+                            </Link>
+                        </div>
+                        <button type='submit' className='start-post-post'>
+                            Post
+                        </button>
                     </div>
-                    <Link to='#' className='start-post-post'>
-                        Post
-                    </Link>
-                </div>
 
-                <p className='start-post-p'>Start Post</p>
+                    <p className='start-post-p'>Start Post</p>
 
-                <div className='post-header'>
-                    <img src={woman} className='post-pp'/>
-                    <p className='post-username'>Amanda Einstein 
-                        <span>
-                            <img src={verified} className='verified-img'/>
-                        </span> 
-                    </p>
-                </div>
+                    <div className='post-header'>
+                        <img src={woman} className='post-pp'/>
+                        <p className='post-username'>Amanda Einstein 
+                            <span>
+                                <img src={verified} className='verified-img'/>
+                            </span> 
+                        </p>
+                    </div>
 
-                <div className='header-border border'></div>
+                    <div className='header-border border'></div>
 
-                <form method='POST'>
                     <textarea
                     type='text'
                     value={details}
                     maxLength={50}
                     placeholder='Add additional information'
                     className='post-information-input border'
+                    onChange={(e) => setDetails(e.target.value)}
                     required
                     />
                     <p className='fifty-words'>50 words</p>
@@ -148,8 +149,8 @@ const StartPost = () => {
                             placeholder='Location'
                             className='post-location-box border' 
                             value={location} 
-                            onChange={handleLocationChange}
                             data-second-location={selectedLocation}
+                            onChange={handleLocationChange}
                             required>
                             <option value=""></option>
                                 {nigerianStates.map((state) => (

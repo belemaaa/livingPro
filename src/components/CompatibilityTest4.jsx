@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import compatTestImage from '../assets/images/compat_3.jpg'
 
 const CompatibilityTest4 = () => {
     useEffect(() => {
@@ -50,6 +51,10 @@ const CompatibilityTest4 = () => {
                         Done
                     </button>
                 </form>
+            </div>
+
+            <div className='hidden md:flex'>
+                <img src={compatTestImage} className='compat_test_image'/>
             </div>
         </div>
     

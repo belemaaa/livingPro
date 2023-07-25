@@ -887,6 +887,21 @@
     gap: 10px;
     color: white;
 }
+@media (min-width: 1024px){
+    .compat-proceed-btn-H{
+        width: 162px;
+        height: 36px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+        background-color: #007FE0;
+        font-weight: 600;
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 10px;
+        gap: 10px;
+        color: white;
+    }
+}
 .compat-proceed-btn-I{
     width: 162px;
     height: 36px;

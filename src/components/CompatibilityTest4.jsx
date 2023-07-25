@@ -26,27 +26,33 @@ const CompatibilityTest4 = () => {
             </Link>
         </div>
         
-        <p className='about-welcome'>Compatibility test</p>
-        <p className='compat-p'>
-            This helps make finding the right roomate easier.
-            Changes can be made later.
-        </p>
 
-        <p className='personality'>Mentality/Humor</p>
-        <div className='p-border border'></div>
+        <div className='compat_test_div'>
+            <div className='compat_test'>
+                <p className='about-welcome'>Compatibility test</p>
+                <p className='compat-p'>
+                    This helps make finding the right roomate easier.
+                    Changes can be made later.
+                </p>
 
-        <p className='compat-4-upper-p'>
-            Tell us something you think about a lot,
-            that either bothers or amuses you.
-        </p>
+                <p className='personality'>Mentality/Humor</p>
+                <div className='p-border border'></div>
 
-        <form method='POST' onSubmit={handleProceed}>
-            <textarea className='compat-4-textarea border'/>
+                <p className='compat-4-upper-p'>
+                    Tell us something you think about a lot,
+                    that either bothers or amuses you.
+                </p>
 
-            <button type='submit' className='compat-proceed-btn-M'>
-                Done
-            </button>
-        </form>
+                <form method='POST' onSubmit={handleProceed}>
+                    <textarea className='compat-4-textarea border'/>
+
+                    <button type='submit' className='compat-proceed-btn-M'>
+                        Done
+                    </button>
+                </form>
+            </div>
+        </div>
+    
     </div>
   )
 }

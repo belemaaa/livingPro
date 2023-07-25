@@ -916,6 +916,21 @@
     gap: 10px;
     color: white;
 }
+@media (min-width: 1024px){
+    .compat-proceed-btn-I{
+        width: 162px;
+        height: 36px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        background-color: #007FE0;
+        font-weight: 600;
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 10px;
+        gap: 10px;
+        color: white;
+    }
+}
 .compat-4-upper-p{
     width: 315px;
     Height: 36px;

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import compatTestImage from '../assets/images/compat_test_image.jpg'
 
 // remember to change state names
 const CompatibilityTest1 = () => {
@@ -125,257 +126,267 @@ const CompatibilityTest1 = () => {
             </Link>
         </div>
         
-        <p className='about-welcome'>Compatibility test</p>
-        <p className='compat-p'>
-            This helps make finding the right roomate easier.
-            Changes can be made later.
-        </p>
+        <div className='compat_test_div'>
+            <div className='compat_test'>
+                <p className='about-welcome'>Compatibility test</p>
+                <p className='compat-p'>
+                    This helps make finding the right roomate easier.
+                    Changes can be made later.
+                </p>
 
-        <p className='personality'>Interests</p>
-        <div className='p-border border'></div>
+                <p className='personality'>Interests</p>
+                <div className='p-border border'></div>
 
-        <form method='POST' onSubmit={handleProceed}>
-            <div className='personality-list'>
-                <div className='here-for-option-btns-P'>
-                    <div className='here-for-option-btn'>
-                        <button onClick={handlePatientBtn}>
-                            {patient ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Sports
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Sports
-                            </p>}
-                        </button>
+                <form method='POST' onSubmit={handleProceed}>
+                    <div className='personality-list'>
+                        <div className='here-for-option-btns-P'>
+                            <div className='here-for-option-btn'>
+                                <button onClick={handlePatientBtn}>
+                                    {patient ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Sports
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Sports
+                                    </p>}
+                                </button>
+                            </div>
+                            
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleFunnyBtn}>
+                                    {funny ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text'>
+                                        Traveling
+                                    </p> 
+                                    :
+                                    <p  style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Traveling
+                                    </p>
+                                }
+                                </button>
+                            </div>
+                            
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleStrictBtn}>
+                                    {strict ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Reading
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Reading
+                                    </p>}
+                                </button>
+                            </div>
+                        </div>
+                        
+
+                        <div className='here-for-option-btns-P'>
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleOrganizedBtn}>
+                                    {organized ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Cooking
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Cooking
+                                    </p>}
+                                </button>
+                            </div>
+
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleNeatBtn}>
+                                    {neat ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Movies
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Movies
+                                    </p>}
+                                </button>
+                            </div>
+
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleStraightforwardBtn}>
+                                    {straightForward ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Socializing
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Socializing
+                                    </p>}
+                                </button>
+                            </div>
+                        </div>    
+
+                        <div className='here-for-option-btns-P'>
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleTrustworthyBtn}>
+                                    {trustworthy ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Acting
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Acting
+                                    </p>}
+                                </button>
+                            </div>
+
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleCreativeBtn}>
+                                    {creative ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Photography
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Photography
+                                    </p>}
+                                </button>
+                            </div>
+
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleIntrovertBtn}>
+                                    {introvert ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Coding
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Coding
+                                    </p>}
+                                </button>
+                            </div>
+                        </div> 
+
+                        <div className='here-for-option-btns-P'>
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleExtrovertBtn}>
+                                    {extrovert ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Shopping
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Shopping
+                                    </p>}
+                                </button>
+                            </div>
+
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleOptimisticBtn}>
+                                    {optimistic ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Designing
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Designing
+                                    </p>}
+                                </button>
+                            </div>
+
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleEgocentricBtn}>
+                                    {egocentric ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Music
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Music
+                                    </p>}
+                                </button>
+                            </div>
+                        </div> 
+
+                        <div className='here-for-option-btns-P'>
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleSelfaware}>
+                                    {selfaware ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Dancing
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Dancing
+                                    </p>}
+                                </button>
+                            </div>
+
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleHonestBtn}>
+                                    {honest ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Singing
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Singing
+                                    </p>}
+                                </button>
+                            </div>
+
+                            <div className='here-for-option-btn-P'>
+                                <button onClick={handleGenerous}>
+                                    {generous ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Swimming
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Swimming
+                                    </p>}
+                                </button>
+                            </div>
+                        </div> 
+
+                        <div className='here-for-option-btns-P'>
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleLogicalBtn}>
+                                    {logical ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Podcasts
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Podcasts
+                                    </p>}
+                                </button>
+                            </div>
+
+                            <div className='here-for-option-btn'>
+                                <button onClick={handleEmotionalBtn}>
+                                    {emotional ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
+                                    className='here-for-btn-text border'>
+                                        Religion
+                                    </p> 
+                                    :
+                                    <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
+                                        Religion
+                                    </p>}
+                                </button>
+                            </div>
+                        </div>                
                     </div>
                     
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleFunnyBtn}>
-                            {funny ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text'>
-                                Traveling
-                            </p> 
-                            :
-                            <p  style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Traveling
-                            </p>
-                        }
-                        </button>
-                    </div>
-                    
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleStrictBtn}>
-                            {strict ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Reading
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Reading
-                            </p>}
-                        </button>
-                    </div>
-                </div>
-                
-
-                <div className='here-for-option-btns-P'>
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleOrganizedBtn}>
-                            {organized ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Cooking
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Cooking
-                            </p>}
-                        </button>
-                    </div>
-
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleNeatBtn}>
-                            {neat ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Movies
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Movies
-                            </p>}
-                        </button>
-                    </div>
-
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleStraightforwardBtn}>
-                            {straightForward ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Socializing
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Socializing
-                            </p>}
-                        </button>
-                    </div>
-                </div>    
-
-                <div className='here-for-option-btns-P'>
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleTrustworthyBtn}>
-                            {trustworthy ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Acting
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Acting
-                            </p>}
-                        </button>
-                    </div>
-
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleCreativeBtn}>
-                            {creative ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Photography
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Photography
-                            </p>}
-                        </button>
-                    </div>
-
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleIntrovertBtn}>
-                            {introvert ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Coding
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Coding
-                            </p>}
-                        </button>
-                    </div>
-                </div> 
-
-                <div className='here-for-option-btns-P'>
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleExtrovertBtn}>
-                            {extrovert ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Shopping
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Shopping
-                            </p>}
-                        </button>
-                    </div>
-
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleOptimisticBtn}>
-                            {optimistic ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Designing
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Designing
-                            </p>}
-                        </button>
-                    </div>
-
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleEgocentricBtn}>
-                            {egocentric ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Music
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Music
-                            </p>}
-                        </button>
-                    </div>
-                </div> 
-
-                <div className='here-for-option-btns-P'>
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleSelfaware}>
-                            {selfaware ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Dancing
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Dancing
-                            </p>}
-                        </button>
-                    </div>
-
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleHonestBtn}>
-                            {honest ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Singing
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Singing
-                            </p>}
-                        </button>
-                    </div>
-
-                    <div className='here-for-option-btn-P'>
-                        <button onClick={handleGenerous}>
-                            {generous ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Swimming
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Swimming
-                            </p>}
-                        </button>
-                    </div>
-                </div> 
-
-                <div className='here-for-option-btns-P'>
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleLogicalBtn}>
-                            {logical ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Podcasts
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Podcasts
-                            </p>}
-                        </button>
-                    </div>
-
-                    <div className='here-for-option-btn'>
-                        <button onClick={handleEmotionalBtn}>
-                            {emotional ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
-                            className='here-for-btn-text border'>
-                                Religion
-                            </p> 
-                            :
-                            <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                Religion
-                            </p>}
-                        </button>
-                    </div>
-                </div>                
+                    <button type='submit' className='compat-proceed-btn-I'>
+                        Proceed
+                    </button>
+                </form>
             </div>
-            
-            <button type='submit' className='compat-proceed-btn-I'>
-                Proceed
-            </button>
-        </form>
+
+            <div className='hidden md:flex'>
+                <img src={compatTestImage} className='compat_test_image'/>
+            </div>
+
+        </div>
+        
         
     </div>
   )

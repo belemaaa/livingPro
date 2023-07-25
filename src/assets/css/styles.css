@@ -30,13 +30,17 @@
         margin-bottom: -15px;
     }
 }
-.OB1ellipse15, .OB2ellipse18, .OB3ellipse8{
+.OB1ellipse15, 
+.OB2ellipse18, 
+.OB3ellipse8{
     margin-left: 52px;
     margin-top: 20px;
     width: 310px;
 }
 @media (min-width: 1024px) {
-    .OB1ellipse15, .OB2ellipse18, .OB3ellipse8{
+    .OB1ellipse15, 
+    .OB2ellipse18, 
+    .OB3ellipse8{
         width: 350px;
         margin-left: 490px;
     }

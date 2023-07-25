@@ -11,7 +11,6 @@ import axios from 'axios'
 
 const StartPost = () => {
     const navigate = useNavigate()
-    const [selectedLocation, setSelectedLocation] = useState('');
     const [images, setImages] = useState([]);
     const [details, setDetails] = useState('')
     const [location, setLocation]  = useState('')
@@ -52,7 +51,7 @@ const StartPost = () => {
     ];
 
     const handleLocationChange = (event) => {
-        setSelectedLocation(event.target.value);
+        setLocation(event.target.value);
     };
 
     // handle image upload
@@ -149,7 +148,6 @@ const StartPost = () => {
                             placeholder='Location'
                             className='post-location-box border' 
                             value={location} 
-                            data-second-location={selectedLocation}
                             onChange={handleLocationChange}
                             required>
                             <option value=""></option>

@@ -12,13 +12,13 @@ import axios from 'axios'
 const StartPost = () => {
     const navigate = useNavigate()
     const [selectedLocation, setSelectedLocation] = useState('');
-    const [image, setImage] = useState('')
+    const [images, setImages] = useState([]);
     const [details, setDetails] = useState('')
     const [location, setLocation]  = useState('')
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     // fetching post api
     const handleCreateAccount = async (e) => {
@@ -31,9 +31,9 @@ const StartPost = () => {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({
-        image: image,
-        details: details,
-        location: location
+            image: images,
+            details: details,
+            location: location
         }),
     });
     if (response.status === 200){
@@ -55,8 +55,7 @@ const StartPost = () => {
         setSelectedLocation(event.target.value);
     };
 
-    const [images, setImages] = useState([]);
-
+    // handle image upload
     const handleImageChange = (event) => {
         const files = event.target.files;
         const imageList = [];
@@ -76,94 +75,96 @@ const StartPost = () => {
         }
     };
 
-  return (
-    <div>
+    return (
         <div>
-            <div className='prev-next-options'>
-                <div className='signup-go-back-btn'>
-                    <Link to='/post'>
-                        <IoIosArrowBack size={25}/>
+            <div>
+                <div className='prev-next-options'>
+                    <div className='signup-go-back-btn'>
+                        <Link to='/post'>
+                            <IoIosArrowBack size={25}/>
+                        </Link>
+                    </div>
+                    <Link to='#' className='start-post-post'>
+                        Post
                     </Link>
                 </div>
-                <Link to='#' className='start-post-post'>
-                    Post
-                </Link>
-            </div>
 
-            <p className='start-post-p'>Start Post</p>
+                <p className='start-post-p'>Start Post</p>
 
-            <div className='post-header'>
-                <img src={woman} className='post-pp'/>
-                <p className='post-username'>Amanda Einstein 
-                    <span>
-                        <img src={verified} className='verified-img'/>
-                    </span> 
-                </p>
-            </div>
+                <div className='post-header'>
+                    <img src={woman} className='post-pp'/>
+                    <p className='post-username'>Amanda Einstein 
+                        <span>
+                            <img src={verified} className='verified-img'/>
+                        </span> 
+                    </p>
+                </div>
 
-            <div className='header-border border'></div>
+                <div className='header-border border'></div>
 
-            <form method='POST'>
-                <textarea
-                type='text'
-                maxLength={50}
-                placeholder='Add additional information'
-                className='post-information-input border'
-                required
-                />
-                <p className='fifty-words'>50 words</p>
+                <form method='POST'>
+                    <textarea
+                    type='text'
+                    value={details}
+                    maxLength={50}
+                    placeholder='Add additional information'
+                    className='post-information-input border'
+                    required
+                    />
+                    <p className='fifty-words'>50 words</p>
 
-                <div>
-                    <div className='post-image-div'>
-                        <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
-                        {images.length === 0 ? (
-                            <input
-                                type='file'
-                                accept='image/*'
-                                className='image-field border'
-                                onChange={handleImageChange}
-                                multiple
-                            />
-                        ) : null}
-                    </div>
-
-                    {images.length > 0 && (
-                        <div className='uploaded-images-grid border'>
-                            {images.map((image, index) => (
-                                <div key={index}>
-                                <img
-                                    src={image}
-                                    alt={`Image ${index}`}
-                                    className='uploaded-images'
+                    <div>
+                        <div className='post-image-div'>
+                            <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
+                            {images.length === 0 ? (
+                                <input
+                                    type='file'
+                                    accept='image/*'
+                                    className='image-field border'
+                                    onChange={handleImageChange}
+                                    multiple
                                 />
-                                </div>
-                            ))}
+                            ) : null}
                         </div>
-                    )}  
-                </div>  
 
-                <div className='post-location-div'>
-                    <label className='post-location-lbl'>Add Location</label>
-                    <select name='location' 
-                        placeholder='Location'
-                        className='post-location-box border' 
-                        value={selectedLocation} 
-                        onChange={handleLocationChange}
-                        required>
-                        <option value=""></option>
-                            {nigerianStates.map((state) => (
-                            <option key={state} value={state}>
-                                {state}
-                            </option>
-                        ))}
-                    </select>
-                </div>                    
-            </form>
+                        {images.length > 0 && (
+                            <div className='uploaded-images-grid border'>
+                                {images.map((image, index) => (
+                                    <div key={index}>
+                                    <img
+                                        src={image}
+                                        alt={`Image ${index}`}
+                                        className='uploaded-images'
+                                    />
+                                    </div>
+                                ))}
+                            </div>
+                        )}  
+                    </div>  
+
+                    <div className='post-location-div'>
+                        <label className='post-location-lbl'>Add Location</label>
+                        <select name='location' 
+                            placeholder='Location'
+                            className='post-location-box border' 
+                            value={location} 
+                            onChange={handleLocationChange}
+                            data-second-location={selectedLocation}
+                            required>
+                            <option value=""></option>
+                                {nigerianStates.map((state) => (
+                                <option key={state} value={state}>
+                                    {state}
+                                </option>
+                            ))}
+                        </select>
+                    </div>                    
+                </form>
+            </div>
+
+            <PostFooter/>
         </div>
-
-        <PostFooter/>
-    </div>
-  )
+    )
 }
 
 export default StartPost

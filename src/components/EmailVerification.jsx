@@ -19,7 +19,7 @@ const EmailVerification = () => {
         const headers={
             'Content-Type': 'application/json'
         }
-        const response = await fetch('https://lp-backend-production.up.railway.app/', {
+        const response = await fetch('https://lp-backend-production.up.railway.app/signup/confirm', {
             method: 'POST',
             headers: headers,
             body: JSON.stringify({

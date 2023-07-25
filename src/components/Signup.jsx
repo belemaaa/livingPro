@@ -59,7 +59,7 @@ const Signup = () => {
         code: code,
         signupData: signupData,
       };
-      const response = await fetch('https://lp-backend-production.up.railway.app/verify', {
+      const response = await fetch('https://lp-backend-production.up.railway.app/signup/confirm', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(requestBody),

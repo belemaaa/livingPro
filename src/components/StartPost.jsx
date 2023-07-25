@@ -10,11 +10,40 @@ import '../assets/css/styles.css'
 import axios from 'axios'
 
 const StartPost = () => {
+    const navigate = useNavigate()
     const [selectedLocation, setSelectedLocation] = useState('');
+    const [image, setImage] = useState('')
+    const [details, setDetails] = useState('')
+    const [location, setLocation]  = useState('')
 
     useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
+
+    // fetching post api
+    const handleCreateAccount = async (e) => {
+    e.preventDefault()
+
+    const headers={
+        'Content-Type': 'multipart/form-data',
+    }
+    const response = await fetch('https://lp-backend-production.up.railway.app/posts/gpt', {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+        image: image,
+        details: details,
+        location: location
+        }),
+    });
+    if (response.status === 200){
+        console.log('Post created')
+        navigate('/home')
+    }
+    else{
+        console.log('an error occurred');
+    }  
+    };
 
       // Array of Nigerian state names
     const nigerianStates = [

@@ -777,7 +777,7 @@
     .compat_test_div{
         display: flex;
         flex-direction: row;
-        margin-left: 200px;
+        margin-left: 150px;
         margin-top: 40px;
     }
 }
@@ -785,8 +785,35 @@
     .compat_test_image{
         width: 600px;
         height: 500px;
+        margin-left: 40px;
+        margin-top: 100px;
+        border-radius: 10px;
+    }
+}
+.compat_title{
+    width: 300px;
+    height: 22px;
+    font-size: 18px;
+    line-height: 21.78px;
+    font-weight: 600;
+    align-items: center;
+    letter-spacing: -0.3px;
+    margin-top: 39px;
+    margin-left: 30px;
+    margin-bottom: 16px;
+}
+@media (min-width: 1024px) {
+    .compat-title{
+        width: 350px;
+        height: 22px;
+        font-size: 14px;
+        line-height: 21.78px;
+        font-weight: 600;
+        align-items: center;
+        letter-spacing: -0.3px;
+        margin-top: 39px;
         margin-left: 60px;
-        margin-top: 40px;
+        margin-bottom: 16px;
     }
 }
 .personality,
@@ -830,6 +857,21 @@
     padding: 10px;
     gap: 10px;
     color: white;
+}
+@media (min-width: 1024px){
+    .compat-proceed-btn{
+        width: 162px;
+        height: 36px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        background-color: #007FE0;
+        font-weight: 600;
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 10px;
+        gap: 10px;
+        color: white;
+    }
 }
 .compat-proceed-btn-H{
     width: 162px;

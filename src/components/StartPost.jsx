@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import GoogleFrame from '../assets/images/GoogleFrame.png'
 import woman from '../assets/images/womanDP.png'
 import verified from '../assets/images/ic_baseline-verified.png'
 import PostFooter from './PostFooter'
@@ -34,27 +33,7 @@ const StartPost = () => {
     const handleImageChange = (event) => {
         const file = event.target.files[0];
         setSelectedImage(file);
-    };
-    // const handleImageChange = (event) => {
-    //     const files = event.target.files;
-    //     const imageList = [];
-    //     for (let i = 0; i < files.length; i++) {
-    //     const file = files[i];
-    //     const reader = new FileReader();
-
-    //     reader.onload = (e) => {
-    //         imageList.push(e.target.result);
-    //         if (imageList.length + images.length <= 4) {
-    //           setImages([...images, ...imageList]);
-    //           setSelectedImage(file);
-    //         } else {
-    //           alert('Maximum of 4 images allowed!');
-    //         }
-    //     };
-    //     reader.readAsDataURL(file);
-    //     }
-    // };    
-
+    };   
 
     // fetching post api
     const handlePost = async (e) => {
@@ -123,24 +102,36 @@ const StartPost = () => {
                     />
                     <p className='fifty-words'>50 words</p>
 
-                    <input type="file" onChange={handleImageChange} />
+                    {/* <input type="file" onChange={handleImageChange} /> */}
 
-                    {/* <div>
+                    <div>
                         <div className='post-image-div'>
                             <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
                             {images.length === 0 ? (
                                 <input
                                     type='file'
                                     accept='image/*'
-                                    value={images}
+                                    //value={images}
                                     className='image-field border'
                                     onChange={handleImageChange}
                                     multiple
                                 />
-                            ) : null}
+                            ) : 
+                            <div className='uploaded-images-grid border'>
+                                {images.map((image, index) => ( 
+                                    <div key={index}>
+                                        <img
+                                            src={image}
+                                            alt={`Image ${index}`}
+                                            className='uploaded-images'
+                                        />
+                                    </div>
+                                ))}
+                            </div> 
+                            }
                         </div>
 
-                        {images.length > 0 && (
+                        {/* {images.length > 0 && (
                             <div className='uploaded-images-grid border'>
                                 {images.map((image, index) => (
                                     <div key={index}>
@@ -152,8 +143,8 @@ const StartPost = () => {
                                     </div>
                                 ))}
                             </div>
-                        )}  
-                    </div>   */}
+                        )}   */}
+                    </div>  
 
                     <div className='post-location-div'>
                         <label className='post-location-lbl'>Add Location</label>
@@ -180,3 +171,24 @@ const StartPost = () => {
 }
 
 export default StartPost
+
+
+// const handleImageChange = (event) => {
+    //     const files = event.target.files;
+    //     const imageList = [];
+    //     for (let i = 0; i < files.length; i++) {
+    //     const file = files[i];
+    //     const reader = new FileReader();
+
+    //     reader.onload = (e) => {
+    //         imageList.push(e.target.result);
+    //         if (imageList.length + images.length <= 4) {
+    //           setImages([...images, ...imageList]);
+    //           setSelectedImage(file);
+    //         } else {
+    //           alert('Maximum of 4 images allowed!');
+    //         }
+    //     };
+    //     reader.readAsDataURL(file);
+    //     }
+    // }; 

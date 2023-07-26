@@ -17,7 +17,7 @@ const Profile = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi rerum hic, 
           vel ipsa dolores veniam, in incidunt, iure cumque architecto optio magni nisi rem! 
           Exercitationem maxime culpa rerum deserunt. Itaque eligendi sapiente ad. Distinctio rem, 
-          voluptas similique aut culpa eaque odit dicta omnis accusamus veniam excepturi dolore laudantium recusandae aliquid.
+          voluptas similique aut culpa eaque odit dicta omnis accusamus veniam excepturi dolore laudantium recusandae aliquide.
         </div>
 
         <div className='md:hidden'>

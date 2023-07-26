@@ -86,7 +86,7 @@ const CompatibilityTest2 = () => {
         
         <div className='compat_test_div'>
             <div className='compat_test'>
-                <p className='about-welcome'>Compatibility test</p>
+                <p className='compat_title'>Compatibility test</p>
                 <p className='compat-p'>
                     This helps make finding the right roomate easier.
                     Changes can be made later.

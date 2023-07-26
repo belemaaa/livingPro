@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import compatTestImage from '../assets/images/compat_3.jpg'
+import compatTestImage from '../assets/images/compat_4.jpg'
 
 const CompatibilityTest4 = () => {
     useEffect(() => {
@@ -30,7 +30,7 @@ const CompatibilityTest4 = () => {
 
         <div className='compat_test_div'>
             <div className='compat_test'>
-                <p className='about-welcome'>Compatibility test</p>
+                <p className='compat_title'>Compatibility test</p>
                 <p className='compat-p'>
                     This helps make finding the right roomate easier.
                     Changes can be made later.
@@ -47,6 +47,7 @@ const CompatibilityTest4 = () => {
                 <form method='POST' onSubmit={handleProceed}>
                     <textarea className='compat-4-textarea border'/>
 
+                    <br/>
                     <button type='submit' className='compat-proceed-btn-M'>
                         Done
                     </button>

@@ -790,7 +790,7 @@
         width: 600px;
         height: 500px;
         margin-left: 40px;
-        margin-top: 100px;
+        margin-top: 50px;
         border-radius: 10px;
     }
 }
@@ -895,7 +895,7 @@
     .compat-proceed-btn-H{
         width: 162px;
         height: 36px;
-        margin-top: 80px;
+        margin-top: 50px;
         margin-bottom: 40px;
         background-color: #007FE0;
         font-weight: 600;
@@ -973,7 +973,7 @@
     .compat-proceed-btn-M{
         width: 162px;
         height: 36px;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 30px;
         /* margin-left: 120px; */
         background-color: #007FE0;

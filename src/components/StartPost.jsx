@@ -112,6 +112,7 @@ const StartPost = () => {
                     <div>
                         <div className='post-image-div'>
                             <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
+                            <br/>
                             {images.length === 0 ? (
                                 <input
                                     type='file'
@@ -153,6 +154,7 @@ const StartPost = () => {
 
                     <div className='post-location-div'>
                         <label className='post-location-lbl'>Add Location</label>
+                        <br/>
                         <select name='location' 
                             placeholder='Location'
                             className='post-location-box border' 

@@ -1197,6 +1197,19 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
+@media (min-width: 1024px){
+    .start-post-post{
+        width: 26px;
+        height: 15px;
+        margin-top: 61px;
+        margin-left: 810px;
+        color: #BDBDBD;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: -0.3px;
+    }
+}
 .start-post-p{
     width: 100px;
     height: 15px;
@@ -1205,6 +1218,17 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 14.52px;
+}
+@media(min-width: 1024px){
+    .start-post-p{
+        width: 150px;
+        height: 15px;
+        margin-top: 20px;
+        margin-left: 400px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 14.52px;
+    }
 }
 .post-header{
     display: flex;
@@ -1239,6 +1263,14 @@
     margin-left: 30px;
     border-color: #d6d4d4;
 }
+@media(min-width: 1024px){
+    .header-border{
+        width: 400px;
+        margin-top: 35px;
+        margin-left: 30px;
+        border-color: #cccccc;
+    }
+}
 .post-information-input{
     width: 350px;
     height: 150px;
@@ -1249,6 +1281,19 @@
     font-weight: 400;
     font-size: 13px;
     padding: 10px;
+}
+@media(min-width: 1024px){
+    .post-information-input{
+        width: 400px;
+        height: 150px;
+        margin-left: 30px;
+        margin-top: 20px;
+        border-radius: 10px;
+        border-color: #cccccc;
+        font-weight: 400;
+        font-size: 13px;
+        padding: 10px;
+    }
 }
 .post-information-input::placeholder{
     width: 180px;
@@ -1263,6 +1308,16 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 12.1px;
+}
+@media(min-width: 1024px){
+    .fifty-words{
+        height: 12px;
+        margin-top: 6px;
+        margin-left: 380px;
+        font-weight: 410;
+        font-size: 10px;
+        line-height: 12.1px;
+    }
 }
 .post-image-div{
     margin-top: 35px;
@@ -1289,6 +1344,19 @@
     padding: 90px;
     font-weight: 300;
     font-size: 10px;
+}
+@media(min-width: 1024px){
+    .image-field{
+        width: 400px;
+        height: 200px;
+        margin-left: 30px;
+        border-radius: 10px;
+        border-color: #cccccc;
+        padding: 90px;
+        padding-left: 130px;
+        font-weight: 300;
+        font-size: 10px;
+    }
 }
 .uploaded-images-grid{
     display: grid;
@@ -1325,6 +1393,21 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 14.52px;
+}
+@media(min-width: 1024px){
+    .post-location-box{
+        width: 400px;
+        height: 44px;
+        margin-top: 5px;
+        margin-left: 30px;
+        border-radius: 10px;
+        border-color: #cccccc;
+        background-color: white;
+        padding-left: 14px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14.52px;
+    }
 }
 .post-location-box::placeholder{
     color: black;

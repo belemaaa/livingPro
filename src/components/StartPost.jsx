@@ -26,7 +26,7 @@ const StartPost = () => {
     const headers={
         'Content-Type': 'multipart/form-data',
     }
-    const response = await fetch('https://lp-backend-production.up.railway.app/posts/gpt', {
+    const response = await fetch('https://lp-backend-production.up.railway.app/posts/', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({

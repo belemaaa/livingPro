@@ -143,6 +143,7 @@ const Signup = () => {
           </div>
 
           <div className='signup-form-div'>
+            {loginError && <p className='loginError'>{loginError}</p>}
             <form method='POST' className='signup-form' onSubmit={handleCreateAccount}>
               <input 
                 type='text' 

@@ -1057,14 +1057,16 @@
 .discover-page,
 .post-page,
 .inbox-page,
-.profile-page{
+.profile-page,
+.start-post-page{
     height: 100%;
 }
 @media (min-width: 1024px){
     .home-page,
     .discover-page,
     .post-page,
-    .inbox-page{
+    .inbox-page,
+    .start-post-page{
         margin-left: 410px;
         width: 70%;
         box-sizing: border-box;

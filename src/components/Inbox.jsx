@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import InboxFooter from './InboxFooter.jsx'
+import Profile from './Profile.jsx';
 
 const Inbox = () => {
     useEffect(() => {
@@ -7,8 +8,12 @@ const Inbox = () => {
     }, []);
 
   return (
-    <div className='inbox-page'>
-        <div>
+    <div className='overflow-hidden'>
+        <div className='hidden md:flex dk-profile border-r'>
+          <Profile/>
+        </div>
+
+        <div className='inbox-page'>
             Inbox
         </div>
 

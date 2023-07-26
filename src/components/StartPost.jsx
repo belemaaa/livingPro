@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import woman from '../assets/images/womanDP.png'
 import verified from '../assets/images/ic_baseline-verified.png'
 import PostFooter from './PostFooter'
+import Profile from './Profile';
 import '../assets/css/styles.css'
 import axios from 'axios'
 
@@ -63,8 +64,12 @@ const StartPost = () => {
     };
     
     return (
-        <div>
-            <div>
+        <div className='overflow-hidden'>
+            <div className='hidden md:flex dk-profile border-r'>
+                <Profile/>
+            </div>
+
+            <div className='start-post-page'>
                 <form method='POST' onSubmit={handlePost}>
                     <div className='prev-next-options'>
                         <div className='signup-go-back-btn'>

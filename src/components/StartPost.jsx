@@ -14,6 +14,7 @@ const StartPost = () => {
     const [images, setImages] = useState([]);
     const [details, setDetails] = useState('')
     const [location, setLocation]  = useState('')
+    const [postError, setPostError] = useState('')
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -40,7 +41,9 @@ const StartPost = () => {
         navigate('/home')
     }
     else{
+        console.log(response)
         console.log('an error occurred');
+        setPostError('Oops! Post was not created.')
     }  
     };
 
@@ -102,6 +105,7 @@ const StartPost = () => {
 
                     <div className='header-border border'></div>
 
+                    {postError && <p className='postError'>{postError}</p>}
                     <textarea
                     type='text'
                     value={details}

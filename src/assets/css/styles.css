@@ -997,10 +997,20 @@
 }
 .home-footer-div{
     min-height: 100%;
-    /* margin-top: 430px; */
     border-color: #909090;
     position: absolute;
     opacity: 1;
+}
+@media (min-width: 1024px){
+    .home-footer-div{
+        min-height: 100%;
+        border-color: #909090;
+        position: absolute;
+        opacity: 1;
+        width: 70%;
+        float: right;
+        margin-left: 400px;
+    }
 }
 .home-footer-icons{
     display: flex;
@@ -1017,10 +1027,24 @@
     margin-left: 28px;
     margin-right: 23px;
 }
+@media (min-width: 1024px){
+    .home-footer-icon-closed{
+        color: #7c7b7b;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
 .home-footer-icon-open{
     color: #007FE0;
-    margin-left: 23px;
-    margin-right: 21px;
+    margin-left: 28px;
+    margin-right: 23px;
+}
+@media (min-width: 1024px){
+    .home-footer-icon-open{
+        color: #007FE0;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 }
 .home-page,
 .discover-page,
@@ -1028,6 +1052,21 @@
 .inbox-page,
 .profile-page{
     height: 100%;
+}
+@media (min-width: 1024px){
+    .home-page,
+    .discover-page,
+    .post-page,
+    .inbox-page{
+        width: 70%;
+        box-sizing: border-box;
+    }
+}
+@media (min-width: 1024px){
+    .profile-page{
+        width: 30%;
+        box-sizing: border-box;
+    }
 }
 .home-footer-icon-name{
     text-align: center;
@@ -1237,3 +1276,8 @@
     margin-bottom: -10px;
     font-weight: 400;
 }
+.home{
+    display: flex;
+    
+}
+

@@ -63,7 +63,7 @@ const InboxFooter = () => {
                 </p>
             </div>
 
-            <div onClick={handleProfile}> 
+            <div onClick={handleProfile} className='md:hidden'> 
                 <CgProfile size={26} className='home-footer-icon-closed'/>
                 <p className='home-footer-icon-name'>
                     Profile

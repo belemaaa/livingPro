@@ -69,7 +69,7 @@ const HomeFooter = () => {
     }
 
   return (
-    <div className='home-footer-div w-screen'>
+    <div className='home-footer-div'>
         <div className='home-footer-icons border-t w-screen'>
             <div>
                 <HiHome size={26} className='home-footer-icon-open'/>

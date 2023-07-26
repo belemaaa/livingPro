@@ -13,29 +13,63 @@ const EmailVerification = () => {
     const [loginError, setLoginError] = useState('')
     const navigate = useNavigate();
 
-    const handleVerify = async (e) => {
-        e.preventDefault()
 
-        const headers={
-            'Content-Type': 'application/json'
-        }
-        const response = await fetch('https://lp-backend-production.up.railway.app/signup/confirm', {
+    const handleVerify = async (e) => {
+        e.preventDefault();
+    
+        // Encode the data in URL-encoded format
+        const requestBody = new URLSearchParams();
+        requestBody.append('code', code.toString());
+        requestBody.append('user_data', JSON.stringify({
+          fullname: 'fullname', 
+          email: 'email', 
+          password: 'password',
+        }));
+
+        console.log('Data being sent to the API:', requestBody.toString());
+
+        try {
+          const response = await fetch('https://lp-backend-production.up.railway.app/signup/confirm', {
             method: 'POST',
-            headers: headers,
-            body: JSON.stringify({
-                code: code
-            }),
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: requestBody.toString(), // Convert URLSearchParams to a string
         });
-        if (response.status === 200){
-            console.log('verification successful')
-            navigate('/about')
-        }
-        else{
+        if (response.status === 200) {
+            navigate('/home');
+          } else {
             console.log('an error occurred')
-            setLoginError('Invalid input. Please confirm the code sent to your mail.')
-            setCode('')
+          }
+        } catch (error) {
+          console.error('Error during code verification:', error);
         }
     };
+
+
+    // const handleVerify = async (e) => {
+    //     e.preventDefault()
+
+    //     const headers={
+    //         'Content-Type': 'application/json'
+    //     }
+    //     const response = await fetch('https://lp-backend-production.up.railway.app/signup/confirm', {
+    //         method: 'POST',
+    //         headers: headers,
+    //         body: JSON.stringify({
+    //             code: code
+    //         }),
+    //     });
+    //     if (response.status === 200){
+    //         console.log('verification successful')
+    //         navigate('/about')
+    //     }
+    //     else{
+    //         console.log('an error occurred')
+    //         setLoginError('Invalid input. Please confirm the code sent to your mail.')
+    //         setCode('')
+    //     }
+    // };
 
     const inputRefs = useRef([]);
     const handlePinChange = (event, index) => {
@@ -69,14 +103,19 @@ const EmailVerification = () => {
                     <form method='POST' onSubmit={handleVerify} value={code}>
                         {Array.from({ length: 6 }, (_, index) => (
                             <input
-                                key={index}
-                                type='text'
-                                className='verification-pin border'
-                                maxLength={1}
-                                ref={(el) => (inputRefs.current[index] = el)}
-                                onInput={(event) => handlePinChange(event, index)}
-                                onChange={(e) => setCode(e.target.value)}
-                                required
+                            key={index}
+                            value={code[index] || ''}
+                            onChange={(e) => {
+                              const newCode = [...code];
+                              newCode[index] = e.target.value;
+                              setCode(newCode);
+                            }}
+                            type='number'
+                            className='verification-pin border'
+                            maxLength={1}
+                            ref={(el) => (inputRefs.current[index] = el)}
+                            onInput={(event) => handlePinChange(event, index)}
+                            required
                             />
                         ))}
 
@@ -92,6 +131,11 @@ const EmailVerification = () => {
 }
 
 export default EmailVerification
+
+
+
+
+
 
 
     //function to validate pin entries (saving if needed)

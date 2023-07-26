@@ -17,7 +17,7 @@ const Signup = () => {
   const [password, setPassword]  = useState('')
   const [code, setCode] = useState('')
   const [showCodeVerification, setShowCodeVerification] = useState(false);
-  const [signupData, setSignupData] = useState(null);
+  const [user_data, setUser_data] = useState(null);
   const [loginError, setLoginError] = useState('')
 
   // fetching signup api
@@ -39,8 +39,9 @@ const Signup = () => {
     if (response.status === 200){
       console.log('signup was successful')
       // Store the signup data in state
-      setSignupData({ fullname, email, password });
-      setShowCodeVerification(true);
+      setUser_data({ fullname, email, password });
+      navigate('/email_verification')
+      // setShowCodeVerification(true);
     }
     else if(response.status === 409){
       setLoginError('Email already exists. Please log in.')
@@ -54,30 +55,43 @@ const Signup = () => {
   
   // fetching code verification api
   const handleVerify = async (e) => {
-      e.preventDefault()
-
-      const headers={
-          'Content-Type': 'application/json'
-      }
-      const requestBody = {
-        code: code,
-        signupData: signupData,
-      };
+    e.preventDefault();
+  
+    if (!user_data) {
+      console.log('User data is missing.');
+      return;
+    }
+  
+    const headers = {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    };
+  
+    const requestBody = new URLSearchParams();
+    requestBody.append('code', code);
+    requestBody.append('user_data', JSON.stringify(user_data));
+  
+    try {
       const response = await fetch('https://lp-backend-production.up.railway.app/signup/confirm', {
         method: 'POST',
         headers: headers,
-        body: JSON.stringify(requestBody),
+        body: requestBody,
       });
-      if (response.status === 200){
-          console.log('verification successful')
-          navigate('/about')
+  
+      if (response.status === 200) {
+        console.log('verification successful');
+        navigate('/about');
+      } else {
+        console.log('An error occurred:', response.status);
+        setLoginError('Invalid input. Please confirm the code sent to your mail.');
+        setCode('');
       }
-      else{
-          console.log('an error occurred')
-          setLoginError('Invalid input. Please confirm the code sent to your mail.')
-          setCode('')
-      }
-    };
+    } catch (error) {
+      console.log('An error occurred:', error.message);
+      setLoginError('An error occurred while verifying the code.');
+      setCode('');
+    }
+  };
+  
 
   const inputRefs = useRef([]);
   const handlePinChange = (event, index) => {
@@ -99,8 +113,8 @@ const Signup = () => {
         </Link>
       </div>
 
-      {showCodeVerification ? (
-        <div className='ev-div'>
+      {/* {showCodeVerification ? ( */}
+        {/* <div className='ev-div'>
           <div className='signup-head'>
               <p className='signup-welcome'>Welcome!!</p>
               <p className='signup-head-p'>
@@ -134,8 +148,8 @@ const Signup = () => {
                 </button>
               </form>
           </div>
-        </div>
-      ): (
+        </div> */}
+      {/* ): ( */}
         <div className='signup-div'>
           <div className='signup-head'>
             <p className='signup-welcome'>Welcome!!</p>
@@ -209,7 +223,7 @@ const Signup = () => {
           </p>
         </div>
       
-      )}
+      {/* )} */}
 
       
 

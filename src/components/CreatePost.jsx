@@ -24,14 +24,14 @@ const CreatePost = () => {
         <div className='post-images-div'>
           <div className='post-image'>
             <Link to='/start_post'>
-              <img src={newApartment}/>
+              <img src={newApartment} className='main-post-image'/>
               <p className='post-image-p'>A New Apartment</p>
             </Link>
           </div>
 
           <div className='post-image'>
             <Link to='/start_post'>
-              <img src={needRoomate}/>
+              <img src={needRoomate} className='main-post-image'/>
               <p className='post-image-p'>Need a Roomate</p>
             </Link>
           </div>
@@ -40,14 +40,14 @@ const CreatePost = () => {
         <div className='post-images-div'>
           <div className='post-image'>
             <Link to='/start_post'>
-              <img src={happyMan}/>
+              <img src={happyMan} className='main-post-image'/>
               <p className='post-image-p'>Got what I needed</p>
             </Link>
           </div>
 
           <div className='post-image'>
             <Link to='/start_post'>
-              <img src={needApartment}/>
+              <img src={needApartment} className='main-post-image'/>
               <p className='post-image-p'>Need an Apartment</p>
             </Link>
           </div>

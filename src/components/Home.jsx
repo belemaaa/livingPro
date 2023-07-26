@@ -11,9 +11,11 @@ const Home = () => {
   return (
     <div className='overflow-hidden'>
       <div className='home'>
-          <Profile className='hidden md:flex'/>
+          <div className='hidden md:flex dk-profile border-r'>
+            <Profile/>
+          </div>
 
-          <div className='grid-border'></div>
+          {/* <div className='grid-border border-r'></div> */}
 
           <div className='home-page'>
             <div className='home-icon-bg w-screen'>

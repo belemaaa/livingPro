@@ -995,6 +995,13 @@
     color: white;
     margin-left: 185px;
 }
+@media (min-width: 1024px){
+    .lp-home-icon{
+        height: 53px;
+        color: white;
+        margin-left: 450px;
+    }
+}
 .home-footer-div{
     min-height: 100%;
     border-color: #909090;
@@ -1009,7 +1016,7 @@
         opacity: 1;
         width: 70%;
         float: right;
-        margin-left: 400px;
+        margin-left: 410px;
     }
 }
 .home-footer-icons{
@@ -1058,14 +1065,18 @@
     .discover-page,
     .post-page,
     .inbox-page{
+        margin-left: 410px;
         width: 70%;
         box-sizing: border-box;
     }
 }
 @media (min-width: 1024px){
-    .profile-page{
+    .dk-profile{
         width: 30%;
+        height: 600px;
         box-sizing: border-box;
+        border-color: #929292;
+        position: fixed;
     }
 }
 .home-footer-icon-name{
@@ -1276,8 +1287,16 @@
     margin-bottom: -10px;
     font-weight: 400;
 }
-.home{
-    display: flex;
-    
+@media (min-width: 1024px){
+    .home{
+        display: flex;   
+    }
 }
-
+/* @media (min-width: 1024px){
+    .grid-border{
+        border-color: black;
+        border-right: #000000;
+        width: 10%;
+        height: 100%;
+    }
+} */

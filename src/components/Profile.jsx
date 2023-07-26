@@ -11,8 +11,23 @@ const Profile = () => {
         <div>
             Profile
         </div>
+        <div>
+          fvwefwyfeferygfeahrfbegfvev erfvebverebvcv
+          fvevfbergfvbe febfefberfe
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi rerum hic, 
+          vel ipsa dolores veniam, in incidunt, iure cumque architecto optio magni nisi rem! 
+          Exercitationem maxime culpa rerum deserunt. Itaque eligendi sapiente ad. Distinctio rem, 
+          voluptas similique aut culpa eaque odit dicta omnis accusamus veniam excepturi dolore laudantium recusandae aliquid.
+        </div>
 
-        <ProfileFooter/>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde doloribus neque cum. Magnam officiis nihil est voluptas quas ducimus architecto velit nesciunt quis reprehenderit, quae provident tempore commodi quod dolorem veniam explicabo asperiores magni exercitationem consequatur aliquid. Nostrum provident a voluptates molestiae optio sed unde sequi, doloremque in voluptas quisquam ea illo doloribus exercitationem aliquid hic repudiandae modi dolore quod earum alias error totam ullam saepe! Deserunt perferendis nam dicta molestias laboriosam odio harum modi ab corporis nihil maiores est omnis, magnam numquam accusamus suscipit voluptas facere necessitatibus cumque, recusandae officia nisi? Aliquid repellendus ratione necessitatibus, ipsam cumque est sint nobis suscipit blanditiis soluta id expedita consequuntur illo temporibus asperiores quibusdam rerum, natus facilis voluptates quia numquam libero labore. Quod tenetur perspiciatis, suscipit, animi earum consequatur impedit molestias minus cum inventore atque architecto veniam ducimus? Voluptatem blanditiis recusandae provident dolorum
+        </div>
+
+        <div className='md:hidden'>
+          <ProfileFooter/>
+        </div>
+        
     </div>
   )
 }

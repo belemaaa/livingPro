@@ -42,7 +42,11 @@ const Signup = () => {
       setSignupData({ fullname, email, password });
       setShowCodeVerification(true);
     }
+    else if(response.status === 409){
+      setLoginError('Email already exists. Please log in.')
+    }
     else{
+      setLoginError('an error occurred.')
       console.log('an error occurred');
     }  
   };

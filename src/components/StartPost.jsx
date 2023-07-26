@@ -12,6 +12,7 @@ import axios from 'axios'
 const StartPost = () => {
     const navigate = useNavigate()
     const [images, setImages] = useState([]);
+    const [selectedImage, setSelectedImage] = useState(null);
     const [details, setDetails] = useState('')
     const [location, setLocation]  = useState('')
     const [postError, setPostError] = useState('')
@@ -19,35 +20,7 @@ const StartPost = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
-    // fetching post api
-    const handlePost = async (e) => {
-    e.preventDefault()
-
-    const headers={
-        'Content-Type': 'multipart/form-data',
-    }
-    const response = await fetch('https://lp-backend-production.up.railway.app/posts/', {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify({
-            image: images,
-            details: details,
-            location: location
-        }),
-    });
-    if (response.status === 200){
-        console.log('Post created')
-        navigate('/home')
-    }
-    else{
-        console.log(response)
-        console.log('an error occurred');
-        setPostError('Oops! Post was not created.')
-    }  
-    };
-
-      // Array of Nigerian state names
+       
     const nigerianStates = [
         'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra',  
         'Bauchi', 'Bayelsa', 
@@ -59,24 +32,57 @@ const StartPost = () => {
 
     // handle image upload
     const handleImageChange = (event) => {
-        const files = event.target.files;
-        const imageList = [];
-        for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        const reader = new FileReader();
+        const file = event.target.files[0];
+        setSelectedImage(file);
+    };
+    // const handleImageChange = (event) => {
+    //     const files = event.target.files;
+    //     const imageList = [];
+    //     for (let i = 0; i < files.length; i++) {
+    //     const file = files[i];
+    //     const reader = new FileReader();
 
-        reader.onload = (e) => {
-            imageList.push(e.target.result);
-            if (imageList.length + images.length <= 4) {
-              setImages([...images, ...imageList]);
-            } else {
-              alert('Maximum of 4 images allowed!');
-            }
-        };
-        reader.readAsDataURL(file);
+    //     reader.onload = (e) => {
+    //         imageList.push(e.target.result);
+    //         if (imageList.length + images.length <= 4) {
+    //           setImages([...images, ...imageList]);
+    //           setSelectedImage(file);
+    //         } else {
+    //           alert('Maximum of 4 images allowed!');
+    //         }
+    //     };
+    //     reader.readAsDataURL(file);
+    //     }
+    // };    
+
+
+    // fetching post api
+    const handlePost = async (e) => {
+        e.preventDefault();
+    
+        const formData = new FormData();
+        formData.append('image', selectedImage); 
+        formData.append('details', details);
+        formData.append('location', location);
+    
+        try {
+          const response = await axios.post('https://lp-backend-production.up.railway.app/posts/', 
+          formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data', 
+            },
+          });
+    
+          if (response.status === 200){
+            console.log('Post created', response.data);
+            navigate('/home')
+          }
+        } catch (error) {
+            setPostError('Oops! Post was not created.')
+            console.error('Error uploading image:', error);
         }
     };
-
+    
     return (
         <div>
             <div>
@@ -117,13 +123,16 @@ const StartPost = () => {
                     />
                     <p className='fifty-words'>50 words</p>
 
-                    <div>
+                    <input type="file" onChange={handleImageChange} />
+
+                    {/* <div>
                         <div className='post-image-div'>
                             <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
                             {images.length === 0 ? (
                                 <input
                                     type='file'
                                     accept='image/*'
+                                    value={images}
                                     className='image-field border'
                                     onChange={handleImageChange}
                                     multiple
@@ -135,16 +144,16 @@ const StartPost = () => {
                             <div className='uploaded-images-grid border'>
                                 {images.map((image, index) => (
                                     <div key={index}>
-                                    <img
-                                        src={image}
-                                        alt={`Image ${index}`}
-                                        className='uploaded-images'
-                                    />
+                                        <img
+                                            src={image}
+                                            alt={`Image ${index}`}
+                                            className='uploaded-images'
+                                        />
                                     </div>
                                 ))}
                             </div>
                         )}  
-                    </div>  
+                    </div>   */}
 
                     <div className='post-location-div'>
                         <label className='post-location-lbl'>Add Location</label>

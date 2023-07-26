@@ -17,6 +17,7 @@ import Discover from "./components/Discover";
 import Inbox from "./components/Inbox";
 import Profile from "./components/Profile";
 import StartPost from "./components/StartPost";
+import ImageUploadTest from "./components/ImageUploadTest";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/start_post" element={<StartPost/>}/>
           <Route path="/inbox" element={<Inbox/>}/>
           <Route path="/profile" element={<Profile/>}/>
+          <Route path="/test" element={<ImageUploadTest/>}/>
         </Routes>
       </Router>
     </div>

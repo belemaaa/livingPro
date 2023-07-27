@@ -24,11 +24,14 @@ const Profile = () => {
           <div className='profile-image-div'>
             <img src={woman} className='profile_image'/>
           </div>
-          <p className='profile_name'>Grace Belema 
-            <span>
-              <img src={verified} className='name_v'/>
-            </span></p>
+
+          <div className='profile-name-div'>
+            <p className='profile-name'>Grace Belema</p>
+            <img src={verified} className='name_v'/> 
+          </div>
+          
           <p className='profile-occupation'>An artiste/enterpreneur</p>
+
           <p className='profile-location'>
             <CiLocationOn className='location-icon'/> 
             Lagos

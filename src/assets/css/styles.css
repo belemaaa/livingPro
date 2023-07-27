@@ -1452,4 +1452,26 @@
 .profile-page{
     margin-top: 106px;
 }
+.profile-name-div{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.profile-name{
+    width: 140px;
+    height: 18px;
+    margin-top: 23px;
+    font-weight: 500;
+    font-size: 17.5px;
+    line-height: 14px;
+    letter-spacing: -0.3px;
+}
+.name_v{
+    margin-top: 18px;
+    width: 20px;
+    height: 20px;
+}
     

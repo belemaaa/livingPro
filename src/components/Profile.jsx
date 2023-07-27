@@ -12,6 +12,7 @@ import recentPosts from '../assets/images/recentPosts.png'
 import history from '../assets/images/history.png'
 import logout from '../assets/images/logout.png'
 import blueVerified from '../assets/images/blueVerified.png'
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
     useEffect(() => {
@@ -42,94 +43,94 @@ const Profile = () => {
           
           <div className='profile-border-b border'/>
 
-          <div className='profile-option'>
+          <Link to='#' className='profile-option'>
             <RiEditLine className='profile-icon'/>
             <p className='profile-option-name'>
               Edit Compatibilty test
             </p>
             <IoIosArrowForward className='profile-arrow-ec'/>
-          </div>
+          </Link>
 
           <div className='profile-border-b border'/>
 
-          <div className='profile-option'>
+          <Link to='#' className='profile-option'>
             <img src={matches} className='profile-icon'/>
             <p className='profile-option-name'>
               Matches
             </p>
             <IoIosArrowForward className='profile-arrow-m'/>
-          </div>
+          </Link>
 
           <div className='profile-border-b border'/>
 
-          <div className='profile-option'>
+          <Link to='#' className='profile-option'>
             <img src={notifications} className='profile-icon'/>
             <p className='profile-option-name'>
               Notifications
             </p>
             <IoIosArrowForward className='profile-arrow-n'/>
-          </div>
+          </Link>
         </div>
 
         <div className='profile-border-b border'/>
 
-        <div className='profile-option'>
+        <Link to='#' className='profile-option'>
           <img src={recentPosts} className='profile-icon'/>
           <p className='profile-option-name'>
             Check Recent Posts
           </p>
           <IoIosArrowForward className='profile-arrow-cr'/>
-        </div>
+        </Link>
 
         <div className='profile-border-b border'/>
 
-        <div className='profile-option'>
+        <Link to='#' className='profile-option'>
           <RiEditLine className='profile-icon'/>
           <p className='profile-option-name'>
             Edit Profile
           </p>
           <IoIosArrowForward className='profile-arrow-ep'/>
-        </div>
+        </Link>
 
         <div className='profile-border-b border'/>
 
-        <div className='profile-option'>
+        <Link to='#' className='profile-option'>
           <img src={history} className='profile-icon'/>
           <p className='profile-option-name'>
             History and Reviews
           </p>
           <IoIosArrowForward className='profile-arrow-h'/>
-        </div>
+        </Link>
 
         <div className='profile-border-b border'/>
 
-        <div className='profile-option'>
+        <Link to='#' className='profile-option'>
           <TbSettings className='profile-icon'/>
           <p className='profile-option-name'>
             Settings
           </p>
           <IoIosArrowForward className='profile-arrow-s'/>
-        </div>
+        </Link>
 
         <div className='profile-border-b border'/>
 
-        <div className='profile-option'>
+        <Link to='#' className='profile-option'>
           <img src={blueVerified} className='profile-icon'/>
-          <p className='profile-option-name'>
+          <p className='profile-option-name text-[#296240]'>
             Verification
           </p>
           <IoIosArrowForward className='profile-arrow-v'/>
-        </div>
+        </Link>
 
         <div className='profile-border-b border'/>
 
-        <div className='profile-option'>
+        <Link to='#' className='profile-option'>
           <img src={logout} className='profile-icon'/>
-          <p className='profile-option-name'>
+          <p className='profile-option-name text-[#FF0000]'>
             Log out
           </p>
           <IoIosArrowForward className='profile-arrow-l'/>
-        </div>
+        </Link>
 
         <div className='profile-border-b border'/>
 

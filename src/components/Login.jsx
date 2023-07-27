@@ -41,7 +41,7 @@ const Login = () => {
     }
   
     return (
-      <div className='login-page overflow-hidden'>
+      <div className='login-page'>
         <div className='signup-go-back-btn'>
           <Link to='/signup'>
               <IoIosArrowBack size={25}/>

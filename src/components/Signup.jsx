@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import GoogleFrame from '../assets/images/GoogleFrame.png'
 import axios from 'axios'
+import EmailVerification from './EmailVerification';
 
 const Signup = () => {
   useEffect(() => {
@@ -39,9 +40,14 @@ const Signup = () => {
     if (response.status === 200){
       console.log('signup was successful')
       // Store the signup data in state
-      setUser_data({ fullname, email, password });
-      navigate('/email_verification')
-      // setShowCodeVerification(true);
+      setShowCodeVerification(true);
+      const userDataObject = {
+        fullname: fullname,
+        email: email,
+        password: password,
+      };
+
+      setUser_data(userDataObject);
     }
     else if(response.status === 409){
       setLoginError('Email already exists. Please log in.')
@@ -51,47 +57,6 @@ const Signup = () => {
       console.log('an error occurred');
     }  
   };
-
-  
-  // fetching code verification api
-  const handleVerify = async (e) => {
-    e.preventDefault();
-  
-    if (!user_data) {
-      console.log('User data is missing.');
-      return;
-    }
-  
-    const headers = {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    };
-  
-    const requestBody = new URLSearchParams();
-    requestBody.append('code', code);
-    requestBody.append('user_data', JSON.stringify(user_data));
-  
-    try {
-      const response = await fetch('https://lp-backend-production.up.railway.app/signup/confirm', {
-        method: 'POST',
-        headers: headers,
-        body: requestBody,
-      });
-  
-      if (response.status === 200) {
-        console.log('verification successful');
-        navigate('/about');
-      } else {
-        console.log('An error occurred:', response.status);
-        setLoginError('Invalid input. Please confirm the code sent to your mail.');
-        setCode('');
-      }
-    } catch (error) {
-      console.log('An error occurred:', error.message);
-      setLoginError('An error occurred while verifying the code.');
-      setCode('');
-    }
-  };
-  
 
   const inputRefs = useRef([]);
   const handlePinChange = (event, index) => {
@@ -106,50 +71,16 @@ const Signup = () => {
 
 
   return (
-    <div className='signup-page overflow-hidden'>
+    <div className='signup-page '>
       <div className='signup-go-back-btn'>
         <Link to='/onboarding3'>
             <IoIosArrowBack size={25}/>
         </Link>
       </div>
 
-      {/* {showCodeVerification ? ( */}
-        {/* <div className='ev-div'>
-          <div className='signup-head'>
-              <p className='signup-welcome'>Welcome!!</p>
-              <p className='signup-head-p'>
-                  Kindly fill in the six digit pin we sent to your mail
-              </p>
-          </div>
-
-          <div className='verification-pins'>
-              {loginError && <p className='loginError'>{loginError}</p>}
-              <form method='POST' onSubmit={handleVerify}>
-                {Array.from({ length: 6 }, (_, index) => (
-                    <input
-                        key={index}
-                        value={code[index] || ''}
-                        onChange={(e) => {
-                          const newCode = [...code];
-                          newCode[index] = e.target.value;
-                          setCode(newCode);
-                        }}
-                        type='text'
-                        className='verification-pin border'
-                        maxLength={1}
-                        ref={(el) => (inputRefs.current[index] = el)}
-                        onInput={(event) => handlePinChange(event, index)}
-                        required
-                    />
-                ))}
-
-                <button type='submit' className='email-verify-btn'>
-                    Verify
-                </button>
-              </form>
-          </div>
-        </div> */}
-      {/* ): ( */}
+      {showCodeVerification ? (
+        <EmailVerification {...user_data}/>  
+       ): ( 
         <div className='signup-div'>
           <div className='signup-head'>
             <p className='signup-welcome'>Welcome!!</p>
@@ -223,7 +154,7 @@ const Signup = () => {
           </p>
         </div>
       
-      {/* )} */}
+      )} 
 
       
 

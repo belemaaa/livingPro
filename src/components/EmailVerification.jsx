@@ -3,8 +3,9 @@ import '../assets/css/styles.css'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import Signup from './Signup';
 
-const EmailVerification = () => {
+const EmailVerification = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -12,6 +13,7 @@ const EmailVerification = () => {
     const [code, setCode] = useState('')
     const [loginError, setLoginError] = useState('')
     const navigate = useNavigate();
+    const { fullname, email, password } = props;
 
 
     const handleVerify = async (e) => {
@@ -19,12 +21,10 @@ const EmailVerification = () => {
     
         // Encode the data in URL-encoded format
         const requestBody = new URLSearchParams();
-        requestBody.append('code', code.toString());
-        requestBody.append('user_data', JSON.stringify({
-          fullname: 'fullname', 
-          email: 'email', 
-          password: 'password',
-        }));
+        requestBody.append('code', code);
+        requestBody.append('fullname', fullname);
+        requestBody.append('email', email);
+        requestBody.append('password', password);
 
         console.log('Data being sent to the API:', requestBody.toString());
 
@@ -34,7 +34,6 @@ const EmailVerification = () => {
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: requestBody.toString(), // Convert URLSearchParams to a string
         });
         if (response.status === 200) {
             navigate('/home');
@@ -45,31 +44,6 @@ const EmailVerification = () => {
           console.error('Error during code verification:', error);
         }
     };
-
-
-    // const handleVerify = async (e) => {
-    //     e.preventDefault()
-
-    //     const headers={
-    //         'Content-Type': 'application/json'
-    //     }
-    //     const response = await fetch('https://lp-backend-production.up.railway.app/signup/confirm', {
-    //         method: 'POST',
-    //         headers: headers,
-    //         body: JSON.stringify({
-    //             code: code
-    //         }),
-    //     });
-    //     if (response.status === 200){
-    //         console.log('verification successful')
-    //         navigate('/about')
-    //     }
-    //     else{
-    //         console.log('an error occurred')
-    //         setLoginError('Invalid input. Please confirm the code sent to your mail.')
-    //         setCode('')
-    //     }
-    // };
 
     const inputRefs = useRef([]);
     const handlePinChange = (event, index) => {
@@ -131,23 +105,3 @@ const EmailVerification = () => {
 }
 
 export default EmailVerification
-
-
-
-
-
-
-
-    //function to validate pin entries (saving if needed)
-//   const handleVerify = (event) => {
-//     event.preventDefault();
-
-//     const pinArray = inputRefs.current.map((inputRef) => inputRef.value);
-//     const pinCode = pinArray.join('');
-
-//     // api call for verification
-
-//     inputRefs.current.forEach((inputRef) => {
-//       inputRef.value = '';
-//     });
-//   };

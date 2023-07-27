@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import ProfileFooter from './ProfileFooter';
-import woman from '../assets/images/womanDP.png'
+import woman from '../assets/images/Rectangle-52.png'
 import verified from '../assets/images/ic_baseline-verified.png'
 import {CiLocationOn} from 'react-icons/ci'
 import {RiEditLine} from 'react-icons/ri'
@@ -21,16 +21,18 @@ const Profile = () => {
   return (
     <div className='profile-page'>
         <div className='profile-header'>
-            <img src={woman} className='profile_image' />
-            <p className='profile_name'>Grace Belema 
-              <span>
-                <img src={verified} className='name_v'/>
-              </span></p>
-            <p className='profile-occupation'>An artiste/enterpreneur</p>
-            <p className='profile-location'>
-              <CiLocationOn className='location-icon'/> 
-              Lagos
-            </p>
+          <div className='profile-image-div'>
+            <img src={woman} className='profile_image'/>
+          </div>
+          <p className='profile_name'>Grace Belema 
+            <span>
+              <img src={verified} className='name_v'/>
+            </span></p>
+          <p className='profile-occupation'>An artiste/enterpreneur</p>
+          <p className='profile-location'>
+            <CiLocationOn className='location-icon'/> 
+            Lagos
+          </p>
         </div>
 
         <div className='profile-options'>

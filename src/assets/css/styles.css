@@ -1432,8 +1432,24 @@
 }
 @media (min-width: 1024px){
     .post-page{
-        /* margin-left: 700px; */
         margin-top: -20px;
     }
+}
+.profile-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+.profile-image-div{
+    margin-left: 180px;
+}
+.profile-header{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.profile-page{
+    margin-top: 106px;
 }
     

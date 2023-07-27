@@ -39,6 +39,9 @@ const Profile = () => {
         </div>
 
         <div className='profile-options'>
+          
+          <div className='profile-border-b border'/>
+
           <div className='profile-option'>
             <RiEditLine className='profile-icon'/>
             <p className='profile-option-name'>
@@ -47,7 +50,7 @@ const Profile = () => {
             <IoIosArrowForward className='profile-arrow-ec'/>
           </div>
 
-          <div className='profile-border-b'/>
+          <div className='profile-border-b border'/>
 
           <div className='profile-option'>
             <img src={matches} className='profile-icon'/>
@@ -57,7 +60,7 @@ const Profile = () => {
             <IoIosArrowForward className='profile-arrow-m'/>
           </div>
 
-          <div className='profile-border-b'/>
+          <div className='profile-border-b border'/>
 
           <div className='profile-option'>
             <img src={notifications} className='profile-icon'/>
@@ -68,7 +71,7 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className='profile-border-b'/>
+        <div className='profile-border-b border'/>
 
         <div className='profile-option'>
           <img src={recentPosts} className='profile-icon'/>
@@ -78,7 +81,7 @@ const Profile = () => {
           <IoIosArrowForward className='profile-arrow-cr'/>
         </div>
 
-        <div className='profile-border-b'/>
+        <div className='profile-border-b border'/>
 
         <div className='profile-option'>
           <RiEditLine className='profile-icon'/>
@@ -88,7 +91,7 @@ const Profile = () => {
           <IoIosArrowForward className='profile-arrow-ep'/>
         </div>
 
-        <div className='profile-border-b'/>
+        <div className='profile-border-b border'/>
 
         <div className='profile-option'>
           <img src={history} className='profile-icon'/>
@@ -98,7 +101,7 @@ const Profile = () => {
           <IoIosArrowForward className='profile-arrow-h'/>
         </div>
 
-        <div className='profile-border-b'/>
+        <div className='profile-border-b border'/>
 
         <div className='profile-option'>
           <TbSettings className='profile-icon'/>
@@ -108,7 +111,7 @@ const Profile = () => {
           <IoIosArrowForward className='profile-arrow-s'/>
         </div>
 
-        <div className='profile-border-b'/>
+        <div className='profile-border-b border'/>
 
         <div className='profile-option'>
           <img src={blueVerified} className='profile-icon'/>
@@ -118,7 +121,7 @@ const Profile = () => {
           <IoIosArrowForward className='profile-arrow-v'/>
         </div>
 
-        <div className='profile-border-b'/>
+        <div className='profile-border-b border'/>
 
         <div className='profile-option'>
           <img src={logout} className='profile-icon'/>
@@ -128,7 +131,7 @@ const Profile = () => {
           <IoIosArrowForward className='profile-arrow-l'/>
         </div>
 
-        <div className='profile-border-b'/>
+        <div className='profile-border-b border'/>
 
         <div className='md:hidden'>
           <ProfileFooter/>

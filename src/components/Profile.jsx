@@ -40,11 +40,11 @@ const Profile = () => {
 
         <div className='profile-options'>
           <div className='profile-option'>
-            <RiEditLine className='profle-icon'/>
+            <RiEditLine className='profile-icon'/>
             <p className='profile-option-name'>
               Edit Compatibilty test
             </p>
-            <IoIosArrowForward className='profile-arrow-f'/>
+            <IoIosArrowForward className='profile-arrow-ec'/>
           </div>
 
           <div className='profile-border-b'/>
@@ -54,7 +54,7 @@ const Profile = () => {
             <p className='profile-option-name'>
               Matches
             </p>
-            <IoIosArrowForward className='profile-arrow-f'/>
+            <IoIosArrowForward className='profile-arrow-m'/>
           </div>
 
           <div className='profile-border-b'/>
@@ -64,7 +64,7 @@ const Profile = () => {
             <p className='profile-option-name'>
               Notifications
             </p>
-            <IoIosArrowForward className='profile-arrow-f'/>
+            <IoIosArrowForward className='profile-arrow-n'/>
           </div>
         </div>
 
@@ -75,7 +75,7 @@ const Profile = () => {
           <p className='profile-option-name'>
             Check Recent Posts
           </p>
-          <IoIosArrowForward className='profile-arrow-f'/>
+          <IoIosArrowForward className='profile-arrow-cr'/>
         </div>
 
         <div className='profile-border-b'/>
@@ -85,7 +85,7 @@ const Profile = () => {
           <p className='profile-option-name'>
             Edit Profile
           </p>
-          <IoIosArrowForward className='profile-arrow-f'/>
+          <IoIosArrowForward className='profile-arrow-ep'/>
         </div>
 
         <div className='profile-border-b'/>
@@ -95,7 +95,7 @@ const Profile = () => {
           <p className='profile-option-name'>
             History and Reviews
           </p>
-          <IoIosArrowForward className='profile-arrow-f'/>
+          <IoIosArrowForward className='profile-arrow-h'/>
         </div>
 
         <div className='profile-border-b'/>
@@ -105,7 +105,7 @@ const Profile = () => {
           <p className='profile-option-name'>
             Settings
           </p>
-          <IoIosArrowForward className='profile-arrow-f'/>
+          <IoIosArrowForward className='profile-arrow-s'/>
         </div>
 
         <div className='profile-border-b'/>
@@ -115,7 +115,7 @@ const Profile = () => {
           <p className='profile-option-name'>
             Verification
           </p>
-          <IoIosArrowForward className='profile-arrow-f'/>
+          <IoIosArrowForward className='profile-arrow-v'/>
         </div>
 
         <div className='profile-border-b'/>
@@ -125,7 +125,7 @@ const Profile = () => {
           <p className='profile-option-name'>
             Log out
           </p>
-          <IoIosArrowForward className='profile-arrow-f'/>
+          <IoIosArrowForward className='profile-arrow-l'/>
         </div>
 
         <div className='profile-border-b'/>

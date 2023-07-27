@@ -46,6 +46,7 @@ const StartPost = () => {
         formData.append('location', location);
     
         try {
+          console.log('api data: ', formData)
           const response = await axios.post('https://lp-backend-production.up.railway.app/posts/', 
           formData, {
             headers: {
@@ -107,9 +108,9 @@ const StartPost = () => {
                     />
                     <p className='fifty-words'>50 words</p>
 
-                    {/* <input type="file" onChange={handleImageChange} /> */}
+                    <input type="file" onChange={handleImageChange} />
 
-                    <div>
+                    {/* <div>
                         <div className='post-image-div'>
                             <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
                             <br/>
@@ -135,7 +136,7 @@ const StartPost = () => {
                                 ))}
                             </div> 
                             }
-                        </div>
+                        </div> */}
 
                         {/* {images.length > 0 && (
                             <div className='uploaded-images-grid border'>
@@ -150,7 +151,7 @@ const StartPost = () => {
                                 ))}
                             </div>
                         )}   */}
-                    </div>  
+                    {/* </div>   */}
 
                     <div className='post-location-div'>
                         <label className='post-location-lbl'>Add Location</label>

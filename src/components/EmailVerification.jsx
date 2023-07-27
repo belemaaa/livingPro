@@ -39,7 +39,8 @@ const EmailVerification = (props) => {
           });
       
           if (response.status === 200) {
-            navigate('/home');
+            console.log('validation successful')
+            navigate('/compatibility_test_1');
           } else {
             console.log('an error occurred');
           }

@@ -18,32 +18,35 @@ const EmailVerification = (props) => {
 
     const handleVerify = async (e) => {
         e.preventDefault();
-    
-        // Encode the data in URL-encoded format
-        const requestBody = new URLSearchParams();
-        requestBody.append('code', code);
-        requestBody.append('fullname', fullname);
-        requestBody.append('email', email);
-        requestBody.append('password', password);
-
-        console.log('Data being sent to the API:', requestBody.toString());
-
+      
         try {
+          const codeValue = code.join('');
+          const requestBody = {
+            code: codeValue,
+            fullname: fullname,
+            email: email,
+            password: password,
+          };
+      
+          console.log('Data being sent to the API:', requestBody);
+      
           const response = await fetch('https://lp-backend-production.up.railway.app/signup/confirm', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
+              'Content-Type': 'application/json'
             },
-        });
-        if (response.status === 200) {
+            body: JSON.stringify(requestBody),
+          });
+      
+          if (response.status === 200) {
             navigate('/home');
           } else {
-            console.log('an error occurred')
+            console.log('an error occurred');
           }
         } catch (error) {
           console.error('Error during code verification:', error);
         }
-    };
+      };      
 
     const inputRefs = useRef([]);
     const handlePinChange = (event, index) => {

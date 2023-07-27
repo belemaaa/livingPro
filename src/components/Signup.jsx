@@ -16,7 +16,6 @@ const Signup = () => {
   const [fullname, setFullname] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword]  = useState('')
-  const [code, setCode] = useState('')
   const [showCodeVerification, setShowCodeVerification] = useState(false);
   const [user_data, setUser_data] = useState(null);
   const [loginError, setLoginError] = useState('')

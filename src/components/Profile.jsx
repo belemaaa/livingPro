@@ -20,86 +20,107 @@ const Profile = () => {
 
   return (
     <div className='profile-page'>
-        <div>
+        <div className='profile-header'>
             <img src={woman} className='profile_image' />
-            <p>Grace Belema 
+            <p className='profile_name'>Grace Belema 
               <span>
-                <img src={verified}/>
+                <img src={verified} className='name_v'/>
               </span></p>
-            <p>An artiste/enterpreneur</p>
-            <p><CiLocationOn/> Lagos</p>
+            <p className='profile-occupation'>An artiste/enterpreneur</p>
+            <p className='profile-location'>
+              <CiLocationOn className='location-icon'/> 
+              Lagos
+            </p>
         </div>
 
-        <div>
-          <div>
-            <RiEditLine/>
-            <p>Edit Compatibilty test</p>
-            <IoIosArrowForward/>
+        <div className='profile-options'>
+          <div className='profile-option'>
+            <RiEditLine className='profle-icon'/>
+            <p className='profile-option-name'>
+              Edit Compatibilty test
+            </p>
+            <IoIosArrowForward className='profile-arrow-f'/>
           </div>
 
           <div className='profile-border-b'/>
 
-          <div>
-            <img src={matches}/>
-            <p>Matches</p>
-            <IoIosArrowForward/>
+          <div className='profile-option'>
+            <img src={matches} className='profile-icon'/>
+            <p className='profile-option-name'>
+              Matches
+            </p>
+            <IoIosArrowForward className='profile-arrow-f'/>
           </div>
 
           <div className='profile-border-b'/>
 
-          <div>
-            <img src={notifications}/>
-            <p>Notifications</p>
-            <IoIosArrowForward/>
+          <div className='profile-option'>
+            <img src={notifications} className='profile-icon'/>
+            <p className='profile-option-name'>
+              Notifications
+            </p>
+            <IoIosArrowForward className='profile-arrow-f'/>
           </div>
         </div>
 
         <div className='profile-border-b'/>
 
-        <div>
-          <img src={recentPosts} />
-          <p>Check Recent Posts</p>
-          <IoIosArrowForward/>
+        <div className='profile-option'>
+          <img src={recentPosts} className='profile-icon'/>
+          <p className='profile-option-name'>
+            Check Recent Posts
+          </p>
+          <IoIosArrowForward className='profile-arrow-f'/>
         </div>
 
         <div className='profile-border-b'/>
 
-        <div>
-          <RiEditLine />
-          <p>Edit Profile</p>
-          <IoIosArrowForward/>
+        <div className='profile-option'>
+          <RiEditLine className='profile-icon'/>
+          <p className='profile-option-name'>
+            Edit Profile
+          </p>
+          <IoIosArrowForward className='profile-arrow-f'/>
         </div>
 
         <div className='profile-border-b'/>
 
-        <div>
-          <img src={history} />
-          <p>History and Reviews</p>
-          <IoIosArrowForward/>
+        <div className='profile-option'>
+          <img src={history} className='profile-icon'/>
+          <p className='profile-option-name'>
+            History and Reviews
+          </p>
+          <IoIosArrowForward className='profile-arrow-f'/>
         </div>
 
         <div className='profile-border-b'/>
 
-        <div>
-          <TbSettings/>
-          <p>Settings</p>
-          <IoIosArrowForward/>
+        <div className='profile-option'>
+          <TbSettings className='profile-icon'/>
+          <p className='profile-option-name'>
+            Settings
+          </p>
+          <IoIosArrowForward className='profile-arrow-f'/>
         </div>
 
         <div className='profile-border-b'/>
 
-        <div>
-          <img src={blueVerified} />
-          <p>Verification</p>
-          <IoIosArrowForward/>
+        <div className='profile-option'>
+          <img src={blueVerified} className='profile-icon'/>
+          <p className='profile-option-name'>
+            Verification
+          </p>
+          <IoIosArrowForward className='profile-arrow-f'/>
         </div>
 
         <div className='profile-border-b'/>
 
-        <div>
-          <img src={logout} />
-          <p>Log out</p>
-          <IoIosArrowForward/>
+        <div className='profile-option'>
+          <img src={logout} className='profile-icon'/>
+          <p className='profile-option-name'>
+            Log out
+          </p>
+          <IoIosArrowForward className='profile-arrow-f'/>
         </div>
 
         <div className='profile-border-b'/>

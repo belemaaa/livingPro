@@ -1,5 +1,8 @@
 import React, {useEffect} from 'react'
 import ProfileFooter from './ProfileFooter';
+import woman from '../assets/images/womanDP.png'
+import verified from '../assets/images/ic_baseline-verified.png'
+import {CiLocationOn} from 'react-icons/ci'
 
 const Profile = () => {
     useEffect(() => {
@@ -9,15 +12,17 @@ const Profile = () => {
   return (
     <div className='profile-page'>
         <div>
-            Profile
+            <img src={woman} className='profile_image' />
+            <p>Grace Belema 
+              <span>
+                <img src={verified}/>
+              </span></p>
+            <p>An artiste/enterpreneur</p>
+            <p><CiLocationOn/> Lagos</p>
         </div>
+
         <div>
-          fvwefwyfeferygfeahrfbegfvev erfvebverebvcv
-          fvevfbergfvbe febfefberfe
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi rerum hic, 
-          vel ipsa dolores veniam, in incidunt, iure cumque architecto optio magni nisi rem! 
-          Exercitationem maxime culpa rerum deserunt. Itaque eligendi sapiente ad. Distinctio rem, 
-          voluptas similique aut culpa eaque odit dicta omnis accusamus veniam excepturi dolore laudantium recusandae aliquide.
+          
         </div>
 
         <div className='md:hidden'>

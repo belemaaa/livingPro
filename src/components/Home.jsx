@@ -15,8 +15,6 @@ const Home = () => {
             <Profile/>
           </div>
 
-          {/* <div className='grid-border border-r'></div> */}
-
           <div className='home-page'>
             <div className='home-icon-bg w-screen'>
               <BsFillHouseHeartFill size={35} className='lp-home-icon'/>

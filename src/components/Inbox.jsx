@@ -14,7 +14,7 @@ const Inbox = () => {
         </div>
 
         <div className='inbox-page'>
-            Inbox
+            Inbox Page
         </div>
 
         <InboxFooter/>

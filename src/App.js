@@ -18,6 +18,7 @@ import Inbox from "./components/Inbox";
 import Profile from "./components/Profile";
 import StartPost from "./components/StartPost";
 import ImageUploadTest from "./components/ImageUploadTest";
+import Matches from "./components/Matches";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/inbox" element={<Inbox/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/test" element={<ImageUploadTest/>}/>
+          <Route path="/matches" element={<Matches/>}/>
         </Routes>
       </Router>
     </div>

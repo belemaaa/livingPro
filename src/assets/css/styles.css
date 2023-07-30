@@ -1572,11 +1572,45 @@
 .matches-header{
     width: 50px;
     height: 15px;
-    margin-top: 49px;
-    margin-left: 164px;
+    margin-top: 30px;
+    margin-left: 184px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14.52px;
     letter-spacing: -0.3px;
     text-align: center;
+}
+.matches-p{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.matches-p p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.52px;
+    letter-spacing: -0.3px;
+    margin-left: 30px;
+    /* text-align: center; */
+}
+.all-time{
+    width: 100px;
+    height: 25px;
+    margin-left: 100px;
+    border-radius: 10px;   
+}
+.all-time p{
+    height: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12.1px;
+    display: flex;
+    flex-direction: row;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.all-time-icon{
+    margin-left: 3px;
+    margin-top: 1px;
 }

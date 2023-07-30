@@ -11,9 +11,9 @@ const Matches = () => {
             </Link>
         </div>
 
-        <p>Matches</p>
+        <p className='matches-header'>Matches</p>
 
-        <div>
+        <div className='matches-p'>
             <p>Total number of matches</p>
             <select>
                 <option value='All time'></option>
@@ -21,8 +21,8 @@ const Matches = () => {
             </select>
         </div>
 
-        <div>
-            <div>
+        <div className='matches-names'>
+            <div className='matches-div'>
                 <img src=''/>
                 <p>Grace Belema</p>
                 <p>70%</p>

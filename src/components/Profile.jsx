@@ -53,7 +53,7 @@ const Profile = () => {
 
           <div className='profile-border-b border'/>
 
-          <Link to='#' className='profile-option'>
+          <Link to='/matches' className='profile-option'>
             <img src={matches} className='profile-icon'/>
             <p className='profile-option-name'>
               Matches

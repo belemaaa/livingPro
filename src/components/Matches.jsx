@@ -5,6 +5,7 @@ import {IoMdArrowDropdown} from 'react-icons/io'
 
 const Matches = () => {
     const [dropdown, setDropdown] = useState(false)
+    const [matches, setMatches] = useState(false)
 
     const toggleDropDown = () => {
         setDropdown(!dropdown)
@@ -30,8 +31,9 @@ const Matches = () => {
         <div className='matches-names'>
             <div className='matches-div border'>
                 <img src='' className='border'/>
-                <p>Grace Belema</p>
-                <p>70%</p>
+                <p className='matches-name'>Grace Belema</p>
+                <p className='matches-percent'>70%</p>
+                
             </div>
         </div>
     </div>

@@ -28,8 +28,8 @@ const Matches = () => {
         </div>
 
         <div className='matches-names'>
-            <div className='matches-div'>
-                <img src=''/>
+            <div className='matches-div border'>
+                <img src='' className='border'/>
                 <p>Grace Belema</p>
                 <p>70%</p>
             </div>

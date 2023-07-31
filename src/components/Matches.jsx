@@ -4,11 +4,11 @@ import {IoIosArrowBack} from 'react-icons/io'
 import {IoMdArrowDropdown} from 'react-icons/io'
 
 const Matches = () => {
-    const [dropdown, setDropdown] = useState(false)
+    const [filter, setFilter] = useState(false)
     const [matches, setMatches] = useState(false)
 
-    const toggleDropDown = () => {
-        setDropdown(!dropdown)
+    const handleFilterClick = () => {
+        setFilter(!filter)
     }
 
   return (
@@ -23,8 +23,16 @@ const Matches = () => {
 
         <div className='matches-p'>
             <p>Total number of matches</p>    
-            <div className='all-time border' onClick={toggleDropDown}>
-                <p>All time <IoMdArrowDropdown className='all-time-icon'/> </p>
+            <div onClick={handleFilterClick}>
+                {filter ? 
+                    <div className='twenty-four-hours border'>
+                        <p>24 hours <IoMdArrowDropdown size={15} className='twenty-four-hours-icon'/> </p> 
+                    </div>
+                :
+                    <div className='all-time border'>
+                        <p>All time <IoMdArrowDropdown className='all-time-icon'/> </p> 
+                    </div>
+                }
             </div>
         </div>
 

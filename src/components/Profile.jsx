@@ -63,7 +63,7 @@ const Profile = () => {
 
           <div className='profile-border-b border'/>
 
-          <Link to='#' className='profile-option'>
+          <Link to='/notifications' className='profile-option'>
             <img src={notifications} className='profile-icon'/>
             <p className='profile-option-name'>
               Notifications

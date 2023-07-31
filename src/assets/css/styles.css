@@ -1599,6 +1599,13 @@
     margin-left: 100px;
     border-radius: 10px;   
 }
+.twenty-four-hours{
+    width: 100px;
+    height: 25px;
+    margin-left: 100px;
+    border-radius: 10px;
+    background-color: #007FE0;
+}
 .all-time p{
     height: 12px;
     font-weight: 400;
@@ -1610,9 +1617,24 @@
     padding-bottom: 5px;
     padding-top: 5px;
 }
+.twenty-four-hours p{
+    height: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12.1px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: white;
+}
 .all-time-icon{
     margin-left: 3px;
     margin-top: 1px;
+}
+.twenty-four-hours-icon{
+    margin-left: 3px;
+    color: white;
 }
 .matches-names{
     margin-top: 60px;

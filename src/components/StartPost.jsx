@@ -16,6 +16,7 @@ const StartPost = () => {
     const [details, setDetails] = useState('')
     const [location, setLocation]  = useState('')
     const [postError, setPostError] = useState('')
+    const maxWordLimit = 50;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -34,7 +35,16 @@ const StartPost = () => {
     const handleImageChange = (event) => {
         const file = event.target.files[0];
         setSelectedImage(file);
-    };   
+    };  
+    
+    const handlewordLimit = (event) => {
+        const inputText = event.target.value;
+        // Split the input text into words
+        const words = inputText.trim().split(/\s+/);
+        if (words.length <= maxWordLimit) {
+          setDetails(inputText);
+        }
+    };
 
     // fetching post api
     const handlePost = async (e) => {
@@ -100,10 +110,9 @@ const StartPost = () => {
                     <textarea
                     type='text'
                     value={details}
-                    maxLength={50}
                     placeholder='Add additional information'
                     className='post-information-input border'
-                    onChange={(e) => setDetails(e.target.value)}
+                    onChange={handlewordLimit}
                     required
                     />
                     <p className='fifty-words'>50 words</p>
@@ -179,24 +188,3 @@ const StartPost = () => {
 }
 
 export default StartPost
-
-
-// const handleImageChange = (event) => {
-    //     const files = event.target.files;
-    //     const imageList = [];
-    //     for (let i = 0; i < files.length; i++) {
-    //     const file = files[i];
-    //     const reader = new FileReader();
-
-    //     reader.onload = (e) => {
-    //         imageList.push(e.target.result);
-    //         if (imageList.length + images.length <= 4) {
-    //           setImages([...images, ...imageList]);
-    //           setSelectedImage(file);
-    //         } else {
-    //           alert('Maximum of 4 images allowed!');
-    //         }
-    //     };
-    //     reader.readAsDataURL(file);
-    //     }
-    // }; 

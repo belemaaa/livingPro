@@ -13,7 +13,7 @@ const Matches = () => {
 
   return (
     <div className='matches-page'>
-        <div className='signup-go-back-btn'>
+        <div className='lg:hidden signup-go-back-btn'>
             <Link to='/profile'>
                 <IoIosArrowBack size={25}/>
             </Link>

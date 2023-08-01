@@ -13,37 +13,40 @@ const Matches = () => {
 
   return (
     <div className='matches-page'>
-        <div className='lg:hidden signup-go-back-btn'>
-            <Link to='/profile'>
-                <IoIosArrowBack size={25}/>
-            </Link>
-        </div>
+        <div className='matches-page-div'>
+            <div className='lg:hidden signup-go-back-btn'>
+                <Link to='/profile'>
+                    <IoIosArrowBack size={25}/>
+                </Link>
+            </div>
 
-        <p className='matches-header'>Matches</p>
+            <p className='matches-header'>Matches</p>
 
-        <div className='matches-p'>
-            <p>Total number of matches</p>    
-            <div onClick={handleFilterClick}>
-                {filter ? 
-                    <div className='twenty-four-hours border'>
-                        <p>24 hours <IoMdArrowDropdown size={15} className='twenty-four-hours-icon'/> </p> 
-                    </div>
-                :
-                    <div className='all-time border'>
-                        <p>All time <IoMdArrowDropdown className='all-time-icon'/> </p> 
-                    </div>
-                }
+            <div className='matches-p'>
+                <p>Total number of matches</p>    
+                <div onClick={handleFilterClick}>
+                    {filter ? 
+                        <div className='twenty-four-hours border'>
+                            <p>24 hours <IoMdArrowDropdown size={15} className='twenty-four-hours-icon'/> </p> 
+                        </div>
+                    :
+                        <div className='all-time border'>
+                            <p>All time <IoMdArrowDropdown className='all-time-icon'/> </p> 
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div className='matches-names'>
+                <div className='matches-div border'>
+                    <img src='' className='border'/>
+                    <p className='matches-name'>Grace Belema</p>
+                    <p className='matches-percent'>70%</p>
+                    
+                </div>
             </div>
         </div>
-
-        <div className='matches-names'>
-            <div className='matches-div border'>
-                <img src='' className='border'/>
-                <p className='matches-name'>Grace Belema</p>
-                <p className='matches-percent'>70%</p>
-                
-            </div>
-        </div>
+       
     </div>
   )
 }

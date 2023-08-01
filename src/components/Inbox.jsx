@@ -37,7 +37,7 @@ const Inbox = () => {
             </div>
 
             <div className='messages'>
-              <div className='message border'>
+              <div className='message'>
                 <img src='' className='border'/>
 
                 <div className='message-nAm'>

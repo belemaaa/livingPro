@@ -17,8 +17,8 @@ const Inbox = () => {
           <Profile/>
         </div>
 
-        <div className='inbox-page'>
-            <div className='inbox-search-bar'>
+        <div className='inbox-page overflow-hidden'>
+            <div className='inbox-search-bar border'>
               <BiSearch className='inbox-search-icon'/>
             </div>
 
@@ -56,9 +56,9 @@ const Inbox = () => {
                         <p className='opened-time'>8.05am</p>
                       </div>
                   }
-                </div>
-                <div className='message-border border'></div>        
+                </div>       
               </div>
+              <div className='message-border border'></div> 
             </div>
         </div>
 

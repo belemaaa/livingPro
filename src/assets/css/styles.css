@@ -1711,3 +1711,141 @@
         margin: 0;
     }
 }
+
+.inbox-search-bar{
+    width: 350px;
+    height: 44px;
+    margin-top: 60px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+.inbox-search-icon{
+    width: 23px;
+    height: 23px;
+    margin-top: 11.5px;
+    margin-left: 12px;
+}
+/* .inbox-page{
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+} */
+.CaMr{
+    display: flex;
+    flex: row;
+}
+.inbox-calls{
+    height: 25px;
+    position: fixed;
+    margin-top: 16px;
+    margin-left: 34px;
+    border-radius: 5px;
+    gap: 4px;
+    display: flex;
+    flex-direction: row;
+}
+.inbox-phone-icon{
+    margin-top: 3px;
+}
+.inbox-mr{
+    height: 12px;
+    margin-top: 18px;
+    margin-left: 233px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 12.1px;
+    display: flex;
+    flex-direction: row;
+}
+.mr-count{
+    width: 18px;
+    height: 18px;
+    margin-left: 4px;
+    border-radius: 5px;
+    background-color: #007FE0;
+    padding-top: 3px;
+    margin-top: -3px;
+}
+.mr-count p{
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12.1px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.messages{
+    margin-top: 80px;
+}
+.message{
+    display: flex;
+    flex-direction: row;
+}
+.message img{
+    width: 41.54px;
+    height: 40px;
+    margin-left: 37px;
+    border-radius: 10px;
+}
+.message-nAm{
+    display: flex;
+    flex-direction: column;
+}
+.message-name{
+    height: 15px;
+    margin-top: 6px;
+    margin-left: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14.52px;
+}
+.message-text{
+    height: 12px;
+    margin-top: 8px;
+    margin-left: 6px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12.1px;
+    letter-spacing: -0.3px;
+}
+.TaN{
+    display: flex;
+    flex-direction: column;
+}
+.notOpened-time{
+    height: 10px;
+    margin-top: 6px;
+    margin-left: 100px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 9.68px;
+    color: #007FE0;
+}
+.opened-time{
+    height: 10px;
+    margin-top: 6px;
+    margin-left: 140px;
+    margin-right: 6px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 9.68px;
+    color: #7c7b7b;
+}
+.message-count{
+    width: 4px;
+    height: 10px;
+    margin-top: 8px;
+    margin-left: 215px;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 9.68px;
+}
+.message-border{
+    margin-top: 10px;
+    width: 340px;
+    margin-left: 37px;
+}

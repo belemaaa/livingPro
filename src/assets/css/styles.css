@@ -1741,7 +1741,7 @@
 }
 .inbox-calls{
     height: 25px;
-    position: fixed;
+
     margin-top: 16px;
     margin-left: 34px;
     border-radius: 5px;
@@ -1755,7 +1755,7 @@
 .inbox-mr{
     height: 12px;
     margin-top: 18px;
-    margin-left: 233px;
+    margin-left: 140px;
     font-weight: 500;
     font-size: 13px;
     line-height: 12.1px;

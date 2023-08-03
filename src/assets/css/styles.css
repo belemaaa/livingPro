@@ -1080,7 +1080,7 @@
 .inbox-page,
 .profile-page,
 .start-post-page{
-    height: 100%;
+    height: 100vh;
 }
 @media (min-width: 1024px){
     .home-page,
@@ -1092,7 +1092,6 @@
         margin-left: 410px;
         width: 70%;
         box-sizing: border-box;
-        height: 100%;
     }
 }
 @media (min-width: 1024px){
@@ -1801,11 +1800,11 @@
 .messages{
     margin-top: 80px;
 }
-.message{
+.inbox-message{
     display: flex;
     flex-direction: row;
 }
-.message img{
+.inbox-message img{
     width: 41.54px;
     height: 40px;
     margin-left: 37px;
@@ -1902,16 +1901,26 @@
 }
 
 
+
+.chat-page{
+    height: 100vh;
+}
 .chat-input-box {
     position: fixed;
     bottom: 0;
     width: 100%;
     padding: 10px;
-    margin-left: 10px;
 } 
 .chat-input-box input{
     padding: 10px;
     border-radius: 10px;
+}
+@media(min-width: 1024px){
+    .chat-input-box input{
+        padding: 10px;
+        border-radius: 10px;
+        width: 800px;
+    }
 }
 .chat-input-box button{
     background-color: #007FE0;
@@ -1920,8 +1929,25 @@
     border-radius: 5px;
     margin-left: 10px;
 }
-@media (min-width: 1024px){
-    .chat{
-        /* margin-left: 100px; */
-    }
+.chat{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px; 
+    height: 630px;
 }
+.sender {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.message {
+    background-color: #f0f0f0;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 10px;
+    max-width: 230px;
+}
+
+
+

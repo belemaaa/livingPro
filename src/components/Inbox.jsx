@@ -41,7 +41,7 @@ const Inbox = () => {
             </div>
 
             <div className='messages'>
-              <div className='message' onClick={openMessage}>
+              <div className='inbox-message' onClick={openMessage}>
                 <img src='' className='border'/>
 
                 <div className='message-nAm'>

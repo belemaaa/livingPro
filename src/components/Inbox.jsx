@@ -4,12 +4,19 @@ import Profile from './Profile.jsx';
 import {BiSearch} from 'react-icons/bi'
 import {BsTelephone} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Inbox = () => {
+  const navigate = useNavigate()
+
   const [opened, setOpened] = useState(false)
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const openMessage = () => {
+      navigate('/chat')
+    }
 
   return (
     <div className='overflow-hidden'>
@@ -37,7 +44,7 @@ const Inbox = () => {
             </div>
 
             <div className='messages'>
-              <div className='message'>
+              <div className='message' onClick={openMessage}>
                 <img src='' className='border'/>
 
                 <div className='message-nAm'>

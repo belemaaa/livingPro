@@ -19,6 +19,7 @@ import Profile from "./components/Profile";
 import StartPost from "./components/StartPost";
 import ImageUploadTest from "./components/ImageUploadTest";
 import Matches from "./components/Matches";
+import Chat from "./components/Chat";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/test" element={<ImageUploadTest/>}/>
           <Route path="/matches" element={<Matches/>}/>
+          <Route path="/chat" element={<Chat/>}/>
         </Routes>
       </Router>
     </div>

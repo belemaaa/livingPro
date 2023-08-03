@@ -16,7 +16,7 @@ const ChatDemo = () => {
         {messages.map((message, index) => {
           if (message.sender === 'receiver') {
             return (
-              <div key={index} className=" receiver-message">
+              <div key={index} className="message receiver-message">
                 {message.text}
               </div>
             );

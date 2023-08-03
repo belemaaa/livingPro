@@ -1092,6 +1092,7 @@
         margin-left: 410px;
         width: 70%;
         box-sizing: border-box;
+        height: 100%;
     }
 }
 @media (min-width: 1024px){
@@ -1774,7 +1775,7 @@
 .inbox-mr{
     height: 12px;
     margin-top: 18px;
-    margin-left: 140px;
+    margin-left: 34px;
     font-weight: 500;
     font-size: 13px;
     line-height: 12.1px;
@@ -1894,84 +1895,33 @@
     font-size: 14px;
     line-height: 14.52px;
 }
-.chat-header-icons{
-    display: flex;
-    flex-direction: row;
-    margin-top: 60px;
-    margin-left: 90px;
-    color: #007FE0;
-}
-.chat-header-icon{
-    margin-right: 15px;
-    width: 20px;
-    height: 20px;
+.chat-header-border{
+    border-color: #BDBDBD;
+    width: 350px;
+    margin-left: 30px;
 }
 
 
-
-
-/* ChatPage.css */
-.chat-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .receiver {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .sender {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  .message {
-    background-color: #f0f0f0;
-    padding: 8px;
-    margin: 4px;
-    border-radius: 5px;
-  }
-  
-  .sender-message {
-    background-color: #e1ffc7;
-  }
-  
-  .receiver-message {
-    background-color: #fff;
-  }
-  
-  .input-box {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
+.chat-input-box {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
     margin-left: 10px;
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+} 
+.chat-input-box input{
+    padding: 10px;
+    border-radius: 10px;
+}
+.chat-input-box button{
+    background-color: #007FE0;
+    color: white;
+    padding: 10px;
     border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+    margin-left: 10px;
+}
+@media (min-width: 1024px){
+    .chat{
+        /* margin-left: 100px; */
+    }
+}

@@ -25,16 +25,13 @@ const Inbox = () => {
         </div>
 
         <div className='inbox-page overflow-hidden'>
-            <div className='inbox-search-bar border'>
-              <BiSearch className='inbox-search-icon'/>
-            </div>
+            <input 
+              type='text'
+              className='inbox-search-bar border'
+              placeholder='search'
+            />
 
             <div className='CaMr'>
-              <Link to='#' className='inbox-calls'>
-                Calls 
-                <BsTelephone className='inbox-phone-icon'/>
-              </Link>
-
               <Link to='#' className='inbox-mr'>
                 Message requests
                 <div className='mr-count'>

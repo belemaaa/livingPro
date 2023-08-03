@@ -12,6 +12,13 @@
     bottom: 0;
     text-align: center;
 }
+.loader-page{
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;
+}
 .landing-bg{
     background-color: #007FE0;
 }

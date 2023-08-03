@@ -3,34 +3,27 @@ import HomeFooter from './HomeFooter';
 import Profile from './Profile';
 import {BsFillHouseHeartFill} from 'react-icons/bs'
 import SquareLoader from "react-spinners/SquareLoader";
+import Loader from './Loader';
 
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // loader
   const [loading, setLoading] = useState(false)
-  useEffect(() => {
-      setLoading(true)
-      setTimeout(() => {
-          setLoading(false)
-      }, 4000)
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 4000)
   }, [])
-
 
   return (
     <div className='overflow-hidden'>
       {
         loading ?
-          <SquareLoader
-            color={'#000000'}
-            loading={loading}
-            size={60}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-            className='loader'
-          />
+          <Loader/> 
+        
         :
           <div>
             <div className='home'>

@@ -4,7 +4,6 @@ import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import GoogleFrame from '../assets/images/GoogleFrame.png'
-import axios from 'axios'
 import EmailVerification from './EmailVerification';
 
 const Signup = () => {

@@ -20,6 +20,7 @@ import StartPost from "./components/StartPost";
 import ImageUploadTest from "./components/ImageUploadTest";
 import Matches from "./components/Matches";
 import Chat from "./components/Chat";
+import ChatDemo from "./components/ChatDemo";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path="/test" element={<ImageUploadTest/>}/>
           <Route path="/matches" element={<Matches/>}/>
           <Route path="/chat" element={<Chat/>}/>
+          <Route path="/chat_demo" element={<ChatDemo/>}/>
         </Routes>
       </Router>
     </div>

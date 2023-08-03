@@ -1087,7 +1087,8 @@
     .discover-page,
     .post-page,
     .inbox-page,
-    .start-post-page{
+    .start-post-page,
+    .chat-page{
         margin-left: 410px;
         width: 70%;
         box-sizing: border-box;
@@ -1866,4 +1867,41 @@
     margin-top: 10px;
     width: 340px;
     margin-left: 37px;
+}
+
+
+.chat-header{
+    display: flex;
+    flex-direction: row;
+}
+.chat-header-title{
+    display: flex;
+    flex-direction: row;
+}
+.chat-header-title img{
+    width: 41.54px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 40px;
+    border-radius: 30px;
+}
+.chat-header-title p{
+    height: 15px;
+    margin-top: 63px;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14.52px;
+}
+.chat-header-icons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    margin-left: 90px;
+    color: #007FE0;
+}
+.chat-header-icon{
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
 }

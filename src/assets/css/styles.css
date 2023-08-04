@@ -36,13 +36,33 @@
 .lp-landing-icon{
     margin-right: 4px;  
 }
+
+/* @media(min-width: 670px){
+    .boarding-ellipses{
+        margin-left: 130px;
+    }
+}
+@media(min-width: 945px){
+    .boarding-ellipses{
+        margin-left: 270px;
+    }
+}
+@media(min-width: 14in){
+    .boarding-ellipses{
+        margin-left: -100px;
+    }
+} */
+/* .boarding-ellipses{
+
+} */
+
 .OB1ellipse16{
     width: 60px;
     height: 60px;
     margin-top: 50px;
     margin-left: 285px;  
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .OB1ellipse16{
         width: 90px;
         height: 90px;
@@ -58,7 +78,7 @@
     margin-top: 20px;
     width: 310px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .OB1ellipse15, 
     .OB2ellipse18, 
     .OB3ellipse8{
@@ -72,7 +92,7 @@
     margin-top: 5px;
     margin-left: 30px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .OB1ellipse17{
         width: 90px;
         height: 90px;
@@ -83,7 +103,7 @@
 .onboarding-text{
     text-align: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .onboarding-text{
         font-size: 24px;
     }
@@ -94,7 +114,7 @@
     padding-left: 32px;
     padding-right: 32px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .onboarding-text-p{
         padding-top: 2px;
         font-weight: 400;
@@ -107,7 +127,7 @@
     margin-top: 50px;
     margin-left: 220px;  
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .OB2ellipse16{
         width: 90px;
         height: 90px;
@@ -122,7 +142,7 @@
     margin-top: 20px;
     margin-left: 109px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .OB2ellipse17{
         width: 90px;
         height: 90px;
@@ -136,7 +156,7 @@
     margin-top: 50px;
     margin-left: 30px;  
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .OB3ellipse16{
         width: 90px;
         height: 90px;
@@ -151,7 +171,7 @@
     margin-top: 20px;
     margin-left: 285px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .OB3ellipse17{
         width: 90px;
         height: 90px;
@@ -164,7 +184,7 @@
     margin-left: 27px;
     margin-bottom: 40px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .boarding-options{
         margin-top: 30px;
         margin-left: 500px;
@@ -178,7 +198,7 @@
     display: flex;
     flex-direction: row;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .boarding-icons{
         margin-left: 500px;
         margin-top: 100px;
@@ -209,7 +229,7 @@
     margin-left: 30px;
     width: 16px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .signup-div,
     .login-div{
         padding-top: 20px;
@@ -219,7 +239,7 @@
         margin-bottom: 60px;
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .ev-div{
         padding-top: 20px;
         margin-left: 380px;
@@ -241,7 +261,7 @@
     margin-left: 30px;
     margin-top: 39px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .signup-head{
         margin-left: 140px;
         margin-top: 39px;
@@ -256,7 +276,7 @@
     align-items: center;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .signup-welcome{
         width: 113px;
         height: 28px;
@@ -279,7 +299,7 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .signup-head-p{
         height: 36px;
         margin-top: 9px;
@@ -296,7 +316,7 @@
     margin-top: 70px;
 
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .signup-form-div{
         margin-left: 100px;
         margin-top: 70px;
@@ -311,7 +331,7 @@
     padding-left: 10px;
     font-size: 12px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .signup-form-input-box{
         width: 400px;
         height: 48px;
@@ -331,7 +351,7 @@
     height: 18px;
     color: #000000;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .signup-form-input-box::placeholder{
         padding-left: 10px;
         font-weight: 500;
@@ -352,7 +372,7 @@
     letter-spacing: -0.3px;
     align-items: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .RememberMe, 
     .forgot-password-btn{
         color: #007FE0;
@@ -384,7 +404,7 @@
     gap: 10px;
     color: white;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .create-account-btn{
         width: 162px;
         height: 36px;
@@ -411,7 +431,7 @@
     align-content: center;
     text-align: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .google-auth-p{
         width: 250px;
         height: 18px;
@@ -434,7 +454,7 @@
     border: 1px;
     gap: 10px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .google-frame{
         width: 40px;
         height: 36px;
@@ -458,7 +478,7 @@
     letter-spacing: -0.3px;
     text-align: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .login-option,
     .create-account-option{
         width: 316px;
@@ -485,7 +505,7 @@
     margin-top: -10px;
     margin-bottom: 2px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .loginError{
         color: red;
         font-size: 11px;
@@ -500,7 +520,7 @@
     margin-top: 50px;
     margin-left: 50px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .verification-pins{
         width: 314px;
         height: 44px;
@@ -531,7 +551,7 @@
     gap: 10px;
     color: white;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .email-verify-btn{
         width: 162px;
         height: 36px;
@@ -547,7 +567,7 @@
         color: white;
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .about-page2{
         background-color: #f2f4f5;
         border-radius: 10px;
@@ -557,7 +577,7 @@
         margin-bottom: 40px;
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .about-form{
         margin-left: 100px;
     }
@@ -574,7 +594,7 @@
     margin-left: 30px;
     margin-bottom: 16px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .about-welcome{
         width: 300px;
         height: 22px;
@@ -596,7 +616,7 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .about-form-label{
         margin-left: -30px;
         height: 18px;
@@ -631,7 +651,7 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .about-form-input-box{
         width: 350px;
         height: 39px;
@@ -676,7 +696,7 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .about-form-input-box-A{
         width: 146px;
         height: 39px;
@@ -702,7 +722,7 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .about-form-input-box-D{
         width: 146px;
         height: 39px;
@@ -774,7 +794,7 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .compat-skip{
         width: 24px;
         height: 18px;
@@ -798,7 +818,7 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .compat_test_div{
         display: flex;
         flex-direction: row;
@@ -806,7 +826,7 @@
         margin-top: 40px;
     }
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .compat_test_image{
         width: 600px;
         height: 500px;
@@ -827,7 +847,7 @@
     margin-left: 30px;
     margin-bottom: 16px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
     .compat-title{
         width: 350px;
         height: 22px;
@@ -883,7 +903,7 @@
     gap: 10px;
     color: white;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .compat-proceed-btn{
         width: 162px;
         height: 36px;
@@ -912,7 +932,7 @@
     gap: 10px;
     color: white;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .compat-proceed-btn-H{
         width: 162px;
         height: 36px;
@@ -941,7 +961,7 @@
     gap: 10px;
     color: white;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .compat-proceed-btn-I{
         width: 162px;
         height: 36px;
@@ -990,7 +1010,7 @@
     gap: 10px;
     color: white;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .compat-proceed-btn-M{
         width: 162px;
         height: 36px;
@@ -1021,11 +1041,9 @@
     justify-content: center;
     flex: 1;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .lp-home-icon{
-        height: 53px;
-        color: white;
-        margin-left: 450px;
+        margin-right: 460px;
     }
 }
 .home-footer-div{
@@ -1034,7 +1052,7 @@
     position: absolute;
     opacity: 1;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .home-footer-div{
         min-height: 100%;
         border-color: #909090;
@@ -1060,7 +1078,7 @@
     margin-left: 28px;
     margin-right: 23px;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .home-footer-icon-closed{
         color: #7c7b7b;
         margin-left: 100px;
@@ -1072,7 +1090,7 @@
     margin-left: 28px;
     margin-right: 23px;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .home-footer-icon-open{
         color: #007FE0;
         margin-left: 100px;
@@ -1087,7 +1105,7 @@
 .start-post-page{
     height: 100vh;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .home-page,
     .discover-page,
     .post-page,
@@ -1099,7 +1117,7 @@
         box-sizing: border-box;
     }
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .dk-profile{
         width: 30%;
         height: 600px;
@@ -1138,7 +1156,7 @@
     letter-spacing: -0.3px;
     text-align: center;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .post-p{
         width: 200px;
         height: 22px;
@@ -1157,7 +1175,7 @@
     flex-direction: row;
     margin-left: 14px;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .post-images-div{
         display: flex;
         flex-direction: row;
@@ -1174,7 +1192,7 @@
     border-radius: 10px;
     margin-bottom: 40px;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .post-image{
         width: 250px;
         margin-top: 40px;
@@ -1183,7 +1201,7 @@
         margin-bottom: 80px;
     }
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .main-post-image{
         width: 210px;
         height: 180px;
@@ -1202,7 +1220,7 @@
     line-height: 14.52px;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .post-image-p{
         height: 15px;
         margin-top: -24px;
@@ -1224,7 +1242,7 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .start-post-post{
         width: 26px;
         height: 15px;
@@ -1246,7 +1264,7 @@
     font-size: 14px;
     line-height: 14.52px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .start-post-p{
         width: 150px;
         height: 15px;
@@ -1290,7 +1308,7 @@
     margin-left: 30px;
     border-color: #d6d4d4;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .header-border{
         width: 400px;
         margin-top: 35px;
@@ -1309,7 +1327,7 @@
     font-size: 13px;
     padding: 10px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .post-information-input{
         width: 400px;
         height: 150px;
@@ -1336,7 +1354,7 @@
     font-size: 10px;
     line-height: 12.1px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .fifty-words{
         height: 12px;
         margin-top: 6px;
@@ -1372,7 +1390,7 @@
     font-weight: 300;
     font-size: 10px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .image-field{
         width: 400px;
         height: 200px;
@@ -1421,7 +1439,7 @@
     font-size: 14px;
     line-height: 14.52px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .post-location-box{
         width: 400px;
         height: 44px;
@@ -1452,12 +1470,12 @@
     margin-bottom: -10px;
     font-weight: 400;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .home{
         display: flex;   
     }
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .post-page{
         margin-top: -20px;
     }
@@ -1479,7 +1497,7 @@
 .profile-page{
     margin-top: 106px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .profile-page{
         margin-top: 52px;
     }
@@ -1530,7 +1548,7 @@
 .profile-options{
     margin-top: 35px;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .profile-options{
         margin-top: 25px;
     }
@@ -1541,7 +1559,7 @@
     display: flex;
     flex-direction: row;
 }
-@media (min-width: 1024px){
+@media (min-width: 1366px){
     .profile-option{
         height: 25px;
         margin-top: 15px;
@@ -1744,7 +1762,7 @@
     margin-left: 30px;
     border-radius: 10px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .inbox-search-bar{
         width: 600px;
         height: 44px;
@@ -1863,7 +1881,7 @@
     line-height: 9.68px;
     color: #7c7b7b;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .notOpened-time{
         height: 10px;
         margin-top: 6px;
@@ -1937,7 +1955,7 @@
 .chat-page{
     height: 100vh;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .chat-page{
         height: 100%;
     }
@@ -1952,7 +1970,7 @@
     padding: 10px;
     border-radius: 10px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .chat-input-box input{
         padding: 10px;
         border-radius: 10px;
@@ -1973,7 +1991,7 @@
     padding: 20px; 
     height: 630px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .chat{
         display: flex;
         flex-direction: column;
@@ -1999,7 +2017,7 @@
     border-radius: 10px;
     max-width: 230px;
 }
-@media(min-width: 1024px){
+@media(min-width: 1366px){
     .message {
         background-color: #f0f0f0;
         padding: 8px;

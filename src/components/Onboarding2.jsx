@@ -13,7 +13,7 @@ const Onboarding2 = () => {
 
   return (
     <div className='onboarding2-page'>
-        <div>
+        <div className='boarding-ellipses'>
             <img src={ellipse16} className='OB2ellipse16'/>
             <img src={ellipse18} className='OB2ellipse18'/>
             <img src={ellipse17} className='OB2ellipse17' />

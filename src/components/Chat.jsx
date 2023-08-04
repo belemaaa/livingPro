@@ -32,7 +32,7 @@ const Chat = () => {
                     <p>Collins wale</p>
                 </div>
             </div>
-            <div className='chat-header-border border-b' />
+            {/* <div className='chat-header-border border'></div> */}
 
             <div className='chat'>
                 <div className="sender">

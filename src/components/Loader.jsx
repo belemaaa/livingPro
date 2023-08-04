@@ -10,8 +10,6 @@ const Loader = () => {
         }, 4000)
     }, [])
   
-
-
   return (
     <div className='loader-page'>
         <SquareLoader

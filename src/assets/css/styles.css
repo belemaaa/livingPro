@@ -1738,22 +1738,25 @@
     margin-left: 30px;
     border-radius: 10px;
 }
+@media(min-width: 1024px){
+    .inbox-search-bar{
+        width: 600px;
+        height: 44px;
+        margin-top: 60px;
+        margin-left: 30px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .inbox-search-bar::placeholder{
+        padding: 10px;
+    }
+}
 .inbox-search-icon{
     width: 23px;
     height: 23px;
     margin-top: 11.5px;
     margin-left: 12px;
 }
-/* .inbox-page{
-    flex: 1;
-    align-content: center;
-    justify-content: center;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-} */
 .CaMr{
     display: flex;
     flex: row;
@@ -1853,6 +1856,27 @@
     font-size: 8px;
     line-height: 9.68px;
     color: #7c7b7b;
+}
+@media(min-width: 1024px){
+    .notOpened-time{
+        height: 10px;
+        margin-top: 6px;
+        margin-left: 185px;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 9.68px;
+        color: #007FE0;
+    }
+    .opened-time{
+        height: 10px;
+        margin-top: 6px;
+        margin-left: 185px;
+        margin-right: 6px;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 9.68px;
+        color: #7c7b7b;
+    }
 }
 .message-count{
     width: 4px;

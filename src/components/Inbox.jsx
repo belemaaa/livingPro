@@ -45,7 +45,7 @@ const Inbox = () => {
                 <img src='' className='border'/>
 
                 <div className='message-nAm'>
-                  <p className='message-name'>Grace Belema</p>
+                  <p className='message-name'>Collins wale</p>
                   <p className='message-text'>Oh, alright</p>
                 </div>
 

@@ -22,8 +22,7 @@ const Home = () => {
     <div className='overflow-hidden'>
       {
         loading ?
-          <Loader/> 
-        
+          <Loader/>  
         :
           <div>
             <div className='home'>

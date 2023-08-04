@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Profile from './Profile.jsx'
-import InboxFooter from './InboxFooter'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
 
@@ -30,7 +29,7 @@ const Chat = () => {
 
                 <div className='chat-header-title'>
                     <img src='' className='border'/>
-                    <p>Grace Belema</p>
+                    <p>Collins wale</p>
                 </div>
             </div>
             <div className='chat-header-border border-b' />

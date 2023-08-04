@@ -39,7 +39,7 @@ const Notifications = () => {
                 <p className='nots-filter'>Yesterday</p>
 
                 <div className='notifications'>
-                    <div className='notification border'>
+                    <div className='prev-notification border'>
                         <img src='' className='border'/>
                         <div className='not-nAp'>
                             <p className='not-n'>Collins Wale</p>
@@ -54,7 +54,7 @@ const Notifications = () => {
                 <p className='nots-filter'>Earlier</p>
 
                 <div className='notifications'>
-                    <div className='notification border'>
+                    <div className='prev-notification border'>
                         <img src='' className='border'/>
                         <div className='not-nAp'>
                             <p className='not-n'>Collins Wale</p>

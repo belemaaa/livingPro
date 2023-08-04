@@ -1010,11 +1010,16 @@
     background-color: #007FE0;
     height: 50px;
     margin-top: 50px;
+    display: flex;
 }
 .lp-home-icon{
-    height: 53px;
+    height: 40px;
+    padding-top: 5px;
     color: white;
-    margin-left: 185px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 @media (min-width: 1024px){
     .lp-home-icon{
@@ -1532,7 +1537,7 @@
 }
 .profile-option{
     height: 45px;
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
 }
@@ -1545,8 +1550,8 @@
     }
 }
 .profile-icon{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin-left: 43px;
     color: #7c7b7b;
 }
@@ -1558,6 +1563,7 @@
     line-height: 14.52px;
     letter-spacing: -0.3px;
     text-align: center;
+    margin-top: 3px;
 }
 .profile-arrow-ec{
     margin-left: 97px;
@@ -2051,7 +2057,23 @@
     padding: 6px;
     margin-bottom: 20px;
 }
+.prev-notification{
+    width: 350px;
+    height: 54px;
+    margin-left: 30px;
+    border-radius: 10px;
+    border-color: #c1c0c0;
+    display: flex;
+    flex-direction: row;
+    padding: 6px;
+    margin-bottom: 20px;
+}
 .notification img{
+    width: 41.54px;
+    height: 40px;
+    border-radius: 10px;
+}
+.prev-notification img{
     width: 41.54px;
     height: 40px;
     border-radius: 10px;

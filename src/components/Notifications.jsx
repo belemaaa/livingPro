@@ -51,7 +51,7 @@ const Notifications = () => {
 
             <div className='earlier'>
                 <div className='notifications-border border'></div>
-                <p className='not-filter'>Earlier</p>
+                <p className='nots-filter'>Earlier</p>
 
                 <div className='notifications'>
                     <div className='notification border'>

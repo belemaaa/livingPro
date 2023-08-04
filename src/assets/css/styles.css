@@ -37,7 +37,8 @@
     margin-right: 4px;  
 }
 
-/* @media(min-width: 670px){
+
+@media(min-width: 670px){
     .boarding-ellipses{
         margin-left: 130px;
     }
@@ -47,14 +48,17 @@
         margin-left: 270px;
     }
 }
-@media(min-width: 14in){
+@media(min-width: 1115px){
     .boarding-ellipses{
-        margin-left: -100px;
+        margin-left: 350px;
     }
-} */
-/* .boarding-ellipses{
+} 
+@media(min-width: 1366px){
+    .boarding-ellipses{
+        margin-left: 0px;
+    }
+} 
 
-} */
 
 .OB1ellipse16{
     width: 60px;
@@ -184,13 +188,20 @@
     margin-left: 27px;
     margin-bottom: 40px;
 }
-@media (min-width: 1366px) {
+@media (min-width: 1080px) {
     .boarding-options{
         margin-top: 30px;
         margin-left: 500px;
         margin-bottom: 40px;
     }
 }
+/* @media (min-width: 1115px) {
+    .boarding-options{
+        margin-top: 30px;
+        margin-left: 380px;
+        margin-bottom: 40px;
+    }
+} */
 .boarding-icons{
     margin-top: 100px;
     margin-left: 30px;
@@ -207,6 +218,15 @@
         flex-direction: row;
     }
 }
+/* @media (min-width: 1115px) {
+    .boarding-icons{
+        margin-left: 300px;
+        margin-top: 100px;
+        margin-right: 500px;
+        display: flex;
+        flex-direction: row;
+    }
+} */
 .boarding-icon{
     height: 4px;
     width: 20px;
@@ -1124,12 +1144,18 @@
         box-sizing: border-box;
         border-color: #929292;
         position: fixed;
+        display: flex;
     }
 }
 .home-footer-icon-name{
     text-align: center;
     font-size: 12px;
     font-weight: 500;
+}
+@media(min-width: 1366px){
+    .footer-profile{
+        display: none;
+    }
 }
 .signup-page,
 .onboarding1-page,

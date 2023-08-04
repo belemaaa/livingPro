@@ -34,9 +34,9 @@ const Onboarding1 = () => {
                     <img src={boardingfill} className='boarding-icon rounded-am'/>
                 </Link>
             
-            <Link to='/onboarding2'>
-                    <img src={boardingempty} className='boarding-icon rounded-sm'/>
-            </Link>
+                <Link to='/onboarding2'>
+                        <img src={boardingempty} className='boarding-icon rounded-sm'/>
+                </Link>
                 
                 <Link to='/onboarding3'>
                     <img src={boardingempty} className='boarding-icon rounded-sm'/>

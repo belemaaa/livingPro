@@ -26,7 +26,7 @@ const Home = () => {
         :
           <div>
             <div className='home'>
-                <div className='hidden md:flex dk-profile border-r'>
+                <div className='hidden dk-profile border-r'>
                   <Profile/>
                 </div>
 

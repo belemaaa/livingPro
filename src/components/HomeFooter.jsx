@@ -108,7 +108,7 @@ const HomeFooter = () => {
                 </p>
             </div>
 
-            <div onClick={handleProfile} className='md:hidden'>
+            <div onClick={handleProfile} className='footer-profile'>
                 {post ? <CgProfile size={26} className='home-footer-icon-open'/>
                  : 
                 <CgProfile size={26} className='home-footer-icon-closed'/>

@@ -76,7 +76,7 @@ const StartPost = () => {
     
     return (
         <div className='overflow-hidden'>
-            <div className='hidden md:flex dk-profile border-r'>
+            <div className='hidden dk-profile border-r'>
                 <Profile/>
             </div>
 

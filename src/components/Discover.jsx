@@ -90,7 +90,7 @@ const Discover = ({accessToken}) => {
 
           <div className='discover-page'>
             <div className='signup-go-back-btn'>
-              <Link to='/signup'>
+              <Link to='/home'>
                   <IoIosArrowBack size={25}/>
               </Link>
             </div>
@@ -107,20 +107,6 @@ const Discover = ({accessToken}) => {
                 <button type='submit'></button>
               </div>
             </form>
-
-            {searchQuery.length > 0 && (
-              <div>
-                {searchError && <p>{searchError}</p>}
-                {searchResult.map((item, index) => (
-                  <div key={index} className='search-result border-b'>
-                      <img src={item.profile_image_url}/>
-                      <p className='search-result-name'>{item.fullname}</p>
-                      <p className='search-result-occ'>{item.occupation}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-
             <div className='discover-options'>
               <div className='apartments-filter'>
                 <form onSubmit={handleApartmentApi}>
@@ -136,29 +122,8 @@ const Discover = ({accessToken}) => {
                       </p>
                     }
                   </button>
-                </form>
-                {apartments && (
-                  <div>
-                    {apResult.map((item, index) => (
-                      <div key={index}>
-                        <div>
-                          <p>{item.profile_image_url}</p>
-                          <div>
-                            <p>{item.fullname}</p>
-                            <p>{item.details}</p>
-                            <p>{item.location}</p>
-                          </div>
-                          <p>{item.created_at}</p>
-                        </div>
-                        <div>
-                          <img src={item.image}/>
-                        </div>   
-                      </div>
-                    ))}
-                  </div>
-                )}        
+                </form>     
               </div>
-
               <div className='matches-filter'>
                 <form onSubmit={handleMatchesApi}>
                   <button type='submit' onClick={matchDisplay} className='matches filter-btn'>
@@ -174,21 +139,57 @@ const Discover = ({accessToken}) => {
                       </p>
                     }
                   </button>
-                </form>
-                {match && (
-                  <div>
-                    {matchResult.map((item, index) => (
-                      <div key={index}>
-                        <img src={item.profile_image_url}/>
-                        <p>{item.fullname}</p>
-                        <p>{item.occupation}</p>
-                      </div>
-                
-                    ))}
-                  </div>
-                )}        
+                </form>      
               </div>
             </div>
+
+            {/* render search results - these are displayed here to set the order of execution */}
+            {searchQuery.length > 0 && (
+              <div>
+                {searchError && <p>{searchError}</p>}
+                {searchResult.map((item, index) => (
+                  <div key={index} className='search-result border-b'>
+                      <img src={item.profile_image_url} className='border'/>
+                      <div>
+                        <p className='search-result-name'>{item.fullname}</p>
+                        <p className='search-result-occ'>{item.occupation}</p>
+                      </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            {apartments && (
+              <div>
+                {apResult.map((item, index) => (
+                  <div key={index}>
+                    <div>
+                      <p>{item.profile_image_url}</p>
+                      <div>
+                        <p>{item.fullname}</p>
+                        <p>{item.details}</p>
+                        <p>{item.location}</p>
+                      </div>
+                      <p>{item.created_at}</p>
+                    </div>
+                    <div>
+                      <img src={item.image}/>
+                    </div>   
+                  </div>
+                ))}
+              </div>
+            )}
+            {match && (
+              <div>
+                {matchResult.map((item, index) => (
+                  <div key={index}>
+                    <img src={item.profile_image_url}/>
+                    <p>{item.fullname}</p>
+                    <p>{item.occupation}</p>
+                  </div>
+            
+                ))}
+              </div>
+            )}       
           </div>
 
        </div>

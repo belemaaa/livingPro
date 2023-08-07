@@ -26,6 +26,7 @@ import Notifications from "./components/Notifications";
 
 function App() {
   const [accessToken, setAccessToken] = useState('');
+  const [id, setId] = useState(null);
 
   return (
     <div>
@@ -36,7 +37,7 @@ function App() {
           <Route path='/onboarding3' element={<Onboarding3/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/home' element={<Home/>} />
-          <Route path='/email_verification' element={<EmailVerification/>}/>
+          <Route path='/email_verification' element={<EmailVerification setId={setId}/>}/>
           <Route path="/login" element={<Login setAccessToken={setAccessToken}/>}/>
           <Route path='/about' element={<AboutInfo/>}/>
           <Route path="/compatibility_test_1" element={<CompatibilityTest1/>}/>
@@ -47,7 +48,7 @@ function App() {
           <Route path="/post" element={<CreatePost/>}/>
           <Route path="/start_post" element={<StartPost accessToken={accessToken}/>}/>
           <Route path="/inbox" element={<Inbox/>}/>
-          <Route path="/profile" element={<Profile/>}/>
+          <Route path='/profile' element={<Profile id={id}/>}/>
           <Route path="/test" element={<ImageUploadTest/>}/>
           <Route path="/matches" element={<Matches/>}/>
           <Route path="/chat" element={<Chat/>}/>

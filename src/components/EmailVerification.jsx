@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import Signup from './Signup';
 
-const EmailVerification = (props) => {
+const EmailVerification = (props, {setId}) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -39,6 +39,9 @@ const EmailVerification = (props) => {
           });
       
           if (response.status === 200) {
+            const responseBody = await response.json();
+            setId(response.data.id)
+
             console.log('validation successful')
             navigate('/compatibility_test_1');
           } else {

@@ -12,9 +12,11 @@ const Discover = () => {
 
   const [searchQuery, setSearchQuery] = useState('')
   const [searchResult, setSearchResult] = useState([])
-  const [appartments, setAppartments] = useState(false)
+  const [apartments, setApartments] = useState(false)
   const [apResult, setApResult] = useState([])
   const [match, setMatch] = useState([])
+  const [searchError, setSearchError] = useState('')
+
 
   const handleInputChange = (e) => {
     setSearchQuery(e.target.value)
@@ -27,16 +29,26 @@ const Discover = () => {
     }
     const response = await fetch(`https://lp-backend-production.up.railway.app/discover/?search_filter=${searchQuery}`)
     const data = await response.json()
-    setSearchResult(data)
+
+    if (response !== []){
+      setSearchResult(data)
+    }
+    else{
+      setSearchResult([])
+      setSearchError('No results found.')
+      console.log('Invalid search')
+    }
   }
+
   const handleApartmentApi = async(e) => {
     e.preventDefault()
-    setAppartments(!appartments)
+    // setApartments(!apartments)
 
     const response = await fetch('https://lp-backend-production.up.railway.app/discover/apartments')
     const data = await response.json()
     setApResult(data)
   }
+
   const handleMatchesApi = async(e) => {
     e.preventDefault()
 
@@ -66,6 +78,7 @@ const Discover = () => {
                   type='text'
                   value={searchQuery}
                   onChange={handleInputChange}
+                  autoCorrect='off'
                 />
                 <button type='submit'></button>
               </div>
@@ -73,6 +86,7 @@ const Discover = () => {
 
             {searchQuery.length > 0 && (
               <div>
+                {searchError && <p>{searchError}</p>}
                 {searchResult.map((item, index) => (
                   <div key={index}>
                       <img src={item.profile_image_url}/>
@@ -84,30 +98,31 @@ const Discover = () => {
             )}
 
             <div className='discover-options'>
-              <div onClick={handleApartmentApi} className='filter-btn'>
-                {appartments ? 
-                <div>
-                  <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }}>
-                    Apartments
-                  </p>
-
-                  {appartments && (
+              <form onSubmit={handleApartmentApi}>
+                <button type='submit' onClick={(e) => setApartments(!apartments)} className='filter-btn'>
+                  {apartments ? 
                     <div>
-                      {apResult.map((item, index) => {
-                        <div key={index}>
-                          <p>{item.details}</p>
-                        </div>
-                      })}
+                      <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }}>
+                        Apartments
+                      </p>
                     </div>
-                  )}
-                </div>
-                
-                :
-                <p className='border'>
-                  Apartments
-                </p>
-                }
-              </div>
+                    :
+                    <p  className='border'>
+                      Apartments
+                    </p>
+                  }
+                </button>
+              </form>
+
+              <div>
+                {apResult.map((item, index) => (
+                  <div key={index}>
+                    <p>{item.details}</p>
+                  </div>
+                ))}
+              </div>      
+           
+              
             </div>
           </div>
 

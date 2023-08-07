@@ -18,7 +18,10 @@ const Discover = () => {
 
   const handleSearchApi = async (e) => {
     e.preventDefault()
-
+    if (searchQuery.trim() === '') {
+      setSearchResult([]);
+      return;
+    }
     const response = await fetch(`https://lp-backend-production.up.railway.app/discover/?search_filter=${searchQuery}`)
     const data = await response.json()
     setSearchResult(data)
@@ -47,7 +50,7 @@ const Discover = () => {
                   value={searchQuery}
                   onChange={handleInputChange}
                 />
-                <button type='submit'><IoIosArrowForward/></button>
+                <button type='submit'></button>
               </div>
             </form>
 

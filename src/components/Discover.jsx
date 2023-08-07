@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {IoIosArrowBack} from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io';
 
-const Discover = () => {
+const Discover = ({accessToken}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -49,15 +49,26 @@ const Discover = () => {
     setApResult(data)
   }
 
+  console.log('access token: ', accessToken)
   const handleMatchesApi = async(e) => {
     e.preventDefault()
-
-    const response = await fetch('https://lp-backend-production.up.railway.app/discover/match')
-    const data = await response.json()
-    setMatchResult(data)
-
-    if(response.status !== 200){
-      console.log('an error occurred')
+    const headers = {
+      Authorization: `Bearer ${accessToken}`,
+    };
+  
+    try {
+      const response = await fetch('https://lp-backend-production.up.railway.app/discover/match', { 
+        headers: headers 
+      });
+      const data = await response.json();
+  
+      if (response.status === 200) {
+        setMatchResult(data);
+      } else {
+        console.log('An error occurred');
+      }
+    } catch (error) {
+      console.error('Error fetching matches:', error);
     }
   }
 
@@ -159,9 +170,12 @@ const Discover = () => {
                 {match && (
                   <div>
                     {matchResult.map((item, index) => (
-                      <div>
-                        
+                      <div key={index}>
+                        <img src={item.profile_image_url}/>
+                        <p>{item.fullname}</p>
+                        <p>{item.occupation}</p>
                       </div>
+                
                     ))}
                   </div>
                 )}        

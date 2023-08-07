@@ -43,7 +43,7 @@ function App() {
           <Route path="/compatibility_test_2" element={<CompatibilityTest2/>}/>
           <Route path="/compatibility_test_3" element={<CompatibilityTest3/>}/>
           <Route path="/compatibility_test_4" element={<CompatibilityTest4/>}/>
-          <Route path="/discover" element={<Discover/>}/>
+          <Route path="/discover" element={<Discover accessToken={accessToken}/>}/>
           <Route path="/post" element={<CreatePost/>}/>
           <Route path="/start_post" element={<StartPost accessToken={accessToken}/>}/>
           <Route path="/inbox" element={<Inbox/>}/>

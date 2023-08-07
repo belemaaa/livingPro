@@ -2227,3 +2227,22 @@
     font-size: 13.5px;
     padding: 10px;
 }
+.discover-options{
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+}
+.filter-btn{
+    margin-left: 30px;
+    width: 86px;
+}
+.filter-btn p{
+    padding: 8px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12.1px;
+    border-radius: 10px;
+}
+.matches{
+    margin-left: 173px;
+}

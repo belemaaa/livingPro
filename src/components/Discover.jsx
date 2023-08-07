@@ -43,13 +43,12 @@ const Discover = ({accessToken}) => {
 
   const handleApartmentApi = async(e) => {
     e.preventDefault()
-  
+
     const response = await fetch('https://lp-backend-production.up.railway.app/discover/apartments')
     const data = await response.json()
     setApResult(data)
   }
 
-  console.log('access token: ', accessToken)
   const handleMatchesApi = async(e) => {
     e.preventDefault()
     const headers = {
@@ -70,6 +69,16 @@ const Discover = ({accessToken}) => {
     } catch (error) {
       console.error('Error fetching matches:', error);
     }
+  }
+
+  // restrict filter display to one at a time
+  const apDisplay = () => {
+    setApartments(!apartments)
+    setMatch(false)
+  }
+  const matchDisplay = () => {
+    setMatch(!match)
+    setApartments(false)
   }
 
   return (
@@ -103,10 +112,10 @@ const Discover = ({accessToken}) => {
               <div>
                 {searchError && <p>{searchError}</p>}
                 {searchResult.map((item, index) => (
-                  <div key={index}>
+                  <div key={index} className='search-result border-b'>
                       <img src={item.profile_image_url}/>
-                      <p>{item.fullname}</p>
-                      <p>{item.occupation}</p>
+                      <p className='search-result-name'>{item.fullname}</p>
+                      <p className='search-result-occ'>{item.occupation}</p>
                   </div>
                 ))}
               </div>
@@ -115,13 +124,12 @@ const Discover = ({accessToken}) => {
             <div className='discover-options'>
               <div className='apartments-filter'>
                 <form onSubmit={handleApartmentApi}>
-                  <button type='submit' onClick={(e) => setApartments(!apartments)} className='filter-btn'>
+                  <button type='submit' onClick={apDisplay} className='filter-btn '>
                     {apartments ? 
-                      <div>
-                        <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }}>
-                          Apartments
-                        </p>
-                      </div>
+                      <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }}>
+                        Apartments
+                      </p>
+
                       :
                       <p  className='border'>
                         Apartments
@@ -153,7 +161,7 @@ const Discover = ({accessToken}) => {
 
               <div className='matches-filter'>
                 <form onSubmit={handleMatchesApi}>
-                  <button type='submit' onClick={(e) => setMatch(!match)} className='filter-btn'>
+                  <button type='submit' onClick={matchDisplay} className='matches filter-btn'>
                     {match ? 
                       <div>
                         <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }}>

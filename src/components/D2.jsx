@@ -136,7 +136,7 @@ const Discover = () => {
                 )}        
               </div>
 
-              <div className='matches-filter'>
+              {/* <div className='matches-filter'>
                 <form onSubmit={handleMatchesApi}>
                   <button type='submit' onClick={(e) => setMatch(!match)} className='filter-btn'>
                     {match ? 
@@ -172,7 +172,7 @@ const Discover = () => {
                     ))}
                   </div>
                 )}        
-              </div>
+              </div> */}
             </div>
           </div>
 

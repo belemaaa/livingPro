@@ -409,7 +409,7 @@ const CompatibilityTest1 = () => {
             </div>
             
 
-            <div className='hidden md:flex'>
+            <div className='hidden lg:flex'>
                 <img src={compatTestImage} className='compat_test_image'/>
             </div>
         </div>

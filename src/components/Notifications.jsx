@@ -19,50 +19,53 @@ const Notifications = () => {
 
             <p className='notifications-header'>Notifications</p>
 
-            <div className='today'>
-                <div className='notifications-border border'></div>
-                <p className='nots-filter'>Today</p>
+            <div className='nots-div'>
+                <div className='today'>
+                    <div className='notifications-border border'></div>
+                    <p className='nots-filter'>Today</p>
 
-                <div className='notifications'>
-                    <div className='notification border'>
-                        <img src='' className='border'/>
-                        <div className='not-nAp'>
-                            <p className='not-n'>Collins Wale</p>
-                            <p className='not-p'>commented on your new post</p>
-                        </div>     
+                    <div className='notifications'>
+                        <div className='notification border'>
+                            <img src='' className='border'/>
+                            <div className='not-nAp'>
+                                <p className='not-n'>Collins Wale</p>
+                                <p className='not-p'>commented on your new post</p>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+
+                <div className='yesterday'>
+                    <div className='notifications-border border'></div>
+                    <p className='nots-filter'>Yesterday</p>
+
+                    <div className='notifications'>
+                        <div className='prev-notification border'>
+                            <img src='' className='border'/>
+                            <div className='not-nAp'>
+                                <p className='not-n'>Collins Wale</p>
+                                <p className='not-p'>commented on your new post</p>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+
+                <div className='earlier'>
+                    <div className='notifications-border border'></div>
+                    <p className='nots-filter'>Earlier</p>
+
+                    <div className='notifications'>
+                        <div className='prev-notification border'>
+                            <img src='' className='border'/>
+                            <div className='not-nAp'>
+                                <p className='not-n'>Collins Wale</p>
+                                <p className='not-p'>commented on your new post</p>
+                            </div>           
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div className='yesterday'>
-                <div className='notifications-border border'></div>
-                <p className='nots-filter'>Yesterday</p>
-
-                <div className='notifications'>
-                    <div className='prev-notification border'>
-                        <img src='' className='border'/>
-                        <div className='not-nAp'>
-                            <p className='not-n'>Collins Wale</p>
-                            <p className='not-p'>commented on your new post</p>
-                        </div>     
-                    </div>
-                </div>
-            </div>
-
-            <div className='earlier'>
-                <div className='notifications-border border'></div>
-                <p className='nots-filter'>Earlier</p>
-
-                <div className='notifications'>
-                    <div className='prev-notification border'>
-                        <img src='' className='border'/>
-                        <div className='not-nAp'>
-                            <p className='not-n'>Collins Wale</p>
-                            <p className='not-p'>commented on your new post</p>
-                        </div>           
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
     </div>

@@ -1505,14 +1505,17 @@
         margin-top: -20px;
     }
 }
-.profile-image{
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    border-color: #000000;
-}
+
+
+
 .profile-image-div{
-    margin-left: 180px;
+    margin-left: 168px;
+    margin-top: -30px;
+}
+.profile-image-div img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
 }
 .profile-header{
     flex: 1;
@@ -1544,6 +1547,18 @@
     font-size: 17px;
     line-height: 16px;
     letter-spacing: -0.3px;
+}
+@media (min-width: 1366px){
+    .profile-name{
+        width: 140px;
+        height: 18px;
+        margin-top: 23px;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 16px;
+        letter-spacing: -0.3px;
+        margin-left: 30px;
+    }
 }
 .name_v{
     margin-top: 18px;

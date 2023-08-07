@@ -39,7 +39,7 @@ const Profile = () => {
     <div className='profile-page'>
         <div className='profile-header'>
           <div className='profile-image-div'>
-            <img src={profileData.profile_image_url} className='profile_image border'/>
+            <img src={profileData.profile_image_url} className='border'/>
           </div>
 
           <div className='profile-name-div'>

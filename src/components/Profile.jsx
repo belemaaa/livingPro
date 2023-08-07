@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import ProfileFooter from './ProfileFooter';
 import woman from '../assets/images/Rectangle-52.png'
 import verified from '../assets/images/ic_baseline-verified.png'
@@ -13,29 +13,45 @@ import history from '../assets/images/history.png'
 import logout from '../assets/images/logout.png'
 import blueVerified from '../assets/images/blueVerified.png'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Profile = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
+    // fetch profile api
+    const [profileData, setProfileData] = useState([])
+    useEffect(() => {
+      const fetchProfile = async () => {
+        try{
+          const response = await axios.get('https://lp-backend-production.up.railway.app/profile/2')
+          setProfileData(response.data)
+        } 
+        catch(error){
+          console.error('error fetching profile data: ', error)
+        }
+      }
+      fetchProfile()
+    }, [])
+
   return (
     <div className='profile-page'>
         <div className='profile-header'>
           <div className='profile-image-div'>
-            <img src={woman} className='profile_image'/>
+            <img src={profileData.profile_image_url} className='profile_image border'/>
           </div>
 
           <div className='profile-name-div'>
-            <p className='profile-name'>Grace Belema</p>
-            <img src={verified} className='name_v'/> 
+            <p className='profile-name'>{profileData.fullname}</p>
+            {/* <img src={verified} className='name_v'/>  */}
           </div>
           
-          <p className='profile-occupation'>An artiste/enterpreneur</p>
+          <p className='profile-occupation'>{profileData.occupation}</p>
 
           <p className='profile-location'>
             <CiLocationOn className='location-icon'/> 
-            Lagos
+            {profileData.location}
           </p>
         </div>
 

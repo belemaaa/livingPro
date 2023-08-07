@@ -1509,6 +1509,7 @@
     width: 60px;
     height: 60px;
     border-radius: 10px;
+    border-color: #000000;
 }
 .profile-image-div{
     margin-left: 180px;
@@ -1541,7 +1542,7 @@
     margin-top: 23px;
     font-weight: 500;
     font-size: 17px;
-    line-height: 14px;
+    line-height: 16px;
     letter-spacing: -0.3px;
 }
 .name_v{
@@ -1553,10 +1554,10 @@
 .profile-occupation{
     width: 150px;
     height: 12px;
-    margin-top: 7px;
+    margin-top: 28px;
     margin-left: 130px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 12.1px;
     letter-spacing: -0.3px;
 }

@@ -9,7 +9,7 @@ import Profile from './Profile';
 import '../assets/css/styles.css'
 import axios from 'axios'
 
-const StartPost = () => {
+const StartPost = ({accessToken}) => {
     const navigate = useNavigate()
     const [images, setImages] = useState([]);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -49,30 +49,36 @@ const StartPost = () => {
     // fetching post api
     const handlePost = async (e) => {
         e.preventDefault();
-    
+      
         const formData = new FormData();
-        formData.append('image', selectedImage); 
+        formData.append('image', selectedImage);
         formData.append('details', details);
         formData.append('location', location);
-    
+      
         try {
-          console.log('api data: ', formData)
-          const response = await axios.post('https://lp-backend-production.up.railway.app/posts/', 
-          formData, {
-            headers: {
-              'Content-Type': 'multipart/form-data', 
-            },
-          });
-    
-          if (response.status === 200){
+          console.log('api data: ', formData);
+      
+          const response = await axios.post(
+            'https://lp-backend-production.up.railway.app/posts/',
+            formData,
+            {
+              headers: {
+                'Content-Type': 'multipart/form-data',
+                Authorization: `Bearer ${accessToken}`
+              },
+            }
+          );
+      
+          if (response.status === 200) {
             console.log('Post created', response.data);
-            navigate('/home')
+            navigate('/home');
           }
         } catch (error) {
-            setPostError('Oops! Post was not created.')
-            console.error('Error uploading image:', error);
+          setPostError('Oops! Post was not created.');
+          console.error('Error uploading image:', error);
         }
     };
+      
     
     return (
         <div className='overflow-hidden'>

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import GoogleFrame from '../assets/images/GoogleFrame.png'
 import axios from 'axios';
 
-const Login = () => {
+const Login = ({setAccessToken}) => {
     useEffect(() => {
       window.scrollTo(0, 0);
     }, []);
@@ -30,6 +30,7 @@ const Login = () => {
         )
         if (response.status === 200){
           console.log('login was successful')
+          setAccessToken(response.data.access_token);
           navigate('/home')
         }
       } catch(error){

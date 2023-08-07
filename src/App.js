@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Route, Routes,} from "react-router-dom";
+import React, {useState} from 'react'
 import Landing from './components/Landing';
 import Splash from "./components/Splash";
 import Onboarding2 from "./components/Onboarding2";
@@ -24,6 +25,8 @@ import ChatDemo from "./components/ChatDemo";
 import Notifications from "./components/Notifications";
 
 function App() {
+  const [accessToken, setAccessToken] = useState('');
+
   return (
     <div>
       <Router>
@@ -34,7 +37,7 @@ function App() {
           <Route path='/signup' element={<Signup/>} />
           <Route path='/home' element={<Home/>} />
           <Route path='/email_verification' element={<EmailVerification/>}/>
-          <Route path="/login" element={<Login/>}/>
+          <Route path="/login" element={<Login setAccessToken={setAccessToken}/>}/>
           <Route path='/about' element={<AboutInfo/>}/>
           <Route path="/compatibility_test_1" element={<CompatibilityTest1/>}/>
           <Route path="/compatibility_test_2" element={<CompatibilityTest2/>}/>
@@ -42,7 +45,7 @@ function App() {
           <Route path="/compatibility_test_4" element={<CompatibilityTest4/>}/>
           <Route path="/discover" element={<Discover/>}/>
           <Route path="/post" element={<CreatePost/>}/>
-          <Route path="/start_post" element={<StartPost/>}/>
+          <Route path="/start_post" element={<StartPost accessToken={accessToken}/>}/>
           <Route path="/inbox" element={<Inbox/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/test" element={<ImageUploadTest/>}/>

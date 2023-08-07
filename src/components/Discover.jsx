@@ -14,7 +14,7 @@ const Discover = () => {
   const [searchResult, setSearchResult] = useState([])
   const [apartments, setApartments] = useState(false)
   const [apResult, setApResult] = useState([])
-  const [match, setMatch] = useState([])
+  const [match, setMatch] = useState(false)
   const [matchResult, setMatchResult] = useState([])
   const [searchError, setSearchError] = useState('')
 
@@ -55,6 +55,10 @@ const Discover = () => {
     const response = await fetch('https://lp-backend-production.up.railway.app/discover/match')
     const data = await response.json()
     setMatchResult(data)
+
+    if(response.status !== 200){
+      console.log('an error occurred')
+    }
   }
 
   return (
@@ -155,19 +159,8 @@ const Discover = () => {
                 {match && (
                   <div>
                     {matchResult.map((item, index) => (
-                      <div key={index}>
-                        <div>
-                          <p>{item.profile_image_url}</p>
-                          <div>
-                            <p>{item.fullname}</p>
-                            <p>{item.details}</p>
-                            <p>{item.location}</p>
-                          </div>
-                          <p>{item.created_at}</p>
-                        </div>
-                        <div>
-                          <img src={item.image}/>
-                        </div>   
+                      <div>
+                        
                       </div>
                     ))}
                   </div>

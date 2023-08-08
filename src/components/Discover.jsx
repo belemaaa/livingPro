@@ -167,8 +167,7 @@ const Discover = ({accessToken}) => {
                     <div className='ap-header'>
                       <img src={item.profile_image_url} className='border'/>
                       <div>
-                        {/* <p className='ap-name'>{item.fullname}</p> */}
-                        <p className='ap-name'>Grace Itamunoala</p>
+                        <p className='ap-name'>{item.owner.fullname}</p>
                         <p className='ap-details'>{item.details}</p>
                         <p className='ap-location'>{item.location}</p>
                       </div>
@@ -186,10 +185,12 @@ const Discover = ({accessToken}) => {
             {match && (
               <div>
                 {matchResult.map((item, index) => (
-                  <div key={index}>
-                    <img src={item.profile_image_url}/>
-                    <p>{item.fullname}</p>
-                    <p>{item.occupation}</p>
+                  <div key={index} className='search-result border-b'>
+                    <img src={item.profile_image_url} className='border'/>
+                    <div>
+                      <p className='search-result-name'>{item.fullname}</p>
+                      <p className='search-result-occ'>{item.occupation}</p>
+                    </div>
                   </div>
             
                 ))}

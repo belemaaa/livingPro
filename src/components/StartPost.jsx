@@ -11,7 +11,6 @@ import axios from 'axios'
 
 const StartPost = ({accessToken}) => {
     const navigate = useNavigate()
-    const [images, setImages] = useState([]);
     const [selectedImage, setSelectedImage] = useState(null);
     const [details, setDetails] = useState('')
     const [location, setLocation]  = useState('')
@@ -127,49 +126,6 @@ const StartPost = ({accessToken}) => {
                         <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
                         <input type="file" onChange={handleImageChange} className='image-field border'/>
                     </div>
-
-                    {/* <div>
-                        <div className='post-image-div'>
-                            <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
-                            <br/>
-                            {images.length === 0 ? (
-                                <input
-                                    type='file'
-                                    accept='image/*'
-                                    //value={images}
-                                    className='image-field border'
-                                    onChange={handleImageChange}
-                                    multiple
-                                />
-                            ) : 
-                            <div className='uploaded-images-grid border'>
-                                {images.map((image, index) => ( 
-                                    <div key={index}>
-                                        <img
-                                            src={image}
-                                            alt={`Image ${index}`}
-                                            className='uploaded-images'
-                                        />
-                                    </div>
-                                ))}
-                            </div> 
-                            }
-                        </div> */}
-
-                        {/* {images.length > 0 && (
-                            <div className='uploaded-images-grid border'>
-                                {images.map((image, index) => (
-                                    <div key={index}>
-                                        <img
-                                            src={image}
-                                            alt={`Image ${index}`}
-                                            className='uploaded-images'
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                        )}   */}
-                    {/* </div>   */}
 
                     <div className='post-location-div'>
                         <label className='post-location-lbl'>Add Location</label>

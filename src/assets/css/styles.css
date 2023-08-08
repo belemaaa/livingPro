@@ -1147,7 +1147,6 @@
         margin-right: 100px;
     }
 }
-.home-page,
 .post-page,
 .inbox-page,
 .profile-page{
@@ -1616,6 +1615,7 @@
 }
 .location-icon{
     margin-top: 3px;
+    margin-left: 20px;
 }
 .profile-options{
     margin-top: 35px;
@@ -1833,6 +1833,7 @@
     margin-top: 60px;
     margin-left: 30px;
     border-radius: 10px;
+    padding: 10px;
 }
 @media(min-width: 1366px){
     .inbox-search-bar{
@@ -2341,4 +2342,12 @@
     border-radius: 10px;
     padding: 10px;
     border-color: #c7c7c7;
+}
+.feed-post{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-color: #d1d0d0;
+    margin-top: 10px;
 }

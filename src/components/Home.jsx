@@ -6,6 +6,7 @@ import SquareLoader from "react-spinners/SquareLoader";
 import Loader from './Loader';
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   useEffect(() => {
@@ -53,23 +54,28 @@ const Home = () => {
 
                   <div className='feed'>
                     {posts.map((post, index) => (
-                    <div key={index} className='feed-post border'>
-                      <div className='ap-header'>
-                        <img src={post.profile_image_url} className='border'/>
-                        <div>
-                          <p className='ap-name'>{post.owner.fullname}</p>
-                          <p className='ap-details'>{post.details}</p>
-                          <p className='ap-location'>{post.location}</p>
+                      <div key={index} className='feed-post border'>
+                        <div className='ap-header'>
+                          <img src={post.profile_image_url} className='border'/>
+                          <div>
+                            <p className='ap-name'>{post.owner.fullname}</p>
+                            <p className='ap-details'>{post.details}</p>
+                            <p className='ap-location'>{post.location}</p>
+                          </div>
+                          <p className='ap-created-at'>
+                            {formatDistanceToNow(parseISO(post.created_at), { addSuffix: true })}
+                          </p>
                         </div>
-                        <p className='ap-created-at'>
-                          {formatDistanceToNow(parseISO(post.created_at), { addSuffix: true })}
-                        </p>
+                        <div className='ap-image hover:mb-[10px] hover:mt-[10px]'>
+                          <img src={post.image} className='border duration-500'/>
+                        </div>   
                       </div>
-                      <div className='ap-image hover:mb-[10px] hover:mt-[10px]'>
-                        <img src={post.image} className='border duration-500'/>
-                      </div>   
-                    </div>
                     ))}
+                    <div className='follow-more'>
+                      <Link to='/discover'>
+                        Follow more people and see their posts!
+                      </Link>
+                    </div>
                   </div>
 
                 </div>

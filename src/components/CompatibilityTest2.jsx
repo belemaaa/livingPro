@@ -190,7 +190,7 @@ const CompatibilityTest2 = () => {
                                     </p> 
                                     :
                                     <p style={{ backgroundColor: '#E8E8E8' }} className='here-for-btn-text'>
-                                        Goosip
+                                        Gossip
                                     </p>}
                                 </button>
                             </div>

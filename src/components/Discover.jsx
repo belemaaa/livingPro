@@ -18,7 +18,7 @@ const Discover = ({accessToken}) => {
   const [apResult, setApResult] = useState([])
   const [match, setMatch] = useState(false)
   const [matchResult, setMatchResult] = useState([])
-  const [searchError, setSearchError] = useState('')
+  const [Error, setError] = useState('')
 
 
   const handleInputChange = (e) => {
@@ -38,7 +38,7 @@ const Discover = ({accessToken}) => {
     }
     else{
       setSearchResult([])
-      setSearchError('No results found.')
+      setError('No results found.')
       console.log('Invalid search')
     }
   }
@@ -67,6 +67,7 @@ const Discover = ({accessToken}) => {
         setMatchResult(data);
       } else {
         console.log('An error occurred');
+        setError('Please log in to view your matches.')
       }
     } catch (error) {
       console.error('Error fetching matches:', error);
@@ -148,7 +149,7 @@ const Discover = ({accessToken}) => {
             {/* render search results - these are displayed here to set the order of execution */}
             {searchQuery.length > 0 && (
               <div>
-                {searchError && <p>{searchError}</p>}
+                {Error && <p>{Error}</p>}
                 {searchResult.map((item, index) => (
                   <div key={index} className='search-result border-b'>
                       <img src={item.profile_image_url} className='border'/>
@@ -184,6 +185,11 @@ const Discover = ({accessToken}) => {
             )}
             {match && (
               <div>
+                {Error && 
+                <Link to='/login'>
+                  <p className='Error'>{Error}</p>
+                </Link>
+                }
                 {matchResult.map((item, index) => (
                   <div key={index} className='search-result border-b'>
                     <img src={item.profile_image_url} className='border'/>

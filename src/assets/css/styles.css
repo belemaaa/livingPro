@@ -2351,3 +2351,22 @@
     border-color: #d1d0d0;
     margin-top: 10px;
 }
+.follow-more{
+    margin-top: 40px;
+    margin-bottom: 130px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #007FE0;
+    text-align: center;
+    letter-spacing: -0.3px;
+}
+.feed{
+    margin-top: -10px;
+}
+.Error{
+    color: red;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}

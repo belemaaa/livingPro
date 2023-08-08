@@ -37,7 +37,7 @@
     margin-right: 4px;  
 }
 
-/* 
+
 @media(min-width: 670px){
     .boarding-ellipses{
         margin-left: 130px;
@@ -53,11 +53,11 @@
         margin-left: 350px;
     }
 } 
-@media(min-width: 1200px) and (max-width: 1366pxpx){
+@media(min-width: 1366px){
     .boarding-ellipses{
         margin-left: 0px;
     }
-}  */
+} 
 
 
 .OB1ellipse16{
@@ -78,7 +78,7 @@
 .OB1ellipse15, 
 .OB2ellipse18, 
 .OB3ellipse8{
-    margin-left: 50px;
+    margin-left: 52px;
     margin-top: 20px;
     width: 310px;
 }
@@ -87,7 +87,7 @@
     .OB2ellipse18, 
     .OB3ellipse8{
         width: 350px;
-        margin-left: 560px;
+        margin-left: 490px;
     }
 }
 .OB1ellipse17{
@@ -100,7 +100,7 @@
     .OB1ellipse17{
         width: 90px;
         height: 90px;
-        margin-left: 540px;
+        margin-left: 450px;
         margin-top: -7px;
     }
 }
@@ -136,7 +136,7 @@
         width: 90px;
         height: 90px;
         margin-top: 10px;
-        margin-left: 750px;
+        margin-left: 690px;
         margin-bottom: -5px;
     }
 }
@@ -150,7 +150,7 @@
     .OB2ellipse17{
         width: 90px;
         height: 90px;
-        margin-left: 580px;
+        margin-left: 520px;
         margin-top: -5px;
     }
 }
@@ -165,8 +165,8 @@
         width: 90px;
         height: 90px;
         margin-top: 10px;
-        margin-left: 490px;
-        margin-bottom: -50px;
+        margin-left: 450px;
+        margin-bottom: -15px;
     }
 }
 .OB3ellipse17{
@@ -179,7 +179,7 @@
     .OB3ellipse17{
         width: 90px;
         height: 90px;
-        margin-left: 870px;
+        margin-left: 800px;
         margin-top: -10px;
     }
 }
@@ -191,7 +191,7 @@
 @media (min-width: 1080px) {
     .boarding-options{
         margin-top: 30px;
-        margin-left: 560px;
+        margin-left: 500px;
         margin-bottom: 40px;
     }
 }
@@ -211,7 +211,7 @@
 }
 @media (min-width: 1366px) {
     .boarding-icons{
-        margin-left: 535px;
+        margin-left: 500px;
         margin-top: 100px;
         margin-right: 500px;
         display: flex;
@@ -253,7 +253,7 @@
     .signup-div,
     .login-div{
         padding-top: 20px;
-        margin-left: 435px;
+        margin-left: 380px;
         width: 600px;
         border-radius: 10px;
         margin-bottom: 60px;
@@ -814,7 +814,7 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-/* @media (min-width: 1115px){
+@media (min-width: 1115px){
     .compat-skip{
         width: 24px;
         height: 18px;
@@ -827,7 +827,7 @@
         line-height: 18px;
         letter-spacing: -0.3px;
     }
-} */
+}
 @media (min-width: 1366px){
     .compat-skip{
         width: 24px;
@@ -852,14 +852,14 @@
     line-height: 18px;
     letter-spacing: -0.3px;
 }
-/* @media (min-width: 1115px){
+@media (min-width: 1115px){
     .compat_test_div{
         display: flex;
         flex-direction: row;
         margin-left: 80px;
         margin-top: 40px;
     }
-} */
+}
 @media (min-width: 1366px){
     .compat_test_div{
         display: flex;
@@ -868,7 +868,7 @@
         margin-top: 40px;
     }
 }
-/* @media (min-width: 1115px){
+@media (min-width: 1115px){
     .compat_test_image{
         width: 500px;
         height: 500px;
@@ -876,7 +876,7 @@
         margin-top: 50px;
         border-radius: 10px;
     }
-} */
+}
 @media (min-width: 1366px){
     .compat_test_image{
         width: 600px;
@@ -1169,13 +1169,12 @@
 }
 @media (min-width: 1366px){
     .dk-profile{
-        width: 27.1%;
-        height: 800px;
+        width: 30%;
+        height: 600px;
         box-sizing: border-box;
         border-color: #929292;
         position: fixed;
         display: flex;
-        margin-right: -20px;
     }
 }
 .home-footer-icon-name{
@@ -1199,7 +1198,6 @@
 .compat-test-2-page,
 .compat-test-1-page,
 .about-page{
-    /* height: 100vh; */
     width: 100%;
 }
 .post-p{
@@ -1543,12 +1541,7 @@
     margin-left: 168px;
     margin-top: -30px;
 }
-@media(min-width: 1366px){
-    .profile-image-div{
-        margin-left: 165px;
-        margin-top: 30px;
-    }
-}
+@media(min-width: 1366px){}
 .profile-image-div img{
     width: 80px;
     height: 80px;
@@ -2193,7 +2186,7 @@
 .yesterday{
     margin-bottom: 40px;
 }
-/* @media(min-width: 1115px){
+@media(min-width: 1115px){
     .nots-div{
         margin-left: 350px;   
     }
@@ -2207,7 +2200,7 @@
         letter-spacing: -0.3px;
         margin-bottom: 80px;
     }
-} */
+}
 @media(min-width: 1366px){
     .nots-div{
         margin-left: 480px;   
@@ -2283,8 +2276,3 @@
     font-size: 9px;
     line-height: 10.89px;
 }
-/* @media(min-width: 1366px){
-    .discover{
-        margin-top: -60px;
-    }
-} */

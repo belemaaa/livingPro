@@ -82,14 +82,14 @@ const Discover = ({accessToken}) => {
   }
 
   return (
-    <div className=''>
-       <div className=''>
+    <div className='overflow-hidden'>
+        <div className='discover'>
           <div className='hidden dk-profile border-r'>
             <Profile/>
           </div>
 
           <div className='discover-page'>
-            <div className='signup-go-back-btn'>
+            <div className='signup-go-back-btn lg:hidden'>
               <Link to='/home'>
                   <IoIosArrowBack size={25}/>
               </Link>
@@ -192,7 +192,7 @@ const Discover = ({accessToken}) => {
             )}       
           </div>
 
-       </div>
+        </div>
 
        <DiscoverFooter/>
     </div>

@@ -2285,6 +2285,7 @@
     flex-direction: column;
     padding-top: 35px;
     padding-bottom: 15px;
+    border-color: #e9e8e8;
 }
 .ap-header{
     display: flex;
@@ -2333,10 +2334,11 @@
     color: #909090;
 }
 .ap-image img{
-    width: 260px;
-    height: 260px;
+    width: 350px;
+    height: 350px;
     margin-top: 5px;
-    margin-left: 70px;
+    margin-left: 30px;
     border-radius: 10px;
     padding: 10px;
+    border-color: #c7c7c7;
 }

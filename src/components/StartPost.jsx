@@ -24,7 +24,7 @@ const StartPost = ({accessToken}) => {
        
     const nigerianStates = [
         'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra',  
-        'Bauchi', 'Bayelsa', 
+        'Bauchi', 'Bayelsa', 'Lagos', 'Abuja' 
     ];
 
     const handleLocationChange = (event) => {

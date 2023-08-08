@@ -177,7 +177,7 @@ const Discover = ({accessToken}) => {
                       </p>
                     </div>
                     <div className='ap-image hover:mb-[10px] hover:mt-[10px]'>
-                      <img src={item.image} className='border hover:scale-110 duration-500'/>
+                      <img src={item.image} className='border duration-500'/>
                     </div>   
                   </div>
                 ))}

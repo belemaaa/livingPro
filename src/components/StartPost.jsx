@@ -123,7 +123,10 @@ const StartPost = ({accessToken}) => {
                     />
                     <p className='fifty-words'>50 words</p>
 
-                    <input type="file" onChange={handleImageChange} />
+                    <div className='flex flex-col'>
+                        <label className='post-image-lbl'>Add Pictures <span>(please select all files)</span></label>
+                        <input type="file" onChange={handleImageChange} className='image-field border'/>
+                    </div>
 
                     {/* <div>
                         <div className='post-image-div'>

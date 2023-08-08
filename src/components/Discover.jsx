@@ -4,6 +4,8 @@ import Profile from './Profile';
 import { Link } from 'react-router-dom';
 import {IoIosArrowBack} from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io';
+import { formatDistanceToNow, parseISO } from 'date-fns';
+
 
 const Discover = ({accessToken}) => {
   useEffect(() => {
@@ -159,20 +161,23 @@ const Discover = ({accessToken}) => {
               </div>
             )}
             {apartments && (
-              <div>
+              <div className='aps'>
                 {apResult.map((item, index) => (
-                  <div key={index}>
-                    <div>
-                      <p>{item.profile_image_url}</p>
+                  <div key={index} className='apartment border-t border-b'>
+                    <div className='ap-header'>
+                      <img src={item.profile_image_url} className='border'/>
                       <div>
-                        <p>{item.fullname}</p>
-                        <p>{item.details}</p>
-                        <p>{item.location}</p>
+                        {/* <p className='ap-name'>{item.fullname}</p> */}
+                        <p className='ap-name'>Grace Itamunoala</p>
+                        <p className='ap-details'>{item.details}</p>
+                        <p className='ap-location'>{item.location}</p>
                       </div>
-                      <p>{item.created_at}</p>
+                      <p className='ap-created-at'>
+                        {formatDistanceToNow(parseISO(item.created_at), { addSuffix: true })}
+                      </p>
                     </div>
-                    <div>
-                      <img src={item.image}/>
+                    <div className='ap-image hover:mb-[10px] hover:mt-[10px]'>
+                      <img src={item.image} className='border hover:scale-110 duration-500'/>
                     </div>   
                   </div>
                 ))}

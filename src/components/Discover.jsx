@@ -101,7 +101,7 @@ const Discover = ({accessToken}) => {
             <form onSubmit={handleSearchApi}>
               <div>
                 <input 
-                  className='discover-search-bar border'
+                  className='discover-search-bar md:w-96 border'
                   type='text'
                   value={searchQuery}
                   onChange={handleInputChange}

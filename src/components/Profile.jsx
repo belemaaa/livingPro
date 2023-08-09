@@ -14,19 +14,17 @@ import blueVerified from '../assets/images/blueVerified.png'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const Profile = ({id}) => {
+const Profile = ({user_id}) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     // fetch profile api
     const [profileData, setProfileData] = useState([])
-    id = useParams()
-    
     useEffect(() => {
       const fetchProfile = async () => {
         try{
-          const response = await axios.get(`https://lp-backend-production.up.railway.app/profile/2`)
+          const response = await axios.get(`https://lp-backend-production.up.railway.app/profile/${user_id}`)
           setProfileData(response.data)
         } 
         catch(error){
@@ -34,7 +32,7 @@ const Profile = ({id}) => {
         }
       }
       fetchProfile()
-    }, [id])
+    },[])
 
   return (
     <div className='profile-page'>

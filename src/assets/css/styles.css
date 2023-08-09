@@ -1331,9 +1331,10 @@
     margin-top: 15px;
 }
 .post-pp{
-    width: 40px;
+    width: 45px;
     height: 40px;
     margin-top: 25px;
+    border-radius: 10px;
 }
 .post-username{
     display: flex;

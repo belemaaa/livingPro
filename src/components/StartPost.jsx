@@ -9,7 +9,7 @@ import Profile from './Profile';
 import '../assets/css/styles.css'
 import axios from 'axios'
 
-const StartPost = ({accessToken}) => {
+const StartPost = ({accessToken, user_id}) => {
     const navigate = useNavigate()
     const [selectedImage, setSelectedImage] = useState(null);
     const [details, setDetails] = useState('')
@@ -78,6 +78,21 @@ const StartPost = ({accessToken}) => {
           console.error('Error uploading image:', error);
         }
     };
+
+    // fetch profile api
+    const [profileData, setProfileData] = useState([])
+    useEffect(() => {
+      const fetchProfile = async () => {
+        try{
+          const response = await axios.get(`https://lp-backend-production.up.railway.app/profile/${user_id}`)
+          setProfileData(response.data)
+        } 
+        catch(error){
+          console.error('error fetching profile data: ', error)
+        }
+      }
+      fetchProfile()
+    },[])
       
     
     return (
@@ -102,11 +117,11 @@ const StartPost = ({accessToken}) => {
                     <p className='start-post-p'>Start Post</p>
 
                     <div className='post-header'>
-                        <img src={woman} className='post-pp'/>
-                        <p className='post-username'>Amanda Einstein 
-                            <span>
+                        <img src={profileData.profile_image_url} className='post-pp'/>
+                        <p className='post-username'>{profileData.fullname} 
+                            {/* <span>
                                 <img src={verified} className='verified-img'/>
-                            </span> 
+                            </span>  */}
                         </p>
                     </div>
 

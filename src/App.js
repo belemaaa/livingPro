@@ -46,7 +46,7 @@ function App() {
           <Route path="/compatibility_test_4" element={<CompatibilityTest4/>}/>
           <Route path="/discover" element={<Discover accessToken={accessToken}/>}/>
           <Route path="/post" element={<CreatePost/>}/>
-          <Route path="/start_post" element={<StartPost accessToken={accessToken}/>}/>
+          <Route path="/start_post" element={<StartPost accessToken={accessToken} user_id={user_id}/>}/>
           <Route path="/inbox" element={<Inbox/>}/>
           <Route path='/profile' element={<Profile user_id={user_id}/>}/>
           <Route path="/test" element={<ImageUploadTest/>}/>

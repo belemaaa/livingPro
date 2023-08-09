@@ -157,30 +157,3 @@ const Profile = ({user_id}) => {
 }
 
 export default Profile
-
-
-
-// useEffect(() => {
-//   const fetchUserInformation = async () => {
-//     try {
-//       const response = await axios.get('https://lp-backend-production.up.railway.app/profile');
-//       setUserId(response.data.userId); 
-//     } catch (error) {
-//       console.error('error fetching user information: ', error);
-//     }
-//   };
-
-//   fetchUserInformation();
-// }, []);
-
-// useEffect(() => {
-//   const fetchProfile = async () => {
-//     try {
-//       if (userId) {
-//         const response = await axios.get(`https://lp-backend-production.up.railway.app/profile/${userId}`);
-//         setProfileData(response.data);
-//       }
-//     } catch (error) {
-//       console.error('error fetching profile data: ', error);
-//     }
-//   };

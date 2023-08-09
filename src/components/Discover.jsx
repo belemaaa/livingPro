@@ -176,7 +176,7 @@ const Discover = ({accessToken}) => {
                         {formatDistanceToNow(parseISO(item.created_at), { addSuffix: true })}
                       </p>
                     </div>
-                    <div className='ap-image hover:mb-[10px] hover:mt-[10px]'>
+                    <div className='ap-image'>
                       <img src={item.image} className='border duration-500'/>
                     </div>   
                   </div>

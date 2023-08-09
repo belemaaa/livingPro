@@ -63,7 +63,7 @@ const ProfileFooter = () => {
                 </p>
             </div>
 
-            <div onClick={handleProfile}> 
+            <div onClick={handleProfile} > 
                 <CgProfile size={26} className='home-footer-icon-open'/>
                 <p className='home-footer-icon-name'>
                     Profile

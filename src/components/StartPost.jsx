@@ -46,6 +46,7 @@ const StartPost = ({accessToken}) => {
     };
 
     // fetching post api
+    // console.log(accessToken)
     const handlePost = async (e) => {
         e.preventDefault();
       

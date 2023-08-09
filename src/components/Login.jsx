@@ -30,6 +30,8 @@ const Login = ({setAccessToken}) => {
         )
         if (response.status === 200){
           console.log('login was successful')
+          // console.log(response.data.access_token)
+
           setAccessToken(response.data.access_token);
           navigate('/home')
         }

@@ -23,6 +23,7 @@ import Matches from "./components/Matches";
 import Chat from "./components/Chat";
 import ChatDemo from "./components/ChatDemo";
 import Notifications from "./components/Notifications";
+import UserProfile from "./components/UserProfile";
 
 function App() {
   const [accessToken, setAccessToken] = useState('');
@@ -54,6 +55,7 @@ function App() {
           <Route path="/chat" element={<Chat/>}/>
           <Route path="/chat_demo" element={<ChatDemo/>}/>
           <Route path="/notifications" element={<Notifications/>}/>
+          <Route path="/your_profile" element={<UserProfile user_id={user_id}/>}/>
         </Routes>
       </Router>
     </div>

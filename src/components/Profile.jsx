@@ -37,20 +37,22 @@ const Profile = ({user_id}) => {
   return (
     <div className='profile-page'>
         <div className='profile-header'>
-          <div className='profile-image-div'>
-            <img src={profileData.profile_image_url} className='border'/>
-          </div>
+          <Link to='/your_profile'>
+            <div className='profile-image-div'>
+              <img src={profileData.profile_image_url} className='border'/>
+            </div>
 
-          <div className='profile-name-div'>
-            <p className='profile-name'>{profileData.fullname}</p>
-          </div>
-          
-          <p className='profile-occupation'>{profileData.occupation}</p>
+            <div className='profile-name-div'>
+              <p className='profile-name'>{profileData.fullname}</p>
+            </div>
+            
+            <p className='profile-occupation'>{profileData.occupation}</p>
 
-          <p className='profile-location'>
-            <CiLocationOn className='location-icon'/> 
-            {profileData.location}
-          </p>
+            <p className='profile-location'>
+              <CiLocationOn className='location-icon'/> 
+              {profileData.location}
+            </p>
+          </Link> 
         </div>
 
         <div className='profile-options'>

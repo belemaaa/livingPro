@@ -11,7 +11,7 @@ const CompatibilityTest4 = () => {
 
     const navigate = useNavigate()
     const handleProceed = () => {
-        navigate('/home')
+        navigate('/login')
     }
 
   return (

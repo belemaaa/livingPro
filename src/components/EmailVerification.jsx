@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import Signup from './Signup';
 
-const EmailVerification = (props, {setId}) => {
+const EmailVerification = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -39,11 +39,8 @@ const EmailVerification = (props, {setId}) => {
           });
       
           if (response.status === 200) {
-            const responseBody = await response.json();
-            setId(response.data.id)
-
             console.log('validation successful')
-            navigate('/compatibility_test_1');
+            navigate('/about');
           } else {
             console.log('an error occurred');
           }
@@ -100,7 +97,7 @@ const EmailVerification = (props, {setId}) => {
                             />
                         ))}
 
-                        <button type='submit' className='email-verify-btn'  >
+                        <button type='submit' className='email-verify-btn'>
                             Verify
                         </button>
                     </form>

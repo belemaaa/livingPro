@@ -18,7 +18,7 @@ const AboutInfo = () => {
   // Array of Nigerian state names
   const nigerianStates = [
     'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra',  
-    'Bauchi', 'Bayelsa', 
+    'Bauchi', 'Bayelsa', 'Abuja', 'Lagos'
   ];
 
   const handleLocationChange = (event) => {

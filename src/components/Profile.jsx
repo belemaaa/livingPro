@@ -20,6 +20,7 @@ const Profile = ({user_id}) => {
     }, []);
 
     // fetch profile api
+    console.log(user_id)
     const [profileData, setProfileData] = useState([])
     useEffect(() => {
       const fetchProfile = async () => {

@@ -1156,7 +1156,8 @@
     .post-page,
     .inbox-page,
     .start-post-page,
-    .chat-page{
+    .chat-page,
+    .user_profile_page{
         margin-left: 410px;
         width: 70%;
         box-sizing: border-box;

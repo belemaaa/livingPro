@@ -20,12 +20,10 @@ const AboutInfo = () => {
   const [roomateBtn, setRoomateBtn] = useState(false)
   const [postbtn, setPostBtn] = useState(false)
 
-  // Array of Nigerian state names
   const nigerianStates = [
     'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra',  
     'Bauchi', 'Bayelsa', 'Abuja', 'Lagos'
   ];
-
   const handleApartBtn = (e) => {
     e.preventDefault()
     setApartBtn(!apartBtn)
@@ -39,6 +37,7 @@ const AboutInfo = () => {
     setPostBtn(!postbtn)
   }
 
+  //fetch personal info api
   const handleProceed = async(e) => {
     e.preventDefault()
 
@@ -49,10 +48,21 @@ const AboutInfo = () => {
       method: 'POST',
       headers: headers,
       body: JSON.stringify({
-        
-      }),
+        fullname: fullname,
+        occupation: occupation,
+        age: age,
+        date_of_birth: date_of_birth,
+        location: selectedLocation,
+        phone_number: phone_number
+      }),  
     });
-    navigate('/compatibility_test_1')
+    if (response.status === 200){
+      console.log('success')
+      navigate('/compatibility_test_1')
+    }
+    else{
+      console.log('an error occurred');
+    }     
   }
 
   return (
@@ -153,7 +163,8 @@ const AboutInfo = () => {
                   <label className='about-form-label'>Mobile number</label>
                   <br/>
                   <input type='phone' 
-                  name='phone' 
+                  value={phone_number}
+                  onChange={(e) => setPhone_number(e.target.value)}
                   className='about-form-input-box border'
                   autoComplete='off'/>
                 </div>

@@ -8,7 +8,7 @@ import { formatDistanceToNow, parseISO } from 'date-fns';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const Home = ({setUsername_param}) => {
+const Home = ({setUsername_param, username_param}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -55,22 +55,25 @@ const Home = ({setUsername_param}) => {
 
                   <div className='feed'>
                     {posts.map((post, index) => (
-                      <div key={index} className='feed-post border'>
-                        <div className='ap-header'>
-                          <img src={post.profile_image_url} className='border'/>
-                          <div>
-                            <p className='ap-name'>{post.owner.fullname}</p>
-                            <p className='ap-details'>{post.details}</p>
-                            <p className='ap-location'>{post.location}</p>
+                     <Link to={`/profile/${username_param}`}>
+                        <div key={index} className='feed-post border'>
+                          <div className='ap-header'>
+                            <img src={post.profile_image_url} className='border'/>
+                            <div>
+                              <p className='ap-name'>{post.owner.fullname}</p>
+                              <p className='ap-details'>{post.details}</p>
+                              <p className='ap-location'>{post.location}</p>
+                            </div>
+                            <p className='ap-created-at'>
+                              {formatDistanceToNow(parseISO(post.created_at), { addSuffix: true })}
+                            </p>
                           </div>
-                          <p className='ap-created-at'>
-                            {formatDistanceToNow(parseISO(post.created_at), { addSuffix: true })}
-                          </p>
+                          <div className='ap-image hover:mb-[10px] hover:mt-[10px]'>
+                            <img src={post.image} className='border duration-500'/>
+                          </div>   
                         </div>
-                        <div className='ap-image hover:mb-[10px] hover:mt-[10px]'>
-                          <img src={post.image} className='border duration-500'/>
-                        </div>   
-                      </div>
+                      </Link>
+                      
                     ))}
                     <div className='follow-more'>
                       <Link to='/discover'>

@@ -20,7 +20,6 @@ const Profile = ({user_id}) => {
     }, []);
 
     // fetch profile api
-    console.log(user_id)
     const [profileData, setProfileData] = useState([])
     useEffect(() => {
       const fetchProfile = async () => {
@@ -37,8 +36,8 @@ const Profile = ({user_id}) => {
 
   return (
     <div className='profile-page'>
-        <div className='profile-header'>
-          <Link to='/your_profile'>
+        <div className=''>
+          <Link to='/your_profile' className='profile-header'>
             <div className='profile-image-div'>
               <img src={profileData.profile_image_url} className='border'/>
             </div>

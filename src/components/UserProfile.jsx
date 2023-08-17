@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import HomeFooter from './HomeFooter';
 import Profile from './Profile';
 import {CiLocationOn} from 'react-icons/ci'
+import {IoIosArrowBack} from 'react-icons/io'
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -41,10 +42,14 @@ const UserProfile = ({user_id}) => {
                   </Link>
               </div>
 
-              <div>
+              <div className='user-profile-header'>
                 <img src='' className='border'/>
-                <p>Grace Belema</p>
-                <p>Engineer</p>
+                <div className='profile-name-div'>
+                  <p className='profile-name'>{profileData.fullname}</p>
+                </div>
+                
+                <p className='profile-occupation'>{profileData.occupation}</p>
+
                 <p className='profile-location'>
                   <CiLocationOn className='location-icon'/> 
                   {profileData.location}
@@ -52,7 +57,7 @@ const UserProfile = ({user_id}) => {
               </div>
 
               <div>
-                <p>Recent Posts</p>
+                <p className='recent-posts'>Recent Posts</p>
                 <div className='border'/>
                 
               </div>

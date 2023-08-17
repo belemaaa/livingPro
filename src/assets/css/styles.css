@@ -1548,10 +1548,9 @@
     border-radius: 10px;
 }
 .profile-header{
-    flex: 1;
     justify-content: center;
-    align-items: center;
     text-align: center;
+    align-items: center;
 }
 .profile-page{
     margin-top: 106px;
@@ -1570,7 +1569,6 @@
     flex-direction: row;
 }
 .profile-name{
-    width: 140px;
     height: 18px;
     margin-top: 23px;
     font-weight: 500;
@@ -1597,10 +1595,9 @@
     margin-left: -5px;
 }
 .profile-occupation{
-    width: 150px;
     height: 12px;
-    margin-top: 28px;
-    margin-left: 130px;
+    margin-top: 6px;
+    text-align: center;
     font-weight: 400;
     font-size: 13px;
     line-height: 12.1px;
@@ -1609,13 +1606,11 @@
 .profile-location{
     display: flex;
     flex-direction: row;
-    margin-left: 176px;
-    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 8px;
     font-size: 13px;
-}
-.location-icon{
-    margin-top: 3px;
-    margin-left: 20px;
 }
 .profile-options{
     margin-top: 35px;
@@ -2461,4 +2456,26 @@
     font-size: 14px;
     font-weight: 400;
     text-align: center;
+}
+
+
+
+.user-profile-header{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.user-profile-header img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-left: 167px;
+    margin-top: 10px;
+}
+.recent-posts{
+    font-weight: 500;
+    font-size: 20px;
+    height: 35px;
+    margin-top: 50px;
+    margin-left: 30px;
 }

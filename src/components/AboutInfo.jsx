@@ -13,7 +13,7 @@ const AboutInfo = () => {
   const [fullname, setFullname] = useState('')
   const [occupation, setOccupation] = useState('')
   const [age, setAge] = useState('')
-  const [date_pf_birth, setDate_pf_birth] = useState('')
+  const [date_of_birth, setDate_of_birth] = useState('')
   const [selectedLocation, setSelectedLocation] = useState('');
   const [phone_number, setPhone_number] = useState('')
   const [apartBtn, setApartBtn] = useState(false)
@@ -25,10 +25,6 @@ const AboutInfo = () => {
     'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra',  
     'Bauchi', 'Bayelsa', 'Abuja', 'Lagos'
   ];
-
-  const handleLocationChange = (event) => {
-    setSelectedLocation(event.target.value);
-  };
 
   const handleApartBtn = (e) => {
     e.preventDefault()
@@ -77,7 +73,9 @@ const AboutInfo = () => {
                 <label className='about-form-label'>What's your full name? 
                 <span className='required-asterik'>*</span></label>
                 <br/>
-                <input type='text' name='name' 
+                <input type='text'
+                value={fullname} 
+                onChange={(e) => setFullname(e.target.value)}
                 className='about-form-input-box border'
                 required
                 />
@@ -89,7 +87,9 @@ const AboutInfo = () => {
                 <label className='about-form-label'>What do you do? (Occupation) 
                 <span className='required-asterik'>*</span></label>
                 <br/>
-                <input type='text' name='occupation' 
+                <input type='text'
+                value={occupation} 
+                onChange={(e) => setOccupation(e.target.value)}
                 className='about-form-input-box border'
                 required
                 autoComplete='off'/>
@@ -103,10 +103,11 @@ const AboutInfo = () => {
                     <label className=''>Age? 
                     <span className='required-asterik'>*</span>
                     </label>
-                  </div>
-                  
+                  </div>  
                   <br/>
-                  <input type='text' name='age' 
+                  <input type='text'
+                  value={age}
+                  onChange={(e) => setAge(e.target.value)}
                   className='about-form-input-box-A border'
                   required
                   autoComplete='off'/>
@@ -117,18 +118,17 @@ const AboutInfo = () => {
                     <label>Date of Birth 
                     <span className='required-asterik'>*</span>
                     </label>
-                  </div>
-                
+                  </div> 
                   <br/>
                   <input type='date' 
-                  name='dateOfBirth' 
+                  value={date_of_birth}
+                  onChange={(e) => setDate_of_birth(e.target.value)}
                   className='about-form-input-box-D border'
                   required/>
                   </div>
               </div>
 
               <br/>
-
               <div className='about-2'>
                 <div>
                   <label className='about-form-label'>Location 
@@ -137,7 +137,7 @@ const AboutInfo = () => {
                   <select name='location' 
                   className='about-form-input-box border' 
                   value={selectedLocation} 
-                  onChange={handleLocationChange}
+                  onChange={(e) => setSelectedLocation(e.target.value)}
                   required>
                     <option value=""></option>
                       {nigerianStates.map((state) => (
@@ -147,10 +147,8 @@ const AboutInfo = () => {
                       ))}
                   </select>
                 </div>
-              
 
                 <br/>
-
                 <div>
                   <label className='about-form-label'>Mobile number</label>
                   <br/>
@@ -159,14 +157,11 @@ const AboutInfo = () => {
                   className='about-form-input-box border'
                   autoComplete='off'/>
                 </div>
-              
 
                 <br/>
-
                 <div>
                   <label className='about-form-label'>Here for:</label>
                   <br/>
-
                   <div className='here-for-option-btns'>
                     <div className='here-for-option-btn'>
                       <button onClick={handleApartBtn}>
@@ -180,7 +175,6 @@ const AboutInfo = () => {
                         </p>}
                       </button>
                     </div>
-                    
                     <div className='here-for-option-btn'>
                       <button onClick={handleRoomateBtn}>
                         {roomateBtn ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 
@@ -194,7 +188,6 @@ const AboutInfo = () => {
                       }
                       </button>
                     </div>
-                    
                     <div className='here-for-option-btn'>
                       <button onClick={handlePostBtn}>
                         {postbtn ? <p style={{ backgroundColor: '#007FE0', color:'#FFFFFF' }} 

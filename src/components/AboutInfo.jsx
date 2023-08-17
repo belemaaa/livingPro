@@ -10,7 +10,12 @@ const AboutInfo = () => {
   }, []);
 
   const navigate = useNavigate()
+  const [fullname, setFullname] = useState('')
+  const [occupation, setOccupation] = useState('')
+  const [age, setAge] = useState('')
+  const [date_pf_birth, setDate_pf_birth] = useState('')
   const [selectedLocation, setSelectedLocation] = useState('');
+  const [phone_number, setPhone_number] = useState('')
   const [apartBtn, setApartBtn] = useState(false)
   const [roomateBtn, setRoomateBtn] = useState(false)
   const [postbtn, setPostBtn] = useState(false)
@@ -38,7 +43,19 @@ const AboutInfo = () => {
     setPostBtn(!postbtn)
   }
 
-  const handleProceed = () => {
+  const handleProceed = async(e) => {
+    e.preventDefault()
+
+    const headers={
+      'Content-Type': 'application/json',
+    }
+    const response = await fetch('https://lp-backend-production.up.railway.app/signup/fully', {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({
+        
+      }),
+    });
     navigate('/compatibility_test_1')
   }
 

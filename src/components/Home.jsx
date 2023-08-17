@@ -8,7 +8,7 @@ import { formatDistanceToNow, parseISO } from 'date-fns';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Home = ({setUsername_param}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -27,6 +27,7 @@ const Home = () => {
       try{
         const response = await axios.get(`https://lp-backend-production.up.railway.app/posts/`)
         setPosts(response.data)
+        setUsername_param(response.data.owner.fullname)
       } 
       catch(error){
         console.error('error fetching posts: ', error)

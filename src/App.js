@@ -24,10 +24,12 @@ import Chat from "./components/Chat";
 import ChatDemo from "./components/ChatDemo";
 import Notifications from "./components/Notifications";
 import UserProfile from "./components/UserProfile";
+import OtherProfiles from "./components/OtherProfiles";
 
 function App() {
   const [accessToken, setAccessToken] = useState('');
   const [user_id, setUser_Id] = useState(null);
+  const [username_param, setUsername_param] = useState('')
 
   return (
     <div>
@@ -37,7 +39,7 @@ function App() {
           <Route path='/onboarding2' element={<Onboarding2/>} />
           <Route path='/onboarding3' element={<Onboarding3/>} />
           <Route path='/signup' element={<Signup/>} />
-          <Route path='/home' element={<Home/>} />
+          <Route path='/home' element={<Home/>} setUsername_param={setUsername_param}/>
           <Route path='/email_verification' element={<EmailVerification/>}/>
           <Route path="/login" element={<Login setAccessToken={setAccessToken} setUser_Id={setUser_Id}/>}/>
           <Route path='/about' element={<AboutInfo/>}/>
@@ -56,6 +58,7 @@ function App() {
           <Route path="/chat_demo" element={<ChatDemo/>}/>
           <Route path="/notifications" element={<Notifications/>}/>
           <Route path="/your_profile" element={<UserProfile user_id={user_id}/>}/>
+          <Route path="/profile/:username_param" element={<OtherProfiles username_param={username_param}/>}/>
         </Routes>
       </Router>
     </div>

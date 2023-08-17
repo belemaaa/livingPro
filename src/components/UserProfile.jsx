@@ -36,7 +36,11 @@ const UserProfile = ({user_id}) => {
             </div>
 
             <div className='user_profile_page'>
-                <p>user profile</p>
+              <div className='lg:hidden signup-go-back-btn'>
+                  <Link to='/profile'>
+                      <IoIosArrowBack size={25}/>
+                  </Link>
+              </div>
             </div>
         </div>
 

@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import HomeFooter from './HomeFooter';
 import Profile from './Profile';
-import {BsFillHouseHeartFill} from 'react-icons/bs'
-import Loader from './Loader';
+import {CiLocationOn} from 'react-icons/ci'
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -40,6 +39,22 @@ const UserProfile = ({user_id}) => {
                   <Link to='/profile'>
                       <IoIosArrowBack size={25}/>
                   </Link>
+              </div>
+
+              <div>
+                <img src='' className='border'/>
+                <p>Grace Belema</p>
+                <p>Engineer</p>
+                <p className='profile-location'>
+                  <CiLocationOn className='location-icon'/> 
+                  {profileData.location}
+                </p>
+              </div>
+
+              <div>
+                <p>Recent Posts</p>
+                <div className='border'/>
+                
               </div>
             </div>
         </div>

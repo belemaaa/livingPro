@@ -59,13 +59,16 @@ const EmailVerification = (props) => {
         inputRefs.current[nextIndex].focus();
         }
     };
+    const handleGoBack = () => {
+      navigate(-1)
+    }
 
     return (
         <div className='email-page'>
             <div className='signup-go-back-btn'>
-                <Link to='/signup'>
+                <button onClick={handleGoBack}>
                     <IoIosArrowBack size={25}/>
-                </Link>
+                </button>
             </div>
 
             <div className='ev-div'>

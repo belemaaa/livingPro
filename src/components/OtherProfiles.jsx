@@ -6,12 +6,17 @@ import {IoIosArrowBack} from 'react-icons/io'
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const OtherProfiles = ({username_param}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const navigate = useNavigate()
+  const handleGoBack = () => {
+    navigate(-1)
+  }
    // fetch profile api
    const [profileData, setProfileData] = useState([])
    useEffect(() => {
@@ -37,9 +42,9 @@ const OtherProfiles = ({username_param}) => {
 
             <div className='user_profile_page'>
               <div className='lg:hidden signup-go-back-btn'>
-                  <Link to='/home'>
+                  <button onClick={handleGoBack}>
                       <IoIosArrowBack size={25}/>
-                  </Link>
+                  </button>
               </div>
 
               <div className='user-profile-header'>

@@ -2,10 +2,16 @@ import React, {useState} from 'react'
 import Profile from './Profile.jsx'
 import {IoIosArrowBack} from 'react-icons/io'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Chat = () => {
     const [messages, setMessages] = useState([]);
     const [messageInput, setMessageInput] = useState('');
+    const navigate = useNavigate()
+
+    const handleGoBack = () => {
+        navigate(-1)
+    }
   
     const handleMessageSend = () => {
       if (messageInput.trim() === '') return;
@@ -22,9 +28,9 @@ const Chat = () => {
         <div className='chat-page overflow-hidden'>
             <div className='chat-header'>
                 <div className='signup-go-back-btn'>
-                    <Link to='/inbox'>
+                    <button onClick={handleGoBack}>
                         <IoIosArrowBack size={25}/>
-                    </Link>
+                    </button>
                 </div>
 
                 <div className='chat-header-title'>

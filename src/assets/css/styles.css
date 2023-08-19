@@ -2470,6 +2470,15 @@
     margin-left: 167px;
     margin-top: 10px;
 }
+/* @media(min-width: 640px){
+    .user-profile-header img{
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        margin-left: 154px;
+        margin-top: 10px;
+    }
+} */
 @media(min-width: 1366px){
     .user-profile-header img{
         width: 80px;

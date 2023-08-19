@@ -93,6 +93,9 @@ const StartPost = ({accessToken, user_id}) => {
       }
       fetchProfile()
     },[])
+    const handleGoBack = () => {
+        navigate(-1)
+    }
       
     
     return (
@@ -105,9 +108,9 @@ const StartPost = ({accessToken, user_id}) => {
                 <form method='POST' onSubmit={handlePost}>
                     <div className='prev-next-options'>
                         <div className='signup-go-back-btn'>
-                            <Link to='/post'>
+                            <button onClick={handleGoBack}>
                                 <IoIosArrowBack size={25}/>
-                            </Link>
+                            </button>
                         </div>
                         <button type='submit' className='start-post-post'>
                             Post

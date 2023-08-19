@@ -3,9 +3,12 @@ import HomeFooter from './HomeFooter';
 import Profile from './Profile';
 import {CiLocationOn} from 'react-icons/ci'
 import {IoIosArrowBack} from 'react-icons/io'
+import woman from '../assets/images/womanDP.png'
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const UserProfile = ({user_id}) => {
   useEffect(() => {
@@ -27,8 +30,13 @@ const UserProfile = ({user_id}) => {
      fetchProfile()
    },[])
 
+   const navigate = useNavigate()
+   const handleGoBack = () => {
+      navigate(-1)
+   }
+
   return (
-    <div className='overflow-hidden'>
+    <div className=''>
         <div>
         <div className='user_profile'>
             <div className='hidden dk-profile border-r'>
@@ -37,13 +45,13 @@ const UserProfile = ({user_id}) => {
 
             <div className='user_profile_page'>
               <div className='lg:hidden signup-go-back-btn'>
-                  <Link to='/profile'>
+                  <button onClick={handleGoBack}>
                       <IoIosArrowBack size={25}/>
-                  </Link>
+                  </button>
               </div>
 
               <div className='user-profile-header'>
-                <img src='' className='border'/>
+                <img src={woman} className='border'/>
                 <div className='profile-name-div'>
                   <p className='profile-name'>{profileData.fullname}</p>
                 </div>
